@@ -7,7 +7,7 @@ output:
     latex_engine: pdflatex
     template: ~/Documents/R/github_Said/social_closeness/Manuscript/social_closeness_dishonesty_files/svm-latex-ms.tex
 title: "Social Closeness and Dishonesty"
-thanks: "Replication files are available on the author's Github account..."
+thanks: "Replication files are available on the author's Github account https://github.com/saidejp/social_closeness"
 author:
 - name: Said E. Jiménez
   affiliation: Universidad Nacional Autónoma de México
@@ -16,11 +16,12 @@ author:
 - name: Eduardo Garza-Villarreal
   affiliation: Instituto Nacional de Psiquiatría Ramón de la Fuente Muñiz
 abstract: "This document provides an introduction to R Markdown, argues for its..."
-keywords: "pandoc, r markdown, knitr"
+keywords: "dishonesty, bayesian hierarchical modeling, mixture modeling"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 geometry: margin=1in
 fontfamily: mathpazo
 fontsize: 12pt
+fig_caption: yes
 # spacing: double
 bibliography: ~/Dropbox/master.bib
 biblio-style: apsr
@@ -29,24 +30,58 @@ biblio-style: apsr
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+
 ```
 
-## R Markdown
+# Introduction
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+bla bla...
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
-```
 
-## Including Plots
+# Method
 
-You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+![Rates](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g1.jpeg)  
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+![Rates by partner](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g2.jpeg)
+
+![Rates by partners and promise condition](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g3.jpeg)
+
+![Promises](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g4.jpeg)
+
+![Bayesians logistic coefficients](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g5.jpeg)
+
+
+![Linear population predictor](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g6.jpeg)
+
+![Linear population predictor by subject](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g7.jpeg)
+
+![Population coefficient with uncertainty](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g8.jpeg)
+
+![Model adjusted by subject](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g9.jpeg)
+
+
+![Two latent thetas](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g16.jpeg)
+
+
+
+
+![Subjects from two latent thetas](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g10.jpeg)
+
+
+![Strategies by group](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g11.jpeg)
+
+![Rates by group](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g12.jpeg)
+
+![Rates by group and promise condition](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g12_b.jpeg)
+
+![Reaction times by group](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g13.jpeg)
+
+![Reaction times by partner](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g14.jpeg)
+
+![Difference between groups in reaction time](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g15.jpeg)
+

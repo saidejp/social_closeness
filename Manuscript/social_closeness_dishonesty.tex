@@ -38,46 +38,6 @@
 
 \setcounter{secnumdepth}{0}
 
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
 
 \usepackage{graphicx,grffile}
 \makeatletter
@@ -89,7 +49,8 @@
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 
-\title{Social Closeness and Dishonesty \thanks{Replication files are available on the author's Github account\ldots{}}  }
+\title{Social Closeness and Dishonesty \thanks{Replication files are available on the author's Github account
+\url{https://github.com/saidejp/social_closeness}}  }
 
 
 
@@ -136,7 +97,7 @@
 \hypersetup{breaklinks=true,
             bookmarks=true,
             pdfauthor={Said E. Jiménez (Universidad Nacional Autónoma de México) and Roberto Mercadillo (Universidad Autónoma Metropolitana) and Eduardo Garza-Villarreal (Instituto Nacional de Psiquiatría Ramón de la Fuente Muñiz)},
-             pdfkeywords = {pandoc, r markdown, knitr},  
+             pdfkeywords = {dishonesty, bayesian hierarchical modeling, mixture modeling},  
             pdftitle={Social Closeness and Dishonesty},
             colorlinks=true,
             citecolor=blue,
@@ -195,7 +156,7 @@
 its\ldots{}
 
 
-\vskip 8.5pt \noindent \emph{Keywords}: pandoc, r markdown, knitr \par
+\vskip 8.5pt \noindent \emph{Keywords}: dishonesty, bayesian hierarchical modeling, mixture modeling \par
 
     \hbox{\vrule height .2pt width 39.14pc}
 
@@ -207,40 +168,113 @@ its\ldots{}
 \vskip 6.5pt
 
 
-\noindent  \subsection{R Markdown}\label{r-markdown}
+\noindent  \section{Introduction}\label{introduction}
 
-This is an R Markdown document. Markdown is a simple formatting syntax
-for authoring HTML, PDF, and MS Word documents. For more details on
-using R Markdown see \url{http://rmarkdown.rstudio.com}.
+bla bla\ldots{}
 
-When you click the \textbf{Knit} button a document will be generated
-that includes both content as well as the output of any embedded R code
-chunks within the document. You can embed an R code chunk like this:
+\section{Method}\label{method}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{summary}\NormalTok{(cars)}
-\end{Highlighting}
-\end{Shaded}
+\begin{figure}
+\centering
+\includegraphics{/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g1.jpeg}
+\caption{Rates}
+\end{figure}
 
-\begin{verbatim}
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
-\end{verbatim}
+\begin{figure}
+\centering
+\includegraphics{/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g2.jpeg}
+\caption{Rates by partner}
+\end{figure}
 
-\subsection{Including Plots}\label{including-plots}
+\begin{figure}
+\centering
+\includegraphics{/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g3.jpeg}
+\caption{Rates by partners and promise condition}
+\end{figure}
 
-You can also embed plots, for example:
+\begin{figure}
+\centering
+\includegraphics{/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g4.jpeg}
+\caption{Promises}
+\end{figure}
 
-\includegraphics{social_closeness_dishonesty_files/figure-latex/pressure-1.pdf}
+\begin{figure}
+\centering
+\includegraphics{/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g5.jpeg}
+\caption{Bayesians logistic coefficients}
+\end{figure}
 
-Note that the \texttt{echo\ =\ FALSE} parameter was added to the code
-chunk to prevent printing of the R code that generated the plot.
+\begin{figure}
+\centering
+\includegraphics{/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g6.jpeg}
+\caption{Linear population predictor}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g7.jpeg}
+\caption{Linear population predictor by subject}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g8.jpeg}
+\caption{Population coefficient with uncertainty}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g9.jpeg}
+\caption{Model adjusted by subject}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g16.jpeg}
+\caption{Two latent thetas}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g10.jpeg}
+\caption{Subjects from two latent thetas}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g11.jpeg}
+\caption{Strategies by group}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g12.jpeg}
+\caption{Rates by group}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g12_b.jpeg}
+\caption{Rates by group and promise condition}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g13.jpeg}
+\caption{Reaction times by group}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g14.jpeg}
+\caption{Reaction times by partner}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g15.jpeg}
+\caption{Difference between groups in reaction time}
+\end{figure}
 \newpage
 \singlespacing 
 \bibliography{\textasciitilde{}/Dropbox/master.bib}

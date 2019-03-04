@@ -33,11 +33,11 @@ g <- mget(ls(pattern = "g"))
 invisible(
   mapply(ggsave, 
          path = "~/Documents/R/github_Said/social_closeness/Manuscript/figures/",
-         device = "tiff",
-         width = 9.5,
+         device = "jpeg",
+         width = 10,
          height = 7,
          units = "in",
-         file = paste0(names(g), ".tiff"),
+         file = paste0(names(g), ".jpeg"),
          plot = g)
   )
 
@@ -46,11 +46,11 @@ invisible(
 
 load("mixture_promise.RData")
 
-ggsave("g16.tiff",
+ggsave("g16.jpeg",
        path = "~/Documents/R/github_Said/social_closeness/Manuscript/figures/",
        plot = thetas,
-       device = "tiff",
-       width = 9.5,
+       device = "jpeg",
+       width = 10,
        height = 7,
        units = "in")
 
