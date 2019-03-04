@@ -1,5 +1,5 @@
 
-# Promise and Social Closeness --------------------------------------------
+# Promises and Social Closeness -------------------------------------------
 
 #+ setup, message = FALSE, warning = FALSE, error = FALSE
 
