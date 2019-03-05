@@ -1,4 +1,6 @@
 ---
+# Template adapted from:http://svmiller.com/blog/2016/02/svm-r-markdown-manuscript/
+
 output: 
   pdf_document:
     citation_package: natbib
@@ -21,7 +23,7 @@ date: "`r format(Sys.time(), '%B %d, %Y')`"
 geometry: margin=1in
 fontfamily: mathpazo
 fontsize: 12pt
-fig_caption: yes
+# fig_caption: yes
 # spacing: double
 bibliography: ~/Dropbox/master.bib
 biblio-style: apsr
@@ -29,7 +31,20 @@ biblio-style: apsr
 
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      error = FALSE,
+                      message = FALSE,
+                      out.width = '80%',
+                      fig.align = 'center',
+                      dpi = 300)
+
+
+
+library(pacman)
+p_load(magrittr, dplyr, forcats, tidyr, modelr, tidybayes,
+       ggstance, ggridges, rstan, brms, tidyverse, bayesplot,
+       rjags)
 
 
 ```
@@ -43,45 +58,172 @@ bla bla...
 # Method
 
 
-![Rates](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g1.jpeg)  
+
+![Difference between groups in reaction time](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g1.jpeg)
+
+
+```{r g1, fig.cap='Difference between groups in reaction time'}
+
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g1.jpeg")
+
+
+```
 
 
 
-![Rates by partner](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g2.jpeg)
+```{r g2, fig.cap='Rates by partner'}
 
-![Rates by partners and promise condition](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g3.jpeg)
-
-![Promises](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g4.jpeg)
-
-![Bayesians logistic coefficients](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g5.jpeg)
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g2.jpeg")
 
 
-![Linear population predictor](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g6.jpeg)
-
-![Linear population predictor by subject](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g7.jpeg)
-
-![Population coefficient with uncertainty](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g8.jpeg)
-
-![Model adjusted by subject](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g9.jpeg)
-
-
-![Two latent thetas](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g16.jpeg)
+```
 
 
 
+```{r g3, fig.cap='Rates by partners and promise condition'}
 
-![Subjects from two latent thetas](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g10.jpeg)
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g3.jpeg")
 
 
-![Strategies by group](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g11.jpeg)
+```
 
-![Rates by group](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g12.jpeg)
 
-![Rates by group and promise condition](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g12_b.jpeg)
+```{r g4, fig.cap='Promises'}
 
-![Reaction times by group](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g13.jpeg)
 
-![Reaction times by partner](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g14.jpeg)
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g4.jpeg")
 
-![Difference between groups in reaction time](/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g15.jpeg)
+
+```
+
+
+
+
+```{r g5, fig.cap='Bayesians logistic coefficients'}
+
+
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g5.jpeg")
+
+
+```
+
+
+
+
+```{r g6, fig.cap='Linear population predictor'}
+
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g6.jpeg")
+
+
+```
+
+
+```{r g7, fig.cap='Linear population predictor by subject'}
+
+
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g7.jpeg")
+
+
+```
+
+
+
+
+```{r g8, fig.cap='Population coefficient with uncertainty'}
+
+
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g8.jpeg")
+
+
+```
+
+
+
+```{r g9, fig.cap='Model adjusted by subject'}
+
+
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g9.jpeg")
+
+
+```
+
+
+
+```{r g16, fig.cap='Two latent thetas'}
+
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g16.jpeg")
+
+
+```
+
+
+
+
+```{r g10, fig.cap='Subjects from two latent thetas'}
+
+
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g10.jpeg")
+
+
+```
+
+
+
+
+```{r g11, fig.cap='Strategies by group'}
+
+
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g11.jpeg")
+
+
+```
+
+
+
+```{r g12, fig.cap='Rates by group'}
+
+
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g12.jpeg")
+
+
+```
+
+
+
+```{r g12_b, fig.cap='Rates by group and promise condition'}
+
+
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g12_b.jpeg")
+
+
+```
+
+```{r g13, fig.cap='Reaction times by group'}
+
+
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g13.jpeg")
+
+
+```
+
+
+
+```{r g14, fig.cap='Reaction times by partner'}
+
+
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g14.jpeg")
+
+
+```
+
+
+
+
+```{r g15, fig.cap='Difference between groups in reaction time'}
+
+
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g15.jpeg")
+
+
+```
 
