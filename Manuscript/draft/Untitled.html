@@ -211,7 +211,7 @@ y_i \sim \mathrm{Bernoulli}(\theta_i) \\
 </div>
 <div id="modelamiento-de-mezclas-latentes" class="section level3">
 <h3>Modelamiento de mezclas latentes</h3>
-<p>Asume que las decisiones de los individuos podrían provenir de una combinación (o <em>mezcla</em>) de procesos psicológicos no observables (<em>latentes</em>), el rasgo latente más importante en este experimento es la (des)honestidad. Se modelaron las diferencias en las tasas de pago entre participantes como una combinación de <span class="math inline">\(N\)</span> distribuciones de subpoblaciones. El modelo asumió que las tasas de pago provenían de una, dos o tres mezclas de distribuciones, o grupos latentes.</p>
+<p>Asume que las decisiones de los individuos podrían provenir de una combinación (o <em>mezcla</em>) de procesos psicológicos no observables (<em>latentes</em>), el rasgo latente más importante en este experimento es la (des)honestidad. Se modelaron las diferencias en las tasas de pago entre participantes como una combinación de <span class="math inline">\(N\)</span> distribuciones de subpoblaciones. El modelo asumió que las tasas de pago provenían de una o dos mezclas de distribuciones, o grupos latentes.</p>
 <p>El modelo de una mezcla, asumía que cada decisión <span class="math inline">\(d_{i,j}\)</span> de cada sujeto provenía de una distribución Bernoulli con probabilidad <span class="math inline">\(\theta_{i,j}\)</span>. Asimismo que <span class="math inline">\(\theta_{i,j}\)</span> provenía de una distribución jerárquica Beta con parámetros <span class="math inline">\(\alpha\)</span> y <span class="math inline">\(\beta\)</span>. La distribución Beta fue reparametrizada en términos de media <span class="math inline">\(\mu\)</span> y precisión <span class="math inline">\(\lambda\)</span>, ya que <span class="math inline">\(\mu = \alpha/(\alpha + \beta)\)</span> y <span class="math inline">\(\lambda = \alpha + \beta\)</span>.</p>
 <p><span class="math display">\[
 \mu \sim \mathrm{Uniform}(0, 1)\\
@@ -219,7 +219,7 @@ y_i \sim \mathrm{Bernoulli}(\theta_i) \\
 \theta_{i,j} \sim \mathrm{Beta}(\mu\lambda, (1 - \mu)\lambda)\\
 d_{i,j} \sim \mathrm{Bernoulli}(\theta_{i,j}) 
 \]</span></p>
-<p>El modelo de dos mezclas es aproximadamente igual al anterior, sin embargo ahora asume que las decisiones provienen de una <em>mezcla</em> de las distribuciones de dos grupos, una distribución Beta con parámetros <span class="math inline">\(\mu_1\lambda_1\)</span> y <span class="math inline">\((1 - \mu_1) \lambda_1\)</span> y otra con párametros <span class="math inline">\(\mu_2\lambda_2\)</span> y <span class="math inline">\((1 - \mu_2) \lambda_2\)</span>, el parámetro <span class="math inline">\(z_i\)</span> determina la probabilidad de que cada sujeto pertenezca a uno de dos grupos latentes, se distribuye Bernoulli con probabilidad <span class="math inline">\(\phi\)</span>, que a su vez sigue una distribución Beta relativamente poco informativa.</p>
+<p>El modelo de dos mezclas es aproximadamente igual al anterior, sin embargo ahora asume que las decisiones provienen de una <em>mezcla</em> de las distribuciones de dos grupos, una distribución Beta con parámetros <span class="math inline">\(\mu_1\lambda_1\)</span> y <span class="math inline">\((1 - \mu_1) \lambda_1\)</span> y otra con párametros <span class="math inline">\(\mu_2\lambda_2\)</span> y <span class="math inline">\((1 - \mu_2) \lambda_2\)</span>, el parámetro <span class="math inline">\(z_i\)</span> determina la probabilidad de que cada sujeto pertenezca a uno de dos grupos latentes, se distribuye Bernoulli con probabilidad <span class="math inline">\(\phi\)</span>, que a su vez sigue una distribución inicial Beta relativamente poco informativa.</p>
 <p><span class="math display">\[
 \mu_1 \sim \mathrm{Uniform}(0, 1)\\
 \mu_2 \sim \mathrm{Uniform}(\mu_1, 1)\\
@@ -234,6 +234,7 @@ z_i \sim \mathrm{Bernoulli}(\phi)\\
 d_{i,j} \sim \mathrm{Bernoulli}(\theta_{i,j})\\
 \phi \sim \mathrm{Beta}(5, 5)
 \]</span></p>
+<p>Los modelos de 1 y 2 mezclas, se programaron en R mediante el paquete <strong>rjags</strong>, que realiza la inferencia mediante el muestreo por Markov chain Monte Carlo a través de <strong>JAGS</strong>. Las distribuciones posteriores de todos los parámetros fueron aproximadas con tres cadenas de 13000 iteraciones cada una, se descartaron las primeras 3000 de cada cadena como periodo de calentamiento, para un total de 30000 muestras post-calentamiento. La convergencia del modelo fue evaluada a través del cálculo del estadístico <span class="math inline">\(\hat{R}\)</span>, que varió de 1 a 1.01 para todos los parámetros lo que indica convergencia, a excepción de <span class="math inline">\(\mu_1\)</span> que obtuvo una estimación de 1.21.</p>
 </div>
 </div>
 
