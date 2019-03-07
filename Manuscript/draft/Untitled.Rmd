@@ -1,0 +1,70 @@
+---
+title: "Untitled"
+author: "Said E. Jiménez"
+date: "6 de marzo de 2019"
+output:
+  html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Análisis de datos
+
+Se obtuvieron las proporciones de las decisiones pagar o no pagar la mitad, así como las promesas realizadas, posteriormente se calcularon las variaciones en las proporciones de acuerdo a los compañeros de juego y la condición de presencia o ausencia de promesas.
+
+
+## Modelamiento Bayesiano 
+
+### Modelo Jerárquico
+
+Se utilizó inferencia bayesiana para evaluar el efecto de las condiciones experimentales en la tasa de pago a nivel individual y poblacional. Para tal propósito se realizó un modelo jerárquico que asume que la incertidumbre en el efecto de promesas y parejas sobre la conducta de cada individuo proviene de distribuciones poblacionales comunes para los parámetros del modelo:  
+
+
+$$
+\begin{equation}
+y_i \sim \mathrm{Bernoulli}(\theta_i) \\
+\mathrm{logit(\theta_i)} = \mathbf{X}\beta  +  \mathbf{Z}u
+\end{equation}
+$$
+En el modelo anterior, cada decisión $y_i$ proviene de una distribución Bernoulli con probabilidad de pagar $\theta_i$, el objetivo del modelo jerárquico es predecir cada decisión a través la combinación lineal de los predictores transformados por su función ligadora inversa $\mathrm{logit}$. En el modelo anterior, $\beta$ y $u$ son coeficientes a nivel poblacional y nivel individual respectivamente, mientras que $\mathbf{X}$, $\mathbf{Z}$ son sus correpondientes matrices del diseño. 
+
+El modelo estima que la probabilidad $\theta_i$ de que en cada ensayo se decida pagar la mitad está en función del efecto de la presencia de promesas, así como de los compañeros con cercanía social baja (confederado) y alta (amigo) $\beta$. También asume que pueden existir diferencias individuales en el desempeño durante la tarea, las cuales son captadas por los parámetros $u$ y constituyen desviaciones de los coeficientes a nivel poblacional. Cabe remarcar que el modelo evalúa explícitamente la incertidumbre respecto a $u$, lo cual es una ventaja con relación a los modelos que asumen que $u$ es parte del término de error. 
+
+El modelo se programó en R por medio del paquete **brms**, que realiza la inferencia mediante el muestreo por Markov chain Monte Carlo a través de **Stan**. Las distribuciones posteriores de todos los parámetros fueron aproximadas con cuatro cadenas de 2000 iteraciones cada una, las primeras 1000 iteraciones de cada cadena fueron descartadas (periodo de calentamiento), para un total de 4000 muestras post-calentamiento. La convergencia del modelo fue evaluada a través de la inspección visual de las cadenas y el cálculo del estadístico $\hat{R}$, que para todos los parámetros fue de 1, lo que se interpreta como convergencia.  
+
+### Modelamiento de mezclas latentes
+
+Asume que las decisiones de los individuos podrían provenir de una combinación (o *mezcla*) de procesos psicológicos no observables (*latentes*), el rasgo latente más importante en este experimento es la (des)honestidad. Se modelaron las diferencias en las tasas de pago entre participantes como una combinación de $N$ distribuciones de subpoblaciones. El modelo asumió que las tasas de pago provenían de una, dos o tres mezclas de distribuciones, o grupos latentes. 
+
+El modelo de una mezcla, asumía que cada decisión $d_{i,j}$ de cada sujeto provenía de una distribución Bernoulli con probabilidad $\theta_{i,j}$. Asimismo que $\theta_{i,j}$ provenía de una distribución jerárquica Beta con parámetros $\alpha$ y $\beta$. La distribución Beta fue reparametrizada en términos de media $\mu$ y precisión $\lambda$, ya que $\mu = \alpha/(\alpha + \beta)$ y $\lambda = \alpha + \beta$.  
+
+$$
+\mu \sim \mathrm{Uniform}(0, 1)\\
+\lambda \sim \mathrm{Uniform}(40, 800)\\
+\theta_{i,j} \sim \mathrm{Beta}(\mu\lambda, (1 - \mu)\lambda)\\
+d_{i,j} \sim \mathrm{Bernoulli}(\theta_{i,j}) 
+$$
+
+El modelo de dos mezclas es aproximadamente igual al anterior, sin embargo ahora asume que las decisiones provienen de una *mezcla* de las distribuciones de dos grupos, una distribución Beta con parámetros $\mu_1\lambda_1$ y $(1 - \mu_1) \lambda_1$ y otra con párametros $\mu_2\lambda_2$ y $(1 - \mu_2) \lambda_2$, el parámetro $z_i$ determina la probabilidad de que cada sujeto pertenezca a uno de dos grupos latentes, se distribuye Bernoulli con probabilidad $\phi$, que a su vez sigue una distribución inicial Beta relativamente poco informativa. 
+
+$$
+\mu_1 \sim \mathrm{Uniform}(0, 1)\\
+\mu_2 \sim \mathrm{Uniform}(\mu_1, 1)\\
+\lambda_1 \sim \mathrm{Uniform}(40, 800)\\
+\lambda_2 \sim \mathrm{Uniform}(4, 100)\\
+z_i \sim \mathrm{Bernoulli}(\phi)\\
+\theta_{i,j} \sim \Bigg\{
+  \begin{array} {lr} 
+    \mathrm{Beta}(\mu_1\lambda_1, (1 - \mu_1)\lambda_1) & \mbox{if} & z_i = 0 \\
+    \mathrm{Beta}(\mu_2\lambda_2, (1 - \mu_2)\lambda_2) & \mbox{if} & z_i = 1
+  \end{array} \\
+d_{i,j} \sim \mathrm{Bernoulli}(\theta_{i,j})\\
+\phi \sim \mathrm{Beta}(5, 5)
+$$
+
+
+
+
+
