@@ -1,5 +1,5 @@
 ---
-title: "Untitled"
+title: "Método"
 author: "Said E. Jiménez"
 date: "6 de marzo de 2019"
 output:
@@ -10,7 +10,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Análisis de datos
+## Análisis descriptivo de datos
 
 Se obtuvieron las proporciones de las decisiones pagar o no pagar la mitad, así como las promesas realizadas, posteriormente se calcularon las variaciones en las proporciones de acuerdo a los compañeros de juego y la condición de presencia o ausencia de promesas.
 
@@ -76,6 +76,17 @@ Los modelos de 1 y 2 mezclas, se programaron en R mediante el paquete **rjags**,
 
 
 ### Modelamiento de los tiempos de reacción
+
+Un hallazgo constante en la investigación sobre engaño y deshonestidad, es la diferencia en los tiempos de reacción entre quienes toman decisiones *deshonestas* vs. decisiones *honestas*, en general, se han encontrado latencias breves en personas *deshonestas* en comparación con las de las personas *honestas*. Se estimaron las medias poblacionales del grupo de deshonestos y honestos mediante un modelo bayesiano jerárquico que asumía que el tiempo de reacción proviene de dos distribución normales para cada grupo con parámetros $\mu_{\mathrm{Dishonest}}$ y $\mu_{\mathrm{Honest}}$ y desviación estándar común $\sigma$. Asimismo, se modeló la variabilidad intrasujeto en los tiempos de reacción por medio de interceptos variantes por participante. El modelo se ajustó en R por medio de **brms** y **Stan** en condiciones iguales a las descritas anteriormente y con resultados adecuados de convergencia para todos los parámetros, $\hat{R} = 1$.   
+
+
+### Contraste de hipótesis 
+
+Para los modelos de la tasa de pago y tiempo de reacción se utilizó el factor de Bayes por medio del método de Savage-Dickey, que calcula la razón de la densidad de la distribución posterior sobre la densidad de la distribución inicial de algún parámetro en el punto de interés. Específicamente para el modelo de la tasa de pago, se evaluó la hipótesis de si las promesas tendrían un efecto positivo en las tasas de pago ($H_1: \beta^{promise} > 0$), así como si la cercanía social alta (amigo) tendría mayores tasas de pago que la cercanía social baja (confederado) ($H_1: \beta^{friend} - \beta^{confederate} > 0$). Para el modelo del tiempo de reacción, la hipótesis fue si los *deshonestos* tendrían tiempos breves en comparación con los *honestos* ($H_1: \mu_{Dishonest} - \mu_{Honest} < 0$). 
+
+### Comparación de modelos
+
+EL modelo de una y dos mezclas se compararon por medio del criterio de información DIC (deviance information criteria), en el que los puntajes bajos indican mejores modelos. Aunque el puntaje DIC favorece al modelo de una mezcla, dado que la diferencia entre los puntajes DIC de los modelos es mínima y las estrategias conductuales entre los grupos son cualitativamente distintas, consideramos al modelo de dos mezclas como una representación útil e informativa de los datos.  
 
 
 
