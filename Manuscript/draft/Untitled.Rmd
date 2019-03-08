@@ -23,14 +23,14 @@ Se utilizó inferencia bayesiana para evaluar el efecto de las condiciones exper
 
 
 $$
-\begin{equation}
-y_i \sim \mathrm{Bernoulli}(\theta_i) \\
-\mathrm{logit(\theta_i)} = \mathbf{X}\beta  +  \mathbf{Z}u
-\end{equation}
+\begin{aligned}
+&y_i \sim \mathrm{Bernoulli}(\theta_i) \\
+&\mathrm{logit(\theta_i)} = \mathbf{X}\beta  +  \mathbf{Z}u
+\end{aligned}
 $$
 En el modelo anterior, cada decisión $y_i$ proviene de una distribución Bernoulli con probabilidad de pagar $\theta_i$, el objetivo del modelo jerárquico es predecir cada decisión a través la combinación lineal de los predictores transformados por su función ligadora inversa $\mathrm{logit}$. En el modelo anterior, $\beta$ y $u$ son coeficientes a nivel poblacional y nivel individual respectivamente, mientras que $\mathbf{X}$, $\mathbf{Z}$ son sus correpondientes matrices del diseño. 
 
-El modelo estima que la probabilidad $\theta_i$ de que en cada ensayo se decida pagar la mitad está en función del efecto de la presencia de promesas, así como de los compañeros con cercanía social baja (confederado) y alta (amigo) $\beta$. También asume que pueden existir diferencias individuales en el desempeño durante la tarea, las cuales son captadas por los parámetros $u$ y constituyen desviaciones de los coeficientes a nivel poblacional. Cabe remarcar que el modelo evalúa explícitamente la incertidumbre respecto a $u$, lo cual es una ventaja con relación a los modelos que asumen que $u$ es parte del término de error. 
+El modelo estima que la probabilidad $\theta_i$ de que en cada ensayo se decida pagar la mitad está en función del efecto de la presencia de promesas, así como de los compañeros con cercanía social baja (confederado) y alta (amigo) $\beta$. También asume que pueden existir diferencias individuales en el desempeño durante la tarea, las cuales son captadas por los parámetros $u$ y constituyen ajustes a los coeficientes poblacionales. Cabe remarcar que el modelo evalúa explícitamente la incertidumbre respecto a $u$, lo cual es una ventaja con relación a los modelos que asumen que $u$ es parte del término de error. 
 
 El modelo se programó en R por medio del paquete **brms**, que realiza la inferencia mediante el muestreo por Markov chain Monte Carlo a través de **Stan**. Las distribuciones posteriores de todos los parámetros fueron aproximadas con cuatro cadenas de 2000 iteraciones cada una, las primeras 1000 iteraciones de cada cadena fueron descartadas (periodo de calentamiento), para un total de 4000 muestras post-calentamiento. La convergencia del modelo fue evaluada a través de la inspección visual de las cadenas y el cálculo del estadístico $\hat{R}$, que para todos los parámetros fue de 1, lo que se interpreta como convergencia.  
 
@@ -41,30 +41,41 @@ Asume que las decisiones de los individuos podrían provenir de una combinación
 El modelo de una mezcla, asumía que cada decisión $d_{i,j}$ de cada sujeto provenía de una distribución Bernoulli con probabilidad $\theta_{i,j}$. Asimismo que $\theta_{i,j}$ provenía de una distribución jerárquica Beta con parámetros $\alpha$ y $\beta$. La distribución Beta fue reparametrizada en términos de media $\mu$ y precisión $\lambda$, ya que $\mu = \alpha/(\alpha + \beta)$ y $\lambda = \alpha + \beta$.  
 
 $$
-\mu \sim \mathrm{Uniform}(0, 1)\\
-\lambda \sim \mathrm{Uniform}(40, 800)\\
-\theta_{i,j} \sim \mathrm{Beta}(\mu\lambda, (1 - \mu)\lambda)\\
-d_{i,j} \sim \mathrm{Bernoulli}(\theta_{i,j}) 
+\begin{aligned}
+&\mu \sim \mathrm{Uniform}(0, 1)\\
+&\lambda \sim \mathrm{Uniform}(40, 800)\\
+&\theta_{i,j} \sim \mathrm{Beta}(\mu\lambda, (1 - \mu)\lambda)\\
+&d_{i,j} \sim \mathrm{Bernoulli}(\theta_{i,j}) 
+\end{aligned}
 $$
 
-El modelo de dos mezclas es aproximadamente igual al anterior, sin embargo ahora asume que las decisiones provienen de una *mezcla* de las distribuciones de dos grupos, una distribución Beta con parámetros $\mu_1\lambda_1$ y $(1 - \mu_1) \lambda_1$ y otra con párametros $\mu_2\lambda_2$ y $(1 - \mu_2) \lambda_2$, el parámetro $z_i$ determina la probabilidad de que cada sujeto pertenezca a uno de dos grupos latentes, se distribuye Bernoulli con probabilidad $\phi$, que a su vez sigue una distribución inicial Beta relativamente poco informativa. 
+
+El modelo de dos mezclas es aproximadamente igual al anterior, sin embargo ahora asume que las decisiones provienen de una *mezcla* de las distribuciones de dos grupos, una distribución Beta con parámetros $\mu_1\lambda_1$ y $(1 - \mu_1) \lambda_1$ y otra con párametros $\mu_2\lambda_2$ y $(1 - \mu_2) \lambda_2$, el parámetro $z_i$ determina la probabilidad de que cada sujeto pertenezca a uno de dos grupos latentes, se distribuye Bernoulli con probabilidad $\phi$, que a su vez sigue una distribución inicial Beta relativamente poco informativa.
+
+Se presenta el modelo de 2 mezclas con la notación propuesta por Lee, nodos cuadrados representan variables discretas y nodos circulares variables numéricas. Los nodos sombreados representan variables observadas, mientras que los nodos no sombreados son variables latentes. Los dos rectángulos representan repeticiones de la relación entre los parámetros del modelo para cada sujeto $i$ y ensayo $j$. Se determinó que un individuo pertenecía al grupo de *Deshonestos* si $z_i < 0.5$, dado que la probabilidad de que ese sujeto pagara la mitad en cada ensayo es baja, mientras que se consideró que un individuo pertenecía al grupo de *Honestos* si $z_i > 0.5$, dado que la probabilidad de que el individuo pague la mitad en cada ensayo es alta. 
 
 $$
-\mu_1 \sim \mathrm{Uniform}(0, 1)\\
-\mu_2 \sim \mathrm{Uniform}(\mu_1, 1)\\
-\lambda_1 \sim \mathrm{Uniform}(40, 800)\\
-\lambda_2 \sim \mathrm{Uniform}(4, 100)\\
-z_i \sim \mathrm{Bernoulli}(\phi)\\
-\theta_{i,j} \sim \Bigg\{
+\begin{aligned} 
+&\mu_1 \sim \mathrm{Uniform}(0, 1)\\
+&\mu_2 \sim \mathrm{Uniform}(\mu_1, 1)\\
+&\lambda_1 \sim \mathrm{Uniform}(40, 800)\\
+&\lambda_2 \sim \mathrm{Uniform}(4, 100)\\
+&z_i \sim \mathrm{Bernoulli}(\phi)\\
+&\theta_{i,j} \sim \Bigg\{
   \begin{array} {lr} 
     \mathrm{Beta}(\mu_1\lambda_1, (1 - \mu_1)\lambda_1) & \mbox{if} & z_i = 0 \\
     \mathrm{Beta}(\mu_2\lambda_2, (1 - \mu_2)\lambda_2) & \mbox{if} & z_i = 1
   \end{array} \\
-d_{i,j} \sim \mathrm{Bernoulli}(\theta_{i,j})\\
-\phi \sim \mathrm{Beta}(5, 5)
+&d_{i,j} \sim \mathrm{Bernoulli}(\theta_{i,j})\\
+&\phi \sim \mathrm{Beta}(5, 5)
+\end{aligned}
 $$
 
 
 Los modelos de 1 y 2 mezclas, se programaron en R mediante el paquete **rjags**, que realiza la inferencia mediante el muestreo por Markov chain Monte Carlo a través de **JAGS**. Las distribuciones posteriores de todos los parámetros fueron aproximadas con tres cadenas de 13000 iteraciones cada una, se descartaron las primeras 3000 de cada cadena como periodo de calentamiento, para un total de 30000 muestras post-calentamiento. La convergencia del modelo fue evaluada a través del cálculo del estadístico $\hat{R}$, que varió de 1 a 1.01 para todos los parámetros lo que indica convergencia, a excepción de $\mu_1$ que obtuvo una estimación de 1.21. 
+
+
+### Modelamiento de los tiempos de reacción
+
 
 
