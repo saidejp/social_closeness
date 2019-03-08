@@ -14,7 +14,13 @@ text-align: justify}
 
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      error = FALSE,
+                      message = FALSE,
+                      out.width = '80%',
+                      fig.align = 'center',
+                      dpi = 300)
 ```
 
 ## Análisis descriptivo de datos
@@ -87,7 +93,11 @@ Los modelos de 1 y 2 mezclas, se programaron en R mediante el paquete **rjags**,
 
 ### Modelamiento de los tiempos de reacción
 
-Un hallazgo constante en la investigación sobre engaño y deshonestidad, es la diferencia en los tiempos de reacción entre quienes toman decisiones *deshonestas* vs. decisiones *honestas*, en general, se han encontrado latencias breves en personas *deshonestas* en comparación con las de las personas *honestas*. Se estimaron las medias poblacionales del grupo de deshonestos y honestos mediante un modelo bayesiano jerárquico que asumía que el tiempo de reacción proviene de dos distribución normales para cada grupo con parámetros $\mu_{\mathrm{Dishonest}}$ y $\mu_{\mathrm{Honest}}$ y desviación estándar común $\sigma$. Asimismo, se modeló la variabilidad intrasujeto en los tiempos de reacción por medio de interceptos variantes por participante. El modelo se ajustó en R por medio de **brms** y **Stan** en condiciones iguales a las descritas anteriormente y con resultados adecuados de convergencia para todos los parámetros, $\hat{R} = 1$.   
+Un hallazgo constante en la investigación sobre engaño y deshonestidad, es la diferencia en los tiempos de reacción entre quienes toman decisiones *deshonestas* vs. decisiones *honestas*, en general, se han encontrado latencias breves en personas *deshonestas* en comparación con las de las personas *honestas*. 
+
+Se estimaron las medias poblacionales del grupo de deshonestos y honestos mediante un modelo bayesiano jerárquico que asumía que el tiempo de reacción proviene de una distribución $rt_i \sim \mathrm{Half-Normal}(0, 5)$ (dado que no puede haber tiempos de reacción negativos), con parámetros $\mu_{\mathrm{Dishonest}}$ y $\mu_{\mathrm{Honest}}$ y desviación estándar común $\sigma$. 
+
+Asimismo, se modeló la variabilidad intrasujeto en los tiempos de reacción por medio de interceptos variantes por participante. El modelo se ajustó en R por medio de **brms** y **Stan** en condiciones iguales a las descritas anteriormente y con resultados adecuados de convergencia para todos los parámetros, $\hat{R} = 1$.   
 
 ---
 
@@ -99,7 +109,52 @@ Para los modelos de la tasa de pago y tiempo de reacción se utilizó el factor 
 
 ### Comparación de modelos
 
-El modelo de una y dos mezclas se compararon por medio del criterio de información DIC (deviance information criteria), en el que los puntajes bajos indican mejores modelos. La estimación de la diferencia entre el modelo de 1 y 2 mezclas favorece al modelo de dos mezclas ($\mathrm{Difference}= 1.21$, $\mathrm{SE}= 3.49$). 
+Los modelos de una y dos mezclas se compararon por medio del criterio de información DIC (deviance information criteria), en el que los puntajes bajos indican mejores modelos. La estimación de la diferencia entre el modelo de 1 y 2 mezclas favorece al modelo de dos mezclas ($\mathrm{Difference}= 1.21$, $\mathrm{SE}= 3.49$). 
+
+---
+
+## Resultados
+
+Se muestran en las figuras 1, 2, 3 y 4 la frecuencia de veces en que los participantes pagaron la mitad, la proporción de pagos que realizaron a cada pareja, la proporción de pagos por pareja y condición de promesas, así como la frecuencia de promesas que fueron seleccionadas por los participantes, respectivamente.
+
+
+```{r g1, fig.cap='Fig. 1 Difference between groups in frecuencies of pay back'}
+
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g1.jpeg")
+
+```
+
+---
+
+```{r g2, fig.cap='Fig.2 Rates by partner'}
+
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g2.jpeg")
+
+
+```
+
+---
+
+```{r g3, fig.cap='Fig. 3 Rates by partners and promise condition'}
+
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g3.jpeg")
+
+
+```
+
+---
+
+```{r g4, fig.cap='Fig. 4 Frecuencies of promises'}
+
+
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g4.jpeg")
+
+
+```
+
+
+
+
 
 
 
