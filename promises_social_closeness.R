@@ -448,7 +448,7 @@ cases_2 <- data %>%
 
 # Prior m_rt --------------------------------------------------------------
 
-prior_rt <- set_prior("normal(0, 5)", class = "b")
+prior_rt <- set_prior("normal(0, 5)", class = "b", lb = 0)
 
 
 # Fitting m_rt ------------------------------------------------------------
@@ -461,7 +461,7 @@ prior_rt <- set_prior("normal(0, 5)", class = "b")
 
 # Hypothesis testing: mu_d = mu_h -----------------------------------------
 
-hypothesis(m_rt, "groupDishonest - groupHonest = 0") 
+hypothesis(m_rt, "groupDishonest - groupHonest = 0")
 hypothesis(m_rt, "groupDishonest - groupHonest < 0") 
 
 

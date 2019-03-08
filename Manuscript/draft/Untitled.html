@@ -211,7 +211,7 @@ text-align: justify}
 &amp;\mathrm{logit(\theta_i)} = \mathbf{X}\beta  +  \mathbf{Z}u
 \end{aligned}
 \]</span> En el modelo anterior, cada decisión <span class="math inline">\(y_i\)</span> proviene de una distribución Bernoulli con probabilidad de pagar <span class="math inline">\(\theta_i\)</span>, el objetivo del modelo jerárquico es predecir cada decisión a través la combinación lineal de los predictores transformados por su función ligadora inversa <span class="math inline">\(\mathrm{logit}\)</span>. En el modelo anterior, <span class="math inline">\(\beta\)</span> y <span class="math inline">\(u\)</span> son coeficientes a nivel poblacional y nivel individual respectivamente, mientras que <span class="math inline">\(\mathbf{X}\)</span>, <span class="math inline">\(\mathbf{Z}\)</span> son sus correpondientes matrices del diseño.</p>
-<p>El modelo estima que la probabilidad <span class="math inline">\(\theta_i\)</span> de que en cada ensayo se decida pagar la mitad está en función del efecto de la presencia de promesas, así como de los compañeros con cercanía social baja (confederado) y alta (amigo) <span class="math inline">\(\beta\)</span>. También asume que pueden existir diferencias individuales en el desempeño durante la tarea, las cuales son captadas por los parámetros <span class="math inline">\(u\)</span> y constituyen ajustes a los coeficientes poblacionales. Cabe remarcar que el modelo evalúa explícitamente la incertidumbre respecto a <span class="math inline">\(u\)</span>, lo cual es una ventaja con relación a los modelos que asumen que <span class="math inline">\(u\)</span> es parte del término de error.</p>
+<p>El modelo estima que la probabilidad <span class="math inline">\(\theta_i\)</span> de que en cada ensayo se decida pagar la mitad está en función del efecto de la presencia de promesas <span class="math inline">\(\beta^{promise}\)</span>, así como de los compañeros con cercanía social baja <span class="math inline">\(\beta^{confederate}\)</span> y alta <span class="math inline">\(\beta^{friend}\)</span>. También asume que pueden existir diferencias individuales en el desempeño durante la tarea, las cuales son captadas por los parámetros <span class="math inline">\(u\)</span> y constituyen ajustes a los coeficientes poblacionales. Cabe remarcar que el modelo evalúa explícitamente la incertidumbre respecto a <span class="math inline">\(u\)</span>, lo cual es una ventaja con relación a los modelos que asumen que <span class="math inline">\(u\)</span> es parte del término de error.</p>
 <p>El modelo se programó en R por medio del paquete <strong>brms</strong>, que realiza la inferencia mediante el muestreo por Markov chain Monte Carlo a través de <strong>Stan</strong>. Las distribuciones posteriores de todos los parámetros fueron aproximadas con cuatro cadenas de 2000 iteraciones cada una, las primeras 1000 iteraciones de cada cadena fueron descartadas (periodo de calentamiento), para un total de 4000 muestras post-calentamiento. La convergencia del modelo fue evaluada a través de la inspección visual de las cadenas y el cálculo del estadístico <span class="math inline">\(\hat{R}\)</span>, que para todos los parámetros fue de 1, lo que se interpreta como convergencia.</p>
 <hr />
 </div>
@@ -222,7 +222,7 @@ text-align: justify}
 <p><span class="math display">\[
 \begin{aligned}
 &amp;\mu \sim \mathrm{Uniform}(0, 1)\\
-&amp;\lambda \sim \mathrm{Uniform}(40, 800)\\
+&amp;\lambda \sim \mathrm{Uniform}(4, 100)\\
 &amp;\theta_{i,j} \sim \mathrm{Beta}(\mu\lambda, (1 - \mu)\lambda)\\
 &amp;d_{i,j} \sim \mathrm{Bernoulli}(\theta_{i,j}) 
 \end{aligned}
@@ -233,8 +233,7 @@ text-align: justify}
 \begin{aligned} 
 &amp;\mu_1 \sim \mathrm{Uniform}(0, 1)\\
 &amp;\mu_2 \sim \mathrm{Uniform}(\mu_1, 1)\\
-&amp;\lambda_1 \sim \mathrm{Uniform}(40, 800)\\
-&amp;\lambda_2 \sim \mathrm{Uniform}(4, 100)\\
+&amp;\lambda_{1:2} \sim \mathrm{Uniform}(4, 100)\\
 &amp;z_i \sim \mathrm{Bernoulli}(\phi)\\
 &amp;\theta_{i,j} \sim \Bigg\{
   \begin{array} {lr} 
@@ -245,7 +244,7 @@ text-align: justify}
 &amp;\phi \sim \mathrm{Beta}(5, 5)
 \end{aligned}
 \]</span></p>
-<p>Los modelos de 1 y 2 mezclas, se programaron en R mediante el paquete <strong>rjags</strong>, que realiza la inferencia mediante el muestreo por Markov chain Monte Carlo a través de <strong>JAGS</strong>. Las distribuciones posteriores de todos los parámetros fueron aproximadas con tres cadenas de 13000 iteraciones cada una, se descartaron las primeras 3000 de cada cadena como periodo de calentamiento, para un total de 30000 muestras post-calentamiento. La convergencia del modelo fue evaluada a través del cálculo del estadístico <span class="math inline">\(\hat{R}\)</span>, que varió de 1 a 1.01 para todos los parámetros lo que indica convergencia, a excepción de <span class="math inline">\(\mu_1\)</span> que obtuvo una estimación de 1.21.</p>
+<p>Los modelos de 1 y 2 mezclas, se programaron en R mediante el paquete <strong>rjags</strong>, que realiza la inferencia mediante el muestreo por Markov chain Monte Carlo a través de <strong>JAGS</strong>. Las distribuciones posteriores de todos los parámetros fueron aproximadas con tres cadenas de 26000 iteraciones cada una, se descartaron las primeras 6000 de cada cadena como periodo de calentamiento, para un total de 60000 muestras post-calentamiento. La convergencia del modelo fue evaluada a través de la inspección visual de las cadenas y el cálculo del estadístico <span class="math inline">\(\hat{R}\)</span>, que varió de 1 a 1.05 para todos los parámetros lo que indica convergencia.</p>
 <hr />
 </div>
 <div id="modelamiento-de-los-tiempos-de-reaccion" class="section level3">
@@ -260,7 +259,7 @@ text-align: justify}
 </div>
 <div id="comparacion-de-modelos" class="section level3">
 <h3>Comparación de modelos</h3>
-<p>EL modelo de una y dos mezclas se compararon por medio del criterio de información DIC (deviance information criteria), en el que los puntajes bajos indican mejores modelos. Aunque el puntaje DIC favorece al modelo de una mezcla, dado que la diferencia entre los puntajes DIC de los modelos es mínima y las estrategias conductuales entre los grupos son cualitativamente distintas, consideramos al modelo de dos mezclas una representación informativa de los datos.</p>
+<p>El modelo de una y dos mezclas se compararon por medio del criterio de información DIC (deviance information criteria), en el que los puntajes bajos indican mejores modelos. La estimación de la diferencia entre el modelo de 1 y 2 mezclas favorece al modelo de dos mezclas (<span class="math inline">\(\mathrm{Difference}= 1.21\)</span>, <span class="math inline">\(\mathrm{SE}= 3.49\)</span>).</p>
 </div>
 </div>
 

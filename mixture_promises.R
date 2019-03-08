@@ -43,7 +43,7 @@ alpha <- mu * lambda
 beta <- (1 - mu) * lambda
 
 mu ~ dunif(0, 1)
-lambda ~ dunif(40, 800)
+lambda ~ dunif(4, 100)
 
 # likelihood
 
@@ -73,7 +73,7 @@ update(m_1, 5e3)
 # Sampling from posterior m_1 ---------------------------------------------
 post_m_1 <- coda.samples(m_1,
                          variable.names = params,
-                         n.iter = 30e3)
+                         n.iter = 20e3)
 
 
 # Summary m_1 -------------------------------------------------------------
