@@ -73,3 +73,20 @@ ggsave("fig1.jpeg",
 
 
 
+# Figure 3 ----------------------------------------------------------------
+
+g5 <- g5 + labs(tag = "A", x = "Estimate", y = "") +
+  theme(axis.text.y = element_text(size = 8))
+          
+
+g8 <- g8 + labs(tag = "B")
+
+fig3 <- grid.arrange(g5, g8, ncol = 2)
+
+ggsave("fig3.jpeg",
+       path = "~/Documents/R/github_Said/social_closeness/Manuscript/figures/",
+       plot = fig3,
+       device = "jpeg",
+       width = 10,
+       height = 5,
+       units = "in")

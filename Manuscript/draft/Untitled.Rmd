@@ -115,6 +115,8 @@ Los modelos de una y dos mezclas se compararon por medio del criterio de informa
 
 ## Resultados
 
+### Descriptivos
+
 Se muestra en la figura 1, la frecuencia de veces en que los participantes pagaron la mitad, así como la frecuencia de promesas que fueron seleccionadas. En la figura 2, se muestra la proporción de pagos realizados dependiendo de cada pareja y de la condición de promesas.
 
 
@@ -134,6 +136,69 @@ knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_close
 ```
 
 
+---
+
+### Resultados: modelo jerárquico
+
+En la tabla 1, se muestran los efectos poblacionales del modelo bayesiano jerárquico para la tasa de pago. Se presentan las estimaciones de cada coeficiente del modelo en escala *logit*, su error estándar y los intervalos de credibilidad bayesianos del 95%. Los cuales indican los límites inferiores y superiores de las estimaciones entre los que se ubica el 95 % de probabilidad. 
+
+
+<caption>Table 1. Population-Level Effects of Task</caption>
+|Term                |Estimate|  SE|L-95% CI|U-95% CI|
+|:-------------------|-------:|---:|-------:|-------:|
+|$\beta^0$           |   -1.62|0.40|   -2.31|   -1.02|
+|$\beta^{promise}$   |    1.27|0.40|    0.64|    1.92|
+|$\beta^{confederate}$ |    2.01|0.55|    1.20|    2.97|
+|$\beta^{friend}$    |    4.15|0.77|    3.07|    5.49|
+
+---
+
+
+La figura 3A muestra la incertidumbre con respecto a la estimación de los coeficientes, la linea central indica la mediana de la distribución y el área sombreada el intervalo del 50 % de probabilidad. Para visualizar el efecto conjunto de las condiciones experimentales en la probabilidad de pagar la mitad, se realizó su combinación lineal para obtener un sólo predictor ($\mathrm{linpred_i}$), se le aplicó la función ligadora inversa *logit* y se transformó su output en probabilidades por medio de la función logistica $1 / (1 + \exp(-\mathrm{linpred}_i))$. 
+
+La figura 3B muestra la probabilidad de pagar la mitad, como función de la combinación lineal de las condiciones experimentales, las lineas delgadas muestran la incertidumbre en la predicción con una muestra aleatoria de tamaño 100 de las distribuciones posteriores de los parámetros poblacionales. La linea gruesa representa la media de las distribuciones posteriores de los parámetros poblacionales. 
+
+
+```{r fig3, fig.cap='Fig. 3 Estimates with uncertainty and linear predictor'}
+
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/fig3.jpeg")
+
+
+```
+
+
+----
+
+En un procedimiento similar al descrito para la figura 3B, la figura 4 representa el efecto conjunto de las condiciones experimentales en la probabilidad de pagar la mitad para cada sujeto. Ya que el modelo jerárquico asume que las diferencias individuales se pueden modelar realizando un ajuste $u$ a los coeficientes poblacionales $\beta$, se obtuvieron 50 muestras aleatorias de las distribuciones posteriores de los parámetros $u$ para cada sujeto, se realizó el ajuste al modelo poblacional y se presenta en lineas delgadas la incertidumbre en la predicción individual. 
+
+
+```{r fig4, fig.cap='Fig. 4 Estimates with uncertainty by subject'}
+
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g9.jpeg")
+
+
+```
+
+---
+
+### Resultados: modelo de mezclas latentes
 
 
 
+
+
+
+---
+
+
+### Resultados: tiempo de reacción
+
+
+
+
+
+
+---
+
+
+### Resultados: contraste de hipótesis y comparación de modelos
