@@ -115,45 +115,23 @@ Los modelos de una y dos mezclas se compararon por medio del criterio de informa
 
 ## Resultados
 
-Se muestran en las figuras 1, 2, 3 y 4 la frecuencia de veces en que los participantes pagaron la mitad, la proporción de pagos que realizaron a cada pareja, la proporción de pagos por pareja y condición de promesas, así como la frecuencia de promesas que fueron seleccionadas por los participantes, respectivamente.
+Se muestra en la figura 1, la frecuencia de veces en que los participantes pagaron la mitad, así como la frecuencia de promesas que fueron seleccionadas. En la figura 2, se muestra la proporción de pagos realizados dependiendo de cada pareja y de la condición de promesas.
 
 
-```{r g1, fig.cap='Fig. 1 Difference between groups in frecuencies of pay back'}
+```{r fig1, fig.cap='Fig. 1 Frecuencies of paying and Promise choice'}
 
-knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g1.jpeg")
-
-```
-
----
-
-```{r g2, fig.cap='Fig.2 Rates by partner'}
-
-knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g2.jpeg")
-
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/fig1.jpeg")
 
 ```
 
 ---
 
-```{r g3, fig.cap='Fig. 3 Rates by partners and promise condition'}
+```{r fig2, fig.cap='Fig. 2 Rates by partners and promise condition'}
 
-knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g3.jpeg")
-
-
-```
-
----
-
-```{r g4, fig.cap='Fig. 4 Frecuencies of promises'}
-
-
-knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g4.jpeg")
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/fig2.jpeg")
 
 
 ```
-
-
-
 
 
 

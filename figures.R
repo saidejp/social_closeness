@@ -7,7 +7,8 @@
 
 library(pacman)
 p_load(magrittr, dplyr, forcats, tidyr, modelr, tidybayes,
-       ggstance, ggridges, rstan, brms, tidyverse, bayesplot, rjags)
+       ggstance, ggridges, rstan, brms, tidyverse, bayesplot, rjags, 
+       gridExtra, ggthemes)
 
 
 
@@ -53,5 +54,22 @@ ggsave("g16.jpeg",
        width = 10,
        height = 7,
        units = "in")
+
+
+# Figure 1 ----------------------------------------------------------------
+
+g1 <- g1 + labs(tag = "A", x = "") 
+g4 <- g4 + labs(tag = "B")
+
+g1_g4 <- grid.arrange(g1, g4, ncol = 2)
+
+ggsave("fig1.jpeg",
+       path = "~/Documents/R/github_Said/social_closeness/Manuscript/figures/",
+       plot = g1_g4,
+       device = "jpeg",
+       width = 10,
+       height = 5,
+       units = "in")
+
 
 
