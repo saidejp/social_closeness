@@ -90,3 +90,38 @@ ggsave("fig3.jpeg",
        width = 10,
        height = 5,
        units = "in")
+
+
+
+# Figure 5 ----------------------------------------------------------------
+
+bayesplot_theme_set(theme_bw(base_size = 15) +
+                    theme(panel.grid.major = element_line(linetype = "blank"), 
+                          panel.grid.minor = element_line(linetype = "blank")))
+
+f_partner <- pp_check(m, 
+                      type = "bars_grouped", 
+                      nsamples = 50, 
+                      group = "partner") +
+  scale_x_continuous(breaks = c(0, 1), 
+                     labels = c("No", "Yes"),
+                     name = "Pay back") 
+
+
+f_promise <- pp_check(m, 
+                      type = "bars_grouped", 
+                      nsamples = 50, 
+                      group = "promise") + 
+  scale_x_continuous(breaks = c(0, 1), 
+                     labels = c("No", "Yes"),
+                     name = "Pay back")
+
+
+ggsave("fig5.jpeg",
+       path = "~/Documents/R/github_Said/social_closeness/Manuscript/figures/",
+       plot = f_partner,
+       device = "jpeg",
+       width = 10,
+       height = 5,
+       units = "in")
+

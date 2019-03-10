@@ -95,7 +95,7 @@ Los modelos de 1 y 2 mezclas, se programaron en R mediante el paquete **rjags**,
 
 Un hallazgo constante en la investigación sobre engaño y deshonestidad, es la diferencia en los tiempos de reacción entre quienes toman decisiones *deshonestas* vs. decisiones *honestas*, en general, se han encontrado latencias breves en personas *deshonestas* en comparación con las de las personas *honestas*. 
 
-Se estimaron las medias poblacionales del grupo de deshonestos y honestos mediante un modelo bayesiano jerárquico que asumía que el tiempo de reacción proviene de una distribución $rt_i \sim \mathrm{Half-Normal}(0, 5)$ (dado que no puede haber tiempos de reacción negativos), con parámetros $\mu_{\mathrm{Dishonest}}$ y $\mu_{\mathrm{Honest}}$ y desviación estándar común $\sigma$. 
+Se estimaron las medias poblacionales del grupo de deshonestos y honestos mediante un modelo bayesiano jerárquico que asumía que el tiempo de reacción proviene de una distribución $rt_i \sim \mathrm{Half-Normal}(0, 5)$ (dado que no puede haber tiempos de reacción negativos), con parámetros $\mu_{Dishonest}$ y $\mu_{Honest}$ y desviación estándar común $\sigma$. 
 
 Asimismo, se modeló la variabilidad intrasujeto en los tiempos de reacción por medio de interceptos variantes por participante. El modelo se ajustó en R por medio de **brms** y **Stan** en condiciones iguales a las descritas anteriormente y con resultados adecuados de convergencia para todos los parámetros, $\hat{R} = 1$.   
 
