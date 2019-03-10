@@ -125,3 +125,19 @@ ggsave("fig5.jpeg",
        height = 5,
        units = "in")
 
+
+# Figure 6 ----------------------------------------------------------------
+
+thetas <- thetas + labs(tag = "A")
+g10 <- g10 + labs(tag = "B")
+
+fig6 <- gridExtra::grid.arrange(thetas, g10, ncol = 2)
+
+
+ggsave("fig6.jpeg",
+       path = "~/Documents/R/github_Said/social_closeness/Manuscript/figures/",
+       plot = fig6,
+       device = "jpeg",
+       width = 10,
+       height = 5,
+       units = "in")

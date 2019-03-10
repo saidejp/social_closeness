@@ -186,11 +186,11 @@ x_intercepts <- chains_m_2 %>%
              size = 1) +
   scale_color_manual(values = c("#053778", "#A4CAE3")) +
   scale_fill_manual(values = c("#053778", "#A4CAE3")) +
-  labs(x = c("Estimate" = expression(theta)), 
+  labs(x = expression(mu), 
        y = "Count",
        col = NULL,
        fill = NULL) +
-  theme_bw(base_size = 15) +
+  theme_bw(base_size = 12) +
   theme(panel.grid = element_line(linetype = "blank"),
         legend.position = "bottom"))
 

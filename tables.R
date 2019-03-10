@@ -19,3 +19,23 @@ knitr::kable(m_tidy,
              digits = 2,
              col.names = c("Term", "Estimate", "SE", "L-95% CI", "U-95% CI"))
 
+
+
+# Tidying mixture model output --------------------------------------------
+
+load("mixture_promises.RData")
+
+m_2_tidy <- ggmcmc::ggs(post_m_2) %>% 
+  filter(Parameter %in% c("lambda1", "lambda2", "mu1", "mu2", "phi"))
+
+
+m_2_tidy %>% 
+  group_by(Parameter) %>% 
+  summarise(mean = mean(value),
+            sd = sd(value),
+            l_95 = quantile(value, .025),
+            u_95 = quantile(value, .975)) %>% 
+  knitr::kable("markdown",
+               padding = 0, 
+               digits = 2,
+               col.names = c("Parameter", "Mean", "SD", "L-95% CI", "U-95% CI")) 
