@@ -108,7 +108,7 @@ prior <- c(set_prior("normal(0, 5)", class = "b"),
 
 # Hypothesis testing ------------------------------------------------------
 
-hypothesis(m, "promisePromise > 0", class = "b")
+hypothesis(m, "promisePromise > 0", class = "b") 
 hypothesis(m, "partnerFriend - partnerConfederate > 0", class = "b") 
 
 

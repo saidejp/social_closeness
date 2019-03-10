@@ -141,3 +141,21 @@ ggsave("fig6.jpeg",
        width = 10,
        height = 5,
        units = "in")
+
+
+
+# Figure 8 ----------------------------------------------------------------
+
+g13 <- g13 + labs(tag = "A")
+g15 <- g15 + labs(tag = "B")
+
+
+fig8 <- gridExtra::grid.arrange(g13, g15, ncol = 2)
+
+ggsave("fig8.jpeg",
+       path = "~/Documents/R/github_Said/social_closeness/Manuscript/figures/",
+       plot = fig8,
+       device = "jpeg",
+       width = 10,
+       height = 5,
+       units = "in")

@@ -128,7 +128,7 @@ knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_close
 
 ---
 
-```{r fig2, fig.cap='Fig. 2 Rates by partners and promise condition'}
+```{r fig2, fig.cap='Fig. 2 Rates by partners and promise condition', fig.height=10, fig.width=5}
 
 knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/fig2.jpeg")
 
@@ -223,7 +223,7 @@ knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_close
 ---
 
 
-```{r fig7, fig.cap='Fig. 7 Payment frecuency by latent group and promise condition'}
+```{r fig7, fig.cap='Fig. 7 Payment frecuency by latent group and promise condition', fig.height=10, fig.width=5}
 
 knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/g12_b.jpeg")
 
@@ -235,12 +235,48 @@ knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_close
 
 ### Resultados: tiempo de reacción
 
+En la tabla 3 se presentan las estimaciones poblacionales del modelo bayesiano de los tiempos de reacción, se resumen las distribuciones posteriores de cada parámetro, incluyendo la estimación de su media, su error estándar y los intervalos de credibilidad bayesianos del 95%. En la figura 8A se muestran con puntos los tiempos de reacción en segundos para cada decisión realizada de acuerdo con cada subgrupo, se agregó a cada grupo un kernel de densidad simétrico para representar la cantidad de casos acumulados a lo largo de los diferentes valores del tiempo de reacción. 
+
+En la figura 8B se presenta la diferencia de las estimaciones posteriores, el punto con dispersión representa el estimador puntual de la diferencia entre las subpoblaciones y el intervalo de credibilidad bayesiano del 95%. El histograma representa la distribución posterior de la diferencia entre los parámetros de las subpoblaciones. 
 
 
-
+<caption>Table 3. Parameters estimates of reaction time model</caption>
+|Term              | Estimate|   SE| L-95% CI| U-95% CI|
+|:-----------------|--------:|----:|--------:|--------:|
+|$\mu_{Dishonest}$ |     2.93| 0.23|     2.55|     3.31|
+|$\mu_{Honest}$    |     3.06| 0.22|     2.69|     3.42|
+|$\mu_{difference}$|    -0.13| 0.32|    -0.77|     0.52|  
+|$\sigma$          |     1.23| 0.05|     1.15|     1.31|
+|$\sigma_{subject}$|     0.65| 0.14|     0.45|     0.89|
 
 
 ---
 
+```{r fig8, fig.cap='Fig. 8 Differences in reaction time by latent group'}
+
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/fig8.jpeg")
+
+
+```
+
+
+---
 
 ### Resultados: contraste de hipótesis y comparación de modelos
+
+
+En la tabla 4 se muestran las hipótesis contrastadas, las estimaciones, los errores estándar y el factor de Bayes (BF) para cada una. Se interpretan los BF's como evidencia en favor de la hipótesis alterna $BF_{10}$ de acuerdo a la clasificación de Jeffreys (1961). La hipótesis uno de si la condición de promesas tiene un efecto superior a 0, se interpreta como "evidencia extrema" a su favor, la hipótesis de si el efecto en la tasa de pago es superior para el amigo que para el confederado también se interpreta como "evidencia superior" a su favor, la hipótesis sobre si la diferencia entre los tiempos de reacción entre honestos y deshonestos es menor a cero, se interpreta como "evidencia anecdótica" a su favor. 
+
+Dado que el intervalo de credibilidad bayesiano para la estimación de la diferencia entre los tiempos de reacción de las subpoblaciones incluye el cero, se decidió evaluar la hipótesis de si la diferencia es igual a 0, el BF correspondiente se interpreta como "evidencia fuerte" en favor a la diferencia igual a 0. Finalmente, se comparó el DIC para los modelos de una ($DIC_{1}$) y dos ($DIC_{2}$) mezclas, cuya diferencia apoya al modelo de dos mezclas latentes. 
+
+
+<caption>Table 4. Hypothesis testing and model comparison</caption>
+|Hypothesis                                    | Estimate|   SE|$BF_{10}$| 
+|:---------------------------------------------|--------:|----:|--------:|
+|$\beta^{promise} > 0$                         |     1.27| 0.40|      499|    
+|$\beta^{friend} - \beta^{confederate} > 0$    |     2.14| 0.77|   665.67|    
+|$\mu_{Dishonest} - \mu_{Honest} < 0$          |    -0.13| 0.32|     1.96|   
+|$\mu_{Dishonest} - \mu_{Honest} = 0$          |    -0.13| 0.32|    20.36|  
+|$DIC_{1} - DIC_{2}$                           |    1.21 | 3.49|      -  |  
+
+

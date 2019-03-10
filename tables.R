@@ -39,3 +39,13 @@ m_2_tidy %>%
                padding = 0, 
                digits = 2,
                col.names = c("Parameter", "Mean", "SD", "L-95% CI", "U-95% CI")) 
+
+
+# Tidying reaction time model output --------------------------------------
+
+m_rt_tidy <- broom::tidy(m_rt) %>%  slice(1:4)
+
+knitr::kable(m_rt_tidy,
+             format = "markdown",
+             digits = 2,
+             col.names = c("Term", "Estimate", "SE", "L-95% CI", "U-95% CI"))
