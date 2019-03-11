@@ -271,12 +271,12 @@ Dado que el intervalo de credibilidad bayesiano para la estimación de la difere
 
 
 <caption>Table 4. Hypothesis testing and model comparison</caption>
-|Hypothesis                                    | Estimate|   SE|$BF_{10}$| 
+|Hypothesis                                    | Estimate|   SE|BF$_{10}$| 
 |:---------------------------------------------|--------:|----:|--------:|
 |$\beta^{promise} > 0$                         |     1.27| 0.40|      499|    
 |$\beta^{friend} - \beta^{confederate} > 0$    |     2.14| 0.77|   665.67|    
 |$\mu_{Dishonest} - \mu_{Honest} < 0$          |    -0.13| 0.32|     1.96|   
 |$\mu_{Dishonest} - \mu_{Honest} = 0$          |    -0.13| 0.32|    20.36|  
-|$DIC_{1} - DIC_{2}$                           |    1.21 | 3.49|      -  |  
+|$DIC_{1} - DIC_{2}$                           |     1.21| 3.49|      -  |  
 
 
