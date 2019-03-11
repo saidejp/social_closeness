@@ -23,6 +23,19 @@ knitr::opts_chunk$set(echo = FALSE,
                       dpi = 300)
 ```
 
+## Participantes
+
+Se incluyeron 20 personas voluntarias (18 mujeres), en un rango de edad de ..., su nivel educativo mínimo fue licenciatura, se trató de estudiantes de estado civil soltero. Todos los participantes reportaron no tener historial médico de tipo neurológico ni psiquiátrico al momento del experimento. Los participantes acudieron con un amigo considerado _cercano_ por ellos mismos, quien cumplía las siguientes características: era una persona del mismo sexo que el participante, no tenía un vínculo familiar y no se trataba de una persona con una relación de tipo sentimental y/o sexual. 
+
+
+---
+
+## Materiales y Procedimiento 
+
+
+
+---
+
 ## Análisis descriptivo de datos
 
 Se obtuvieron las proporciones de las decisiones pagar o no pagar la mitad, así como las promesas realizadas, posteriormente se calcularon las variaciones en las proporciones de acuerdo a los compañeros de juego y la condición de presencia o ausencia de promesas.
@@ -278,5 +291,8 @@ Dado que el intervalo de credibilidad bayesiano para la estimación de la difere
 |$\mu_{Dishonest} - \mu_{Honest} < 0$          |    -0.13| 0.32|     1.96|   
 |$\mu_{Dishonest} - \mu_{Honest} = 0$          |    -0.13| 0.32|    20.36|  
 |$DIC_{1} - DIC_{2}$                           |     1.21| 3.49|      -  |  
+
+---
+
 
 
