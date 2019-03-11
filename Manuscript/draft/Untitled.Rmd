@@ -32,6 +32,13 @@ Se incluyeron 20 personas voluntarias (18 mujeres), en un rango de edad de ..., 
 
 ## Materiales y Procedimiento 
 
+Se trata de una adaptación de la tarea de confianza y promesas presentada por Baumgartner (2009), que consiste en 24 ensayos entre dos jugadores A y B, el jugador A tiene originalmente 0 pesos mexicanos y el jugador B tiene 2 pesos, al jugador B se le presenta la oportunidad de invertir su dinero al jugador A o conservarlo, si invierte su dinero se multiplica por 5 pesos, de modo que el jugador A recibe 10 pesos. Finalmente, el jugador A toma la decisión de pagar la mitad al jugador B o quedarse los 10 pesos. La estructura descrita se repite en 24 ensayos, sin embargo, en 4 de los ensayos el jugador A puede enviar una promesa a B, las promesas son que siempre, casi siempre, algunas veces o nunca, pagar la mitad
+
+
+
+
+
+
 
 
 ---
