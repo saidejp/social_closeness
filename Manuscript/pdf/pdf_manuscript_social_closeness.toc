@@ -1,0 +1,15 @@
+\contentsline {subsection}{Participantes}{1}{section*.2}
+\contentsline {subsection}{Materiales y Procedimiento}{1}{section*.3}
+\contentsline {subsection}{Modelamiento Bayesiano}{2}{section*.4}
+\contentsline {subsubsection}{An\IeC {\'a}lisis descriptivo}{2}{section*.5}
+\contentsline {subsubsection}{Modelo Jer\IeC {\'a}rquico}{2}{section*.6}
+\contentsline {subsubsection}{Modelamiento de mezclas latentes}{3}{section*.7}
+\contentsline {subsubsection}{Modelamiento de los tiempos de reacci\IeC {\'o}n}{4}{section*.8}
+\contentsline {subsubsection}{Contraste de hip\IeC {\'o}tesis}{4}{section*.9}
+\contentsline {subsubsection}{Comparaci\IeC {\'o}n de modelos}{4}{section*.10}
+\contentsline {subsection}{Resultados}{4}{section*.11}
+\contentsline {subsubsection}{Descriptivos}{4}{section*.12}
+\contentsline {subsubsection}{Resultados: modelo jer\IeC {\'a}rquico}{4}{section*.13}
+\contentsline {subsubsection}{Resultados: modelo de mezclas latentes}{7}{section*.14}
+\contentsline {subsubsection}{Resultados: tiempo de reacci\IeC {\'o}n}{8}{section*.15}
+\contentsline {subsubsection}{Resultados: contraste de hip\IeC {\'o}tesis y comparaci\IeC {\'o}n de modelos}{9}{section*.16}

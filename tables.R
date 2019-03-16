@@ -14,8 +14,9 @@ m_tidy <- broom::tidy(m) %>%
   slice(1:4)
 
 knitr::kable(m_tidy, 
-             format = "markdown", 
-             padding = 0, 
+             format = "latex",
+             longtable = TRUE,
+             #padding = 0, 
              digits = 2,
              col.names = c("Term", "Estimate", "SE", "L-95% CI", "U-95% CI"))
 
@@ -48,4 +49,7 @@ m_rt_tidy <- broom::tidy(m_rt) %>%  slice(1:4)
 knitr::kable(m_rt_tidy,
              format = "markdown",
              digits = 2,
+             longtble = TRUE,
              col.names = c("Term", "Estimate", "SE", "L-95% CI", "U-95% CI"))
+
+

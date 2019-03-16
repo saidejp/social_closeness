@@ -107,8 +107,8 @@ $$
 &z_i \sim \mathrm{Bernoulli}(\phi)\\
 &\theta_{i,j} \sim \Bigg\{
   \begin{array} {lr} 
-    \mathrm{Beta}(\mu_1\lambda_1, (1 - \mu_1)\lambda_1) & \mbox{if} & z_i = 0 \\
-    \mathrm{Beta}(\mu_2\lambda_2, (1 - \mu_2)\lambda_2) & \mbox{if} & z_i = 1
+    \mathrm{Beta}(\mu_1\lambda_1, (1 - \mu_1)\lambda_1) \quad \mbox{if} \quad z_i = 0 \\
+    \mathrm{Beta}(\mu_2\lambda_2, (1 - \mu_2)\lambda_2) \quad \mbox{if} \quad z_i = 1
   \end{array} \\
 &d_{i,j} \sim \mathrm{Bernoulli}(\theta_{i,j})\\
 &\phi \sim \mathrm{Beta}(5, 5)
