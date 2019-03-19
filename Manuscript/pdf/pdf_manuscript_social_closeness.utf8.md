@@ -226,7 +226,7 @@ En la figura 6, se obtuvieron 50 muestras aleatorias de la distribución posteri
 
 ### Resultados: modelo de mezclas latentes
 
-El modelo de 2-mezclas latentes identificó dos subpoblaciones de tamaño 10; en la tabla 2 se muestran los resúmenes de las distribuciones posteriores de los parámetros de ambas subpoblaciones y el parámetro de la mezcla $\phi$. Una de las subpoblaciones tiene alta probabilidad de pagar $\mu_1$, la que denominamos __honestos__ y la otra subpoblación tiene una probabilidad de pagar menor por lo que fue denominada __deshonestos__ $\mu_2$. En la figura 7A se muestran las distribuciones posteriores de las dos $\mu$'s, correspondientes a la probabilidad de pagar de las dos subpoblaciones latentes. Y en la figura 7B se presentan las decisiones de dos sujetos extraídos de las dos subpoblaciones, el sujeto 5 de la subpoblación de __deshonestos__ y el 17 de la subpoblación de __honestos__. Se puede observar que el sujeto 5 decide no pagar en la mayoría de los ensayos, independientemente de la condición de promesas y cercanía social, mientras que el sujeto 17 sólo decidió no pagar en tres ocasiones cuando su compañero fue la computadora. En la figura 8 se muestra la frecuencia de las decisiones de los dos grupos latentes, dependiendo de si estaban en la condición con o sin promesa. 
+El modelo de 2-mezclas latentes identificó dos subpoblaciones de tamaño 10; en la tabla 2 se muestran los resúmenes de las distribuciones posteriores de los parámetros de ambas subpoblaciones y el parámetro de la mezcla $\phi$. Una de las subpoblaciones tiene alta probabilidad de pagar $\mu_1$, la que denominamos __honestos__ y la otra subpoblación tiene una probabilidad de pagar menor por lo que fue denominada __deshonestos__ $\mu_2$. En la figura 7A se muestran las distribuciones posteriores de las dos $\mu$'s, correspondientes a la probabilidad de pagar de las dos subpoblaciones latentes. Y en la figura 7B se presentan las decisiones de dos sujetos extraídos de las dos subpoblaciones, el sujeto 5 de la subpoblación de __deshonestos__ y el 17 de la subpoblación de __honestos__. Se puede observar que el sujeto 5 decide no pagar en la mayoría de los ensayos, independientemente de la condición de promesas y cercanía social, mientras que el sujeto 17 sólo decidió no pagar en tres ocasiones cuando su compañero fue la computadora. 
 
 
 <caption>Table 2. Parameters of 2-Mixture Model</caption>
@@ -252,6 +252,8 @@ El modelo de 2-mezclas latentes identificó dos subpoblaciones de tamaño 10; en
 
 
 
+En la figura 8 se muestra la frecuencia de las decisiones de los dos grupos latentes, dependiendo de si estaban en la condición con o sin promesa. 
+
 
 \begin{figure}
 
@@ -263,17 +265,11 @@ El modelo de 2-mezclas latentes identificó dos subpoblaciones de tamaño 10; en
 \end{figure}
 
 
-
-
 ### Resultados: tiempo de reacción
 
 En la tabla 3 se presentan las estimaciones poblacionales del modelo bayesiano de los tiempos de reacción, se resumen las distribuciones posteriores de cada parámetro, incluyendo la estimación de su media, su error estándar y los intervalos de credibilidad bayesianos del 95%. En la figura 9A se muestran con puntos los tiempos de reacción en segundos para cada decisión realizada de acuerdo con cada subgrupo, se agregó a cada grupo un kernel de densidad simétrico para representar la cantidad de casos acumulados a lo largo de los diferentes valores del tiempo de reacción. 
 
 En la figura 9B se presenta la diferencia de las estimaciones posteriores, el punto con dispersión representa el estimador puntual de la diferencia entre las subpoblaciones y el intervalo de credibilidad bayesiano del 95%. El histograma representa la distribución posterior de la diferencia entre los parámetros de las subpoblaciones. 
-
-
-
-
 
 <caption>Table 3. Parameters estimates of reaction time model</caption>
 |Term              | Estimate|   SE| L-95% CI| U-95% CI|
@@ -315,4 +311,8 @@ Dado que el intervalo de credibilidad bayesiano para la estimación de la difere
 |$\mu_{Dishonest} - \mu_{Honest} < 0$          |    -0.13| 0.32|     1.96|   
 |$\mu_{Dishonest} - \mu_{Honest} = 0$          |    -0.13| 0.32|    20.36|  
 |$DIC_{1} - DIC_{2}$                           |     1.21| 3.49|      -  |  
+
+
+
+
 

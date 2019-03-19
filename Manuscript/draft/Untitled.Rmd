@@ -3,8 +3,10 @@ title: "Método"
 author: "Said E. Jiménez"
 date: "6 de marzo de 2019"
 output:
-  html_document:
+  html_document: 
     theme: cerulean
+bibliography: judgement.bib
+csl: apa.csl
 ---
 
 <style>
@@ -22,6 +24,12 @@ knitr::opts_chunk$set(echo = FALSE,
                       fig.align = 'center',
                       dpi = 300)
 ```
+
+## Introducción
+
+Desde la infidelidad afectiva hasta los fraudes financieros, la deshonestidad es ubicua en la interacciones humanas. Para el estudio de este fenómeno, se han utilizado frecuentemente: cuestionarios de autorreporte [@Halevy2014], encuestas [@Serota2010] o narraciones autobiográficas sobre mentiras que los participantes hayan dicho (o bien, de las que hayan sido victimas) [@DePaulo2004]. Sin embargo, existe la preocupación de que los resultados derivados de estos estudios incluyan sesgos por deseabilidad social, o que tengan poco poder predictivo [@Baumgartner2013]. De manera paralela,
+múltiples estudios han abordado la deshonestidad en el laboratorio, en donde ésta puede surgir de manera genuina y generar consecuencias específicas para el participante o para otros [@Gneezy2005; @Gneezy2013; @Fischbacher2013a]. 
+
 
 ## Participantes
 
@@ -313,6 +321,9 @@ Dado que el intervalo de credibilidad bayesiano para la estimación de la difere
 |$DIC_{1} - DIC_{2}$                           |     1.21| 3.49|      -  |  
 
 ---
+
+## Referencias
+
 
 
 
