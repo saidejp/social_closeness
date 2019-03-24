@@ -1,5 +1,5 @@
 ---
-title: "Modelamiento Bayesiano Jerárquico de la (Des)honestidad: el Efecto de la Cercanía Social"
+title: "Modelamiento Bayesiano de la (Des)honestidad: el Efecto de la Cercanía Social"
 author: "Said E. Jiménez"
 date: "6 de marzo de 2019"
 output:
@@ -30,7 +30,12 @@ knitr::opts_chunk$set(echo = FALSE,
 Desde la infidelidad afectiva hasta los fraudes financieros, la deshonestidad es ubicua en la interacciones humanas. Para el estudio de este fenómeno, se han utilizado frecuentemente: cuestionarios de autorreporte [@Halevy2014], encuestas [@Serota2010] o narraciones autobiográficas sobre mentiras que los participantes hayan dicho (o bien, de las que hayan sido victimas) [@DePaulo2004]. Sin embargo, existe la preocupación de que los resultados derivados de estos estudios incluyan sesgos por deseabilidad social, o que tengan poco poder predictivo [@Baumgartner2013]. Para contrarrestar dichas críticas, múltiples estudios han abordado la deshonestidad en el laboratorio, en donde ésta puede surgir de manera genuina y generar consecuencias específicas para el participante o para otros [@Gneezy2005; @Gneezy2013; @Fischbacher2013a].
 
 
-Un ejemplo de los experimentos sobre deshonestidad son los estudios en los que los participantes realizan promesas sobre su comportamiento (e.g. si inviertes tu dinero en mí te retribuiré después); y posteriormente tienen la posibilidad de cumplir o romper sus promesas [@Vanberg2008; @Baumgartner2013; @Baumgartner2009; @Charness2006]. En general, se sabe que las personas tienen preferencia por mantener sus promesas _per se_, en este sentido son honestas. Sin embargo, nosotros creemos que el efecto de las promesas puede variar en función de la cercanía hacia la persona a la que se le promete algo, por ejemplo, la cantidad de dinero a la que una persona está dispuesta a renunciar para compartirla con otra, decrece de forma hiperbólica dependiendo de la distancia social percibida [@Rachlin2006; @Vekaria2017]. Asimismo, se sabe que la experiencia subjetiva de compartir tiene mayor valor cuando se trata de alguien cercano que alguien lejano (e.g. un amigo vs. un desconocido) [@Fareri2012]. Así, es justificable pensar que a mayor cercanía social habrá un mayor efecto de las promesas, de modo que la gente será más honesta. Y, aumentará la deshonestidad conforme la cercanía social disminuya.  
+Un ejemplo de los experimentos sobre deshonestidad son los estudios en los que los participantes realizan promesas sobre su comportamiento (e.g. si inviertes tu dinero en mí te retribuiré después); y posteriormente tienen la posibilidad de cumplir o romper sus promesas [@Vanberg2008; @Baumgartner2013; @Baumgartner2009; @Charness2006]. En general, se sabe que las personas tienen preferencia por mantener sus promesas _per se_, en este sentido son honestas. Sin embargo, nosotros creemos que el efecto de las promesas puede variar en función de la cercanía hacia la persona a la que se le promete algo, por ejemplo, la cantidad de dinero a la que una persona está dispuesta a renunciar para compartirla con otra, decrece de forma hiperbólica dependiendo de la distancia social percibida [@Rachlin2006; @Vekaria2017]. Asimismo, se sabe que la experiencia subjetiva de compartir tiene mayor valor cuando se trata de alguien cercano que alguien lejano (e.g. un amigo vs. un desconocido) [@Fareri2012]. Así, es posible pensar que a mayor cercanía social habrá un mayor efecto de las promesas -la gente será más honesta-, y aumentará la deshonestidad conforme la cercanía social disminuya.  
+
+
+
+
+
 
 
 
