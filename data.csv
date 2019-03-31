@@ -1,481 +1,649 @@
-id,group,partner,type_trial,promise,dec_partner,prom_keys,prom_keys_rt,decision,decision_rt,prom_percent,decision_gain,response
-1,Dishonest,Confederate,Promise,Promise,Trust,Mostly,2.85298609734,Pay back,6.6363260746,66.66,5,1
-1,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,5.25301814079,NA,10,0
-1,Dishonest,Friend,Not apply,Promise,Trust,NA,NA,Pay back,3.15287804604,NA,5,1
-1,Dishonest,Computer,No Promise,No promise,Trust,NA,NA,Not to pay back,2.652821064,NA,10,0
-1,Dishonest,Computer,Not apply,No promise,Trust,NA,NA,Pay back,1.82026100159,NA,5,1
-1,Dishonest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,3.15264606476,NA,5,1
-1,Dishonest,Friend,Promise,Promise,Trust,Mostly,5.76971292496,Not to pay back,3.31951594353,66.66,10,0
-1,Dishonest,Confederate,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-1,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Pay back,4.3529047966,NA,5,1
-1,Dishonest,Friend,Promise,Promise,Trust,Sometimes,4.96962690353,Pay back,5.06642603874,33.33,5,1
-1,Dishonest,Friend,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-1,Dishonest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,5.05299210548,NA,5,1
-1,Dishonest,Computer,No Promise,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-1,Dishonest,Friend,Not apply,No promise,Trust,NA,NA,Not to pay back,2.3528649807,NA,10,0
-1,Dishonest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,1.86936688423,NA,10,0
-1,Dishonest,Confederate,No Promise,No promise,Trust,NA,NA,Not to pay back,2.66970610619,NA,10,0
-1,Dishonest,Friend,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-1,Dishonest,Confederate,Not apply,No promise,Trust,NA,NA,Pay back,2.13401913643,NA,5,1
-1,Dishonest,Computer,Promise,Promise,No trust,Always,5.48608803749,NA,NA,100,NA,NA
-1,Dishonest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,2.41950392723,NA,5,1
-1,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Pay back,2.33405184746,NA,5,1
-1,Dishonest,Friend,No Promise,No promise,Trust,NA,NA,Pay back,1.50263905525,NA,5,1
-1,Dishonest,Confederate,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-1,Dishonest,Confederate,Not apply,No promise,Trust,NA,NA,Not to pay back,2.70077800751,NA,10,0
-2,Dishonest,Confederate,Promise,Promise,Trust,Sometimes,7.62033081055,Pay back,3.40366101265,33.33,5,1
-2,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,5.63425898552,NA,10,0
-2,Dishonest,Friend,Not apply,Promise,Trust,NA,NA,Pay back,2.13694405556,NA,5,1
-2,Dishonest,Computer,No Promise,No promise,Trust,NA,NA,Not to pay back,4.2869720459,NA,10,0
-2,Dishonest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,2.75357699394,NA,10,0
-2,Dishonest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,3.38689494133,NA,5,1
-2,Dishonest,Friend,Promise,Promise,Trust,Sometimes,3.62056612968,Pay back,3.4535710811599998,33.33,5,1
-2,Dishonest,Confederate,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-2,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,2.38685297966,NA,10,0
-2,Dishonest,Friend,Promise,Promise,Trust,Sometimes,1.72017288208,Pay back,4.15367913246,33.33,5,1
-2,Dishonest,Friend,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-2,Dishonest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,3.38716101646,NA,5,1
-2,Dishonest,Computer,No Promise,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-2,Dishonest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,3.2362549305,NA,5,1
-2,Dishonest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,2.73701810837,NA,10,0
-2,Dishonest,Confederate,No Promise,No promise,Trust,NA,NA,Not to pay back,5.35379981995,NA,10,0
-2,Dishonest,Friend,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-2,Dishonest,Confederate,Not apply,No promise,Trust,NA,NA,Pay back,5.67053794861,NA,5,1
-2,Dishonest,Computer,Promise,Promise,No trust,Sometimes,2.37023591995,NA,NA,33.33,NA,NA
-2,Dishonest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,3.68685913086,NA,5,1
-2,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,3.72049593925,NA,10,0
-2,Dishonest,Friend,No Promise,No promise,Trust,NA,NA,Pay back,2.27026796341,NA,5,1
-2,Dishonest,Confederate,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-2,Dishonest,Confederate,Not apply,No promise,Trust,NA,NA,Not to pay back,5.15386009216,NA,10,0
-3,Honest,Confederate,Promise,Promise,Trust,Mostly,5.86956501007,Pay back,5.11940908432,66.66,5,1
-3,Honest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,4.18618106842,NA,10,0
-3,Honest,Friend,Not apply,Promise,Trust,NA,NA,Pay back,2.1194999218,NA,5,1
-3,Honest,Computer,No Promise,No promise,Trust,NA,NA,Not to pay back,3.68384599686,NA,10,0
-3,Honest,Computer,Not apply,No promise,Trust,NA,NA,Pay back,1.90069007874,NA,5,1
-3,Honest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,1.56944513321,NA,5,1
-3,Honest,Friend,Promise,Promise,Trust,Mostly,4.10264587402,Pay back,1.91925001144,66.66,5,1
-3,Honest,Confederate,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-3,Honest,Computer,Not apply,Promise,Trust,NA,NA,Pay back,1.80290198326,NA,5,1
-3,Honest,Friend,Promise,Promise,Trust,Sometimes,3.88408589363,Pay back,2.16947984695,33.33,5,1
-3,Honest,Friend,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-3,Honest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,2.70729207993,NA,5,1
-3,Honest,Computer,No Promise,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-3,Honest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,3.61964392662,NA,5,1
-3,Honest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,2.85284399986,NA,10,0
-3,Honest,Confederate,No Promise,No promise,Trust,NA,NA,Not to pay back,2.38409900665,NA,10,0
-3,Honest,Friend,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-3,Honest,Confederate,Not apply,No promise,Trust,NA,NA,Pay back,2.18665599823,NA,5,1
-3,Honest,Computer,Promise,Promise,No trust,Always,3.01922106743,NA,NA,100,NA,NA
-3,Honest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,2.33403897285,NA,5,1
-3,Honest,Computer,Not apply,Promise,Trust,NA,NA,Pay back,1.58618187904,NA,5,1
-3,Honest,Friend,No Promise,No promise,Trust,NA,NA,Pay back,3.61742401123,NA,5,1
-3,Honest,Confederate,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-3,Honest,Confederate,Not apply,No promise,Trust,NA,NA,Pay back,1.56999206543,NA,5,1
-4,Dishonest,Confederate,Promise,Promise,Trust,Always,4.03659932,Pay back,3.902844214,100,5,1
-4,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,2.802287192,NA,10,0
-4,Dishonest,Friend,Not apply,Promise,Trust,NA,NA,Pay back,3.08579462,NA,5,1
-4,Dishonest,Computer,No Promise,No promise,Trust,NA,NA,Not to pay back,2.682974053,NA,10,0
-4,Dishonest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,2.402042942,NA,10,0
-4,Dishonest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,2.802303323,NA,5,1
-4,Dishonest,Friend,Promise,Promise,Trust,Mostly,5.55428579,Pay back,1.901613434,66.66,5,1
-4,Dishonest,Confederate,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-4,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,5.08747379,NA,10,0
-4,Dishonest,Friend,Promise,Promise,Trust,Mostly,2.368562553,Pay back,4.27010706,66.66,5,1
-4,Dishonest,Friend,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-4,Dishonest,Confederate,Not apply,Promise,Trust,NA,NA,Not to pay back,1.935008764,NA,10,0
-4,Dishonest,Computer,No Promise,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-4,Dishonest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,1.568103751,NA,5,1
-4,Dishonest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,3.419244542,NA,10,0
-4,Dishonest,Confederate,No Promise,No promise,Trust,NA,NA,Pay back,1.985099377,NA,5,1
-4,Dishonest,Friend,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-4,Dishonest,Confederate,Not apply,No promise,Trust,NA,NA,Pay back,1.518018271,NA,5,1
-4,Dishonest,Computer,Promise,Promise,No trust,Always,3.486240517,NA,NA,100,NA,NA
-4,Dishonest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,2.132085834,NA,5,1
-4,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,2.63540183,NA,10,0
-4,Dishonest,Friend,No Promise,No promise,Trust,NA,NA,Pay back,2.085342564,NA,5,1
-4,Dishonest,Confederate,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-4,Dishonest,Confederate,Not apply,No promise,Trust,NA,NA,Pay back,1.801506634,NA,5,1
-5,Dishonest,Confederate,Promise,Promise,Trust,Mostly,2.06680893898,Pay back,3.53405499458,66.66,5,1
-5,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,2.21980595589,NA,10,0
-5,Dishonest,Friend,Not apply,Promise,Trust,NA,NA,Pay back,1.35181498528,NA,5,1
-5,Dishonest,Computer,No Promise,No promise,Trust,NA,NA,Not to pay back,2.902780056,NA,10,0
-5,Dishonest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,1.95274209976,NA,10,0
-5,Dishonest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,1.85274600983,NA,5,1
-5,Dishonest,Friend,Promise,Promise,Trust,Mostly,2.33602190018,Pay back,2.40057682991,66.66,5,1
-5,Dishonest,Confederate,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-5,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,3.23611283302,NA,10,0
-5,Dishonest,Friend,Promise,Promise,Trust,Always,2.78614997864,Pay back,1.71909999847,100,5,1
-5,Dishonest,Friend,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-5,Dishonest,Confederate,Not apply,Promise,Trust,NA,NA,Not to pay back,3.56978392601,NA,10,0
-5,Dishonest,Computer,No Promise,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-5,Dishonest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,1.18585586548,NA,5,1
-5,Dishonest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,1.68608999252,NA,10,0
-5,Dishonest,Confederate,No Promise,No promise,Trust,NA,NA,Not to pay back,2.68624901772,NA,10,0
-5,Dishonest,Friend,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-5,Dishonest,Confederate,Not apply,No promise,Trust,NA,NA,Not to pay back,1.45117211342,NA,10,0
-5,Dishonest,Computer,Promise,Promise,No trust,Always,2.90254306793,NA,NA,100,NA,NA
-5,Dishonest,Confederate,Not apply,Promise,Trust,NA,NA,Not to pay back,0.817193984985,NA,10,0
-5,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,0.869384050369,NA,10,0
-5,Dishonest,Friend,No Promise,No promise,Trust,NA,NA,Not to pay back,0.669382095337,NA,10,0
-5,Dishonest,Confederate,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-5,Dishonest,Confederate,Not apply,No promise,Trust,NA,NA,Not to pay back,0.867382049561,NA,10,0
-6,Honest,Confederate,Promise,Promise,Trust,Sometimes,5.75448426045,Pay back,4.53662751056,33.33,5,1
-6,Honest,Computer,Not apply,Promise,Trust,NA,NA,Pay back,5.13760861452,NA,5,1
-6,Honest,Friend,Not apply,Promise,Trust,NA,NA,Pay back,5.55460414896,NA,5,1
-6,Honest,Computer,No Promise,No promise,Trust,NA,NA,Not to pay back,4.8025766809,NA,10,0
-6,Honest,Computer,Not apply,No promise,Trust,NA,NA,Pay back,3.2528556867,NA,5,1
-6,Honest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,2.78572816518,NA,5,1
-6,Honest,Friend,Promise,Promise,Trust,No response,NA,Pay back,3.88652925356,0,5,1
-6,Honest,Confederate,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-6,Honest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,2.63534870232,NA,10,0
-6,Honest,Friend,Promise,Promise,Trust,Always,3.00226064515,Pay back,2.90237540053,100,5,1
-6,Honest,Friend,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-6,Honest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,4.0867880946,NA,5,1
-6,Honest,Computer,No Promise,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-6,Honest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,3.18587261788,NA,5,1
-6,Honest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,6.53821538831,NA,10,0
-6,Honest,Confederate,No Promise,No promise,Trust,NA,NA,Pay back,3.33569406858,NA,5,1
-6,Honest,Friend,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-6,Honest,Confederate,Not apply,No promise,Trust,NA,NA,Pay back,2.46867836942,NA,5,1
-6,Honest,Computer,Promise,Promise,No trust,Sometimes,6.88869310799,NA,NA,33.33,NA,NA
-6,Honest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,6.77169390721,NA,5,1
-6,Honest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,3.5862007523,NA,10,0
-6,Honest,Friend,No Promise,No promise,Trust,NA,NA,Pay back,3.95272956579,NA,5,1
-6,Honest,Confederate,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-6,Honest,Confederate,Not apply,No promise,Trust,NA,NA,Pay back,5.62126054987,NA,5,1
-7,Honest,Confederate,Promise,Promise,Trust,Mostly,6.35381507874,Pay back,3.68702292442,66.66,5,1
-7,Honest,Computer,Not apply,Promise,Trust,NA,NA,Pay back,7.82050895691,NA,5,1
-7,Honest,Friend,Not apply,Promise,Trust,NA,NA,Pay back,2.61956095695,NA,5,1
-7,Honest,Computer,No Promise,No promise,Trust,NA,NA,Not to pay back,3.60368490219,NA,10,0
-7,Honest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,1.98696208,NA,10,0
-7,Honest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,2.13408112526,NA,5,1
-7,Honest,Friend,Promise,Promise,Trust,Mostly,3.3705739975,Pay back,2.30354309082,66.66,5,1
-7,Honest,Confederate,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-7,Honest,Computer,Not apply,Promise,Trust,NA,NA,Pay back,1.52018213272,NA,5,1
-7,Honest,Friend,Promise,Promise,Trust,Mostly,3.17008709908,Pay back,1.32060599327,66.66,5,1
-7,Honest,Friend,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-7,Honest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,2.10372400284,NA,5,1
-7,Honest,Computer,No Promise,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-7,Honest,Friend,Not apply,No promise,Trust,NA,NA,Not to pay back,2.56728601456,NA,10,0
-7,Honest,Computer,Not apply,No promise,Trust,NA,NA,Pay back,3.40085291862,NA,5,1
-7,Honest,Confederate,No Promise,No promise,Trust,NA,NA,Not to pay back,1.9535639286,NA,10,0
-7,Honest,Friend,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-7,Honest,Confederate,Not apply,No promise,Trust,NA,NA,Pay back,2.30339598656,NA,5,1
-7,Honest,Computer,Promise,Promise,No trust,Always,2.80366301537,NA,NA,100,NA,NA
-7,Honest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,2.62025499344,NA,5,1
-7,Honest,Computer,Not apply,Promise,Trust,NA,NA,Pay back,2.03692388535,NA,5,1
-7,Honest,Friend,No Promise,No promise,Trust,NA,NA,Pay back,1.05358290672,NA,5,1
-7,Honest,Confederate,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-7,Honest,Confederate,Not apply,No promise,Trust,NA,NA,Not to pay back,2.3173391819,NA,10,0
-8,Dishonest,Confederate,Promise,Promise,Trust,Always,4.00347018242,Pay back,3.55384278297,100,5,1
-8,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,2.87003517151,NA,10,0
-8,Dishonest,Friend,Not apply,Promise,Trust,NA,NA,Pay back,1.65338993073,NA,5,1
-8,Dishonest,Computer,No Promise,No promise,Trust,NA,NA,Not to pay back,3.10350894928,NA,10,0
-8,Dishonest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,2.21990299225,NA,10,0
-8,Dishonest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,1.83385586739,NA,5,1
-8,Dishonest,Friend,Promise,Promise,Trust,Always,5.270154953,Pay back,2.16735696793,100,5,1
-8,Dishonest,Confederate,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-8,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,3.35376310349,NA,10,0
-8,Dishonest,Friend,Promise,Promise,Trust,Mostly,3.98738098145,Pay back,1.98685908318,66.66,5,1
-8,Dishonest,Friend,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-8,Dishonest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,3.41990399361,NA,5,1
-8,Dishonest,Computer,No Promise,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-8,Dishonest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,1.98663496971,NA,5,1
-8,Dishonest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,2.3204100132,NA,10,0
-8,Dishonest,Confederate,No Promise,No promise,Trust,NA,NA,Not to pay back,1.3200109005,NA,10,0
-8,Dishonest,Friend,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-8,Dishonest,Confederate,Not apply,No promise,Trust,NA,NA,Not to pay back,5.8869240284,NA,10,0
-8,Dishonest,Computer,Promise,Promise,No trust,Mostly,4.02022504807,NA,NA,66.66,NA,NA
-8,Dishonest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,1.2868180275,NA,5,1
-8,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,1.80355787277,NA,10,0
-8,Dishonest,Friend,No Promise,No promise,Trust,NA,NA,Pay back,1.52032899857,NA,5,1
-8,Dishonest,Confederate,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-8,Dishonest,Confederate,Not apply,No promise,Trust,NA,NA,Not to pay back,1.47029304504,NA,10,0
-9,Honest,Confederate,Promise,Promise,Trust,Mostly,3.28606509895,Pay back,7.85592988553,66.66,5,1
-9,Honest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,8.32303100964,NA,10,0
-9,Honest,Friend,Not apply,Promise,Trust,NA,NA,Pay back,3.30259501236,NA,5,1
-9,Honest,Computer,No Promise,No promise,Trust,NA,NA,Not to pay back,4.78522294812,NA,10,0
-9,Honest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,5.12053938711,NA,10,0
-9,Honest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,3.20249088923,NA,5,1
-9,Honest,Friend,Promise,Promise,Trust,No response,NA,Pay back,3.60266467219,0,5,1
-9,Honest,Confederate,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-9,Honest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,3.16892547865,NA,10,0
-9,Honest,Friend,Promise,Promise,Trust,Mostly,2.8028017921,Pay back,3.20259721216,66.66,5,1
-9,Honest,Friend,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-9,Honest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,2.80238676607,NA,5,1
-9,Honest,Computer,No Promise,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-9,Honest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,3.65300637204,NA,5,1
-9,Honest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,2.91893354454,NA,10,0
-9,Honest,Confederate,No Promise,No promise,Trust,NA,NA,Pay back,2.16896874108,NA,5,1
-9,Honest,Friend,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-9,Honest,Confederate,Not apply,No promise,Trust,NA,NA,Pay back,3.98624254821,NA,5,1
-9,Honest,Computer,Promise,Promise,No trust,Always,2.96946845873,NA,NA,100,NA,NA
-9,Honest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,3.99984564848,NA,5,1
-9,Honest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,3.41969027033,NA,10,0
-9,Honest,Friend,No Promise,No promise,Trust,NA,NA,Pay back,2.30193214398,NA,5,1
-9,Honest,Confederate,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-9,Honest,Confederate,Not apply,No promise,Trust,NA,NA,Pay back,3.28599727224,NA,5,1
-10,Dishonest,Confederate,Promise,Promise,Trust,Sometimes,5.88761411374,NA,NA,33.33,NA,NA
-10,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,4.26988091832,NA,10,0
-10,Dishonest,Friend,Not apply,Promise,Trust,NA,NA,Pay back,4.186553451,NA,5,1
-10,Dishonest,Computer,No Promise,No promise,Trust,NA,NA,Not to pay back,3.93409115914,NA,10,0
-10,Dishonest,Computer,Not apply,No promise,Trust,NA,NA,Pay back,3.80285971984,NA,5,1
-10,Dishonest,Friend,Not apply,No promise,Trust,NA,NA,Not to pay back,3.80320068635,NA,10,0
-10,Dishonest,Friend,Promise,Promise,Trust,No response,NA,Pay back,2.68534173653,0,5,1
-10,Dishonest,Confederate,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-10,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,2.48516465374,NA,10,0
-10,Dishonest,Friend,Promise,Promise,Trust,Mostly,2.81904500024,Pay back,2.40200950322,66.66,5,1
-10,Dishonest,Friend,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-10,Dishonest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,1.7847837247,NA,5,1
-10,Dishonest,Computer,No Promise,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-10,Dishonest,Friend,Not apply,No promise,Trust,NA,NA,Not to pay back,3.43593384512,NA,10,0
-10,Dishonest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,3.28564897296,NA,10,0
-10,Dishonest,Confederate,No Promise,No promise,Trust,NA,NA,Not to pay back,3.38628471061,NA,10,0
-10,Dishonest,Friend,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-10,Dishonest,Confederate,Not apply,No promise,Trust,NA,NA,Pay back,2.31836526678,NA,5,1
-10,Dishonest,Computer,Promise,Promise,No trust,Sometimes,2.95245312643,NA,NA,33.33,NA,NA
-10,Dishonest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,3.90302507021,NA,5,1
-10,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Pay back,2.15195560851,NA,5,1
-10,Dishonest,Friend,No Promise,No promise,Trust,NA,NA,Pay back,2.46842722734,NA,5,1
-10,Dishonest,Confederate,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-10,Dishonest,Confederate,Not apply,No promise,Trust,NA,NA,Not to pay back,1.76820101636,NA,10,0
-11,Honest,Confederate,Promise,Promise,Trust,Mostly,1.75158192055,Pay back,2.35189231025,66.66,5,1
-11,Honest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,3.20245246722,NA,10,0
-11,Honest,Friend,Not apply,Promise,Trust,NA,NA,Pay back,1.95165532005,NA,5,1
-11,Honest,Computer,No Promise,No promise,Trust,NA,NA,Not to pay back,2.80016307741,NA,10,0
-11,Honest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,2.25195240105,NA,10,0
-11,Honest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,1.75217476267,NA,5,1
-11,Honest,Friend,Promise,Promise,Trust,Mostly,1.61811068513,Pay back,1.88498752905,66.66,5,1
-11,Honest,Confederate,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-11,Honest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,2.20188198959,NA,10,0
-11,Honest,Friend,Promise,Promise,Trust,Mostly,2.00184818622,Pay back,3.2359760942,66.66,5,1
-11,Honest,Friend,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-11,Honest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,2.40185566549,NA,5,1
-11,Honest,Computer,No Promise,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-11,Honest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,2.48523925781,NA,5,1
-11,Honest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,2.38522932211,NA,10,0
-11,Honest,Confederate,No Promise,No promise,Trust,NA,NA,Pay back,2.11831911478,NA,5,1
-11,Honest,Friend,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-11,Honest,Confederate,Not apply,No promise,Trust,NA,NA,Pay back,1.68452660072,NA,5,1
-11,Honest,Computer,Promise,Promise,No trust,Mostly,2.1350587471,NA,NA,66.66,NA,NA
-11,Honest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,1.34674774586,NA,5,1
-11,Honest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,2.85254436325,NA,10,0
-11,Honest,Friend,No Promise,No promise,Trust,NA,NA,Pay back,2.3018849593,NA,5,1
-11,Honest,Confederate,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-11,Honest,Confederate,Not apply,No promise,Trust,NA,NA,Pay back,2.36831187382,NA,5,1
-12,Dishonest,Confederate,Promise,Promise,Trust,Mostly,5.1376078811,Pay back,5.90506207058,66.66,5,1
-12,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,3.15256934811,NA,10,0
-12,Dishonest,Friend,Not apply,Promise,Trust,NA,NA,Pay back,2.2520183021,NA,5,1
-12,Dishonest,Computer,No Promise,No promise,Trust,NA,NA,Not to pay back,2.98343415675,NA,10,0
-12,Dishonest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,1.63486584986,NA,10,0
-12,Dishonest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,2.06835646776,NA,5,1
-12,Dishonest,Friend,Promise,Promise,Trust,Mostly,4.13672503433,Pay back,1.65122857969,66.66,5,1
-12,Dishonest,Confederate,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-12,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,2.36846389051,NA,10,0
-12,Dishonest,Friend,Promise,Promise,Trust,Mostly,2.65205386537,Pay back,2.25192077842,66.66,5,1
-12,Dishonest,Friend,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-12,Dishonest,Confederate,Not apply,Promise,Trust,NA,NA,Not to pay back,3.40276549559,NA,10,0
-12,Dishonest,Computer,No Promise,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-12,Dishonest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,3.80303313618,NA,5,1
-12,Dishonest,Computer,Not apply,No promise,Trust,NA,NA,Pay back,2.01826884295,NA,5,1
-12,Dishonest,Confederate,No Promise,No promise,Trust,NA,NA,Pay back,3.1194699253,NA,5,1
-12,Dishonest,Friend,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-12,Dishonest,Confederate,Not apply,No promise,Trust,NA,NA,Not to pay back,2.26845289161,NA,10,0
-12,Dishonest,Computer,Promise,Promise,No trust,Sometimes,2.78572963178,NA,NA,33.33,NA,NA
-12,Dishonest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,2.41880998993,NA,5,1
-12,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,4.5035717166,NA,10,0
-12,Dishonest,Friend,No Promise,No promise,Trust,NA,NA,Not to pay back,3.20281169121,NA,10,0
-12,Dishonest,Confederate,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-12,Dishonest,Confederate,Not apply,No promise,Trust,NA,NA,Not to pay back,2.21870403364,NA,10,0
-13,Dishonest,Confederate,Promise,Promise,Trust,Always,6.58620285988,Pay back,8.02095198631,100,5,1
-13,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Pay back,6.18383598328,NA,5,1
-13,Dishonest,Friend,Not apply,Promise,Trust,NA,NA,Pay back,3.46954488754,NA,5,1
-13,Dishonest,Computer,No Promise,No promise,Trust,NA,NA,Not to pay back,2.45237493515,NA,10,0
-13,Dishonest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,3.56944394112,NA,10,0
-13,Dishonest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,2.40195798874,NA,5,1
-13,Dishonest,Friend,Promise,Promise,Trust,No response,NA,Pay back,2.10288095474,0,5,1
-13,Dishonest,Confederate,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-13,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,4.16684293747,NA,10,0
-13,Dishonest,Friend,Promise,Promise,Trust,Mostly,3.66923499107,Pay back,3.50267481804,66.66,5,1
-13,Dishonest,Friend,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-13,Dishonest,Confederate,Not apply,Promise,Trust,NA,NA,Not to pay back,3.21926116943,NA,10,0
-13,Dishonest,Computer,No Promise,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-13,Dishonest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,3.6202070713,NA,5,1
-13,Dishonest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,2.06879997253,NA,10,0
-13,Dishonest,Confederate,No Promise,No promise,Trust,NA,NA,Not to pay back,1.93534898758,NA,10,0
-13,Dishonest,Friend,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-13,Dishonest,Confederate,Not apply,No promise,Trust,NA,NA,Not to pay back,1.40251898766,NA,10,0
-13,Dishonest,Computer,Promise,Promise,No trust,Mostly,3.45296812057,NA,NA,66.66,NA,NA
-13,Dishonest,Confederate,Not apply,Promise,Trust,NA,NA,Not to pay back,2.2861790657,NA,10,0
-13,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,3.90252900124,NA,10,0
-13,Dishonest,Friend,No Promise,No promise,Trust,NA,NA,Pay back,1.92020606995,NA,5,1
-13,Dishonest,Confederate,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-13,Dishonest,Confederate,Not apply,No promise,Trust,NA,NA,Not to pay back,3.95273590088,NA,10,0
-14,Honest,Confederate,Promise,Promise,Trust,Mostly,4.13610386848,Pay back,2.86971116066,66.66,5,1
-14,Honest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,2.46985697746,NA,10,0
-14,Honest,Friend,Not apply,Promise,Trust,NA,NA,Pay back,1.8529279232,NA,5,1
-14,Honest,Computer,No Promise,No promise,Trust,NA,NA,Not to pay back,3.26963400841,NA,10,0
-14,Honest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,4.05125880241,NA,10,0
-14,Honest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,1.41904401779,NA,5,1
-14,Honest,Friend,Promise,Promise,Trust,Always,2.81749916077,Pay back,2.16959500313,100,5,1
-14,Honest,Confederate,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-14,Honest,Computer,Not apply,Promise,Trust,NA,NA,Pay back,2.16957902908,NA,5,1
-14,Honest,Friend,Promise,Promise,Trust,Always,2.5526869297,Pay back,1.61928892136,100,5,1
-14,Honest,Friend,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-14,Honest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,2.23682379723,NA,5,1
-14,Honest,Computer,No Promise,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-14,Honest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,2.55251812935,NA,5,1
-14,Honest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,2.06743097305,NA,10,0
-14,Honest,Confederate,No Promise,No promise,Trust,NA,NA,Pay back,2.01913380623,NA,5,1
-14,Honest,Friend,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-14,Honest,Confederate,Not apply,No promise,Trust,NA,NA,Pay back,1.98616409302,NA,5,1
-14,Honest,Computer,Promise,Promise,No trust,Sometimes,3.81960892677,NA,NA,33.33,NA,NA
-14,Honest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,2.30307197571,NA,5,1
-14,Honest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,1.80271196365,NA,10,0
-14,Honest,Friend,No Promise,No promise,Trust,NA,NA,Pay back,1.8172621727,NA,5,1
-14,Honest,Confederate,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-14,Honest,Confederate,Not apply,No promise,Trust,NA,NA,Pay back,2.15285491943,NA,5,1
-15,Dishonest,Confederate,Promise,Promise,Trust,Mostly,3.00275266255,Pay back,3.302910937,66.66,5,1
-15,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,3.33616763231,NA,10,0
-15,Dishonest,Friend,Not apply,Promise,Trust,NA,NA,Pay back,3.00271159995,NA,5,1
-15,Dishonest,Computer,No Promise,No promise,Trust,NA,NA,Pay back,4.56806772106,NA,5,1
-15,Dishonest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,2.23578857293,NA,10,0
-15,Dishonest,Friend,Not apply,No promise,Trust,NA,NA,Not to pay back,2.65210788767,NA,10,0
-15,Dishonest,Friend,Promise,Promise,Trust,Sometimes,2.80241286932,Pay back,1.61800830858,33.33,5,1
-15,Dishonest,Confederate,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-15,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,3.46978578874,NA,10,0
-15,Dishonest,Friend,Promise,Promise,Trust,Never,2.46877535479,Not to pay back,2.25196174867,0,10,0
-15,Dishonest,Friend,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-15,Dishonest,Confederate,Not apply,Promise,Trust,NA,NA,Not to pay back,1.73506319427,NA,10,0
-15,Dishonest,Computer,No Promise,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-15,Dishonest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,1.83532236546,NA,5,1
-15,Dishonest,Computer,Not apply,No promise,Trust,NA,NA,Pay back,3.5525423816,NA,5,1
-15,Dishonest,Confederate,No Promise,No promise,Trust,NA,NA,Not to pay back,1.83515334874,NA,10,0
-15,Dishonest,Friend,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-15,Dishonest,Confederate,Not apply,No promise,Trust,NA,NA,Pay back,2.91883531722,NA,5,1
-15,Dishonest,Computer,Promise,Promise,No trust,Always,3.98749862972,NA,NA,100,NA,NA
-15,Dishonest,Confederate,Not apply,Promise,Trust,NA,NA,Not to pay back,3.34944662612,NA,10,0
-15,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,1.45120824946,NA,10,0
-15,Dishonest,Friend,No Promise,No promise,Trust,NA,NA,Pay back,2.35200644098,NA,5,1
-15,Dishonest,Confederate,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-15,Dishonest,Confederate,Not apply,No promise,Trust,NA,NA,Pay back,3.25250802829,NA,5,1
-16,Honest,Confederate,Promise,Promise,Trust,Mostly,4.88615202904,Pay back,3.44176387787,66.66,5,1
-16,Honest,Computer,Not apply,Promise,Trust,NA,NA,Pay back,2.58353090286,NA,5,1
-16,Honest,Friend,Not apply,Promise,Trust,NA,NA,Pay back,2.5217359066,NA,5,1
-16,Honest,Computer,No Promise,No promise,Trust,NA,NA,Pay back,3.13719105721,NA,5,1
-16,Honest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,3.18696594238,NA,10,0
-16,Honest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,1.84755015373,NA,5,1
-16,Honest,Friend,Promise,Promise,Trust,Always,3.11524295807,Pay back,2.22653698921,100,5,1
-16,Honest,Confederate,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-16,Honest,Computer,Not apply,Promise,Trust,NA,NA,Pay back,1.75729608536,NA,5,1
-16,Honest,Friend,Promise,Promise,Trust,Sometimes,3.33753299713,Pay back,1.28107094765,33.33,5,1
-16,Honest,Friend,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-16,Honest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,3.53530502319,NA,5,1
-16,Honest,Computer,No Promise,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-16,Honest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,2.33850884438,NA,5,1
-16,Honest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,3.93783307076,NA,10,0
-16,Honest,Confederate,No Promise,No promise,Trust,NA,NA,Pay back,4.72633504868,NA,5,1
-16,Honest,Friend,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-16,Honest,Confederate,Not apply,No promise,Trust,NA,NA,Not to pay back,1.53380393982,NA,10,0
-16,Honest,Computer,Promise,Promise,No trust,Mostly,6.1225771904,NA,NA,66.66,NA,NA
-16,Honest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,2.85547709465,NA,5,1
-16,Honest,Computer,Not apply,Promise,Trust,NA,NA,Pay back,7.25333714485,NA,5,1
-16,Honest,Friend,No Promise,No promise,Trust,NA,NA,Pay back,2.95675516129,NA,5,1
-16,Honest,Confederate,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-16,Honest,Confederate,Not apply,No promise,Trust,NA,NA,Not to pay back,2.13866710663,NA,10,0
-17,Honest,Confederate,Promise,Promise,Trust,Sometimes,6.40271902084,Pay back,9.01969504356,33.33,5,1
-17,Honest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,4.30311083794,NA,10,0
-17,Honest,Friend,Not apply,Promise,Trust,NA,NA,Pay back,5.48429298401,NA,5,1
-17,Honest,Computer,No Promise,No promise,Trust,NA,NA,Pay back,4.68630385399,NA,5,1
-17,Honest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,4.13428497314,NA,10,0
-17,Honest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,2.81956601143,NA,5,1
-17,Honest,Friend,Promise,Promise,Trust,Mostly,4.15307092667,Pay back,2.93621706963,66.66,5,1
-17,Honest,Confederate,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-17,Honest,Computer,Not apply,Promise,Trust,NA,NA,Pay back,4.80096101761,NA,5,1
-17,Honest,Friend,Promise,Promise,Trust,Mostly,4.9364480972300004,Pay back,3.95296287537,66.66,5,1
-17,Honest,Friend,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-17,Honest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,5.23637104034,NA,5,1
-17,Honest,Computer,No Promise,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-17,Honest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,1.95284795761,NA,5,1
-17,Honest,Computer,Not apply,No promise,Trust,NA,NA,Pay back,2.53597688675,NA,5,1
-17,Honest,Confederate,No Promise,No promise,Trust,NA,NA,Pay back,2.31743502617,NA,5,1
-17,Honest,Friend,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-17,Honest,Confederate,Not apply,No promise,Trust,NA,NA,Pay back,5.85303902626,NA,5,1
-17,Honest,Computer,Promise,Promise,No trust,Always,3.15299010277,NA,NA,100,NA,NA
-17,Honest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,3.35304999352,NA,5,1
-17,Honest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,2.61965298653,NA,10,0
-17,Honest,Friend,No Promise,No promise,Trust,NA,NA,Pay back,2.28619289398,NA,5,1
-17,Honest,Confederate,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-17,Honest,Confederate,Not apply,No promise,Trust,NA,NA,Pay back,3.63632702827,NA,5,1
-18,Honest,Confederate,Promise,Promise,Trust,Mostly,4.53695584188,Pay back,3.46920319012,66.66,5,1
-18,Honest,Computer,Not apply,Promise,Trust,NA,NA,Pay back,5.18259353946,NA,5,1
-18,Honest,Friend,Not apply,Promise,Trust,NA,NA,Pay back,3.11545279463,NA,5,1
-18,Honest,Computer,No Promise,No promise,Trust,NA,NA,Not to pay back,3.0024725586,NA,10,0
-18,Honest,Computer,Not apply,No promise,Trust,NA,NA,Pay back,1.95162708948,NA,5,1
-18,Honest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,2.54829830115,NA,5,1
-18,Honest,Friend,Promise,Promise,Trust,Mostly,5.40418230501,Pay back,4.3823215726700004,66.66,5,1
-18,Honest,Confederate,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-18,Honest,Computer,Not apply,Promise,Trust,NA,NA,Pay back,8.75669202163,NA,5,1
-18,Honest,Friend,Promise,Promise,Trust,Mostly,2.86901525514,Pay back,2.73158513957,66.66,5,1
-18,Honest,Friend,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-18,Honest,Confederate,Not apply,Promise,Trust,NA,NA,Not to pay back,2.7691450058,NA,10,0
-18,Honest,Computer,No Promise,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-18,Honest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,2.08505872876,NA,5,1
-18,Honest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,5.70438222881,NA,10,0
-18,Honest,Confederate,No Promise,No promise,Trust,NA,NA,Not to pay back,4.65375747147,NA,10,0
-18,Honest,Friend,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-18,Honest,Confederate,Not apply,No promise,Trust,NA,NA,Not to pay back,3.71976129396,NA,10,0
-18,Honest,Computer,Promise,Promise,No trust,Always,5.20375547334,NA,NA,100,NA,NA
-18,Honest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,1.59874890881,NA,5,1
-18,Honest,Computer,Not apply,Promise,Trust,NA,NA,Pay back,1.38493418426,NA,5,1
-18,Honest,Friend,No Promise,No promise,Trust,NA,NA,Pay back,3.2363727888,NA,5,1
-18,Honest,Confederate,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-18,Honest,Confederate,Not apply,No promise,Trust,NA,NA,Not to pay back,4.21997448982,NA,10,0
-19,Dishonest,Confederate,Promise,Promise,Trust,Mostly,5.2192928791,Pay back,5.35295414925,66.66,5,1
-19,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,2.96740603447,NA,10,0
-19,Dishonest,Friend,Not apply,Promise,Trust,NA,NA,Pay back,2.3695089817,NA,5,1
-19,Dishonest,Computer,No Promise,No promise,Trust,NA,NA,Not to pay back,5.93592691422,NA,10,0
-19,Dishonest,Computer,Not apply,No promise,Trust,NA,NA,Not to pay back,3.26745915413,NA,10,0
-19,Dishonest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,2.85280394554,NA,5,1
-19,Dishonest,Friend,Promise,Promise,Trust,Sometimes,6.33410215378,Pay back,3.30293989182,33.33,5,1
-19,Dishonest,Confederate,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-19,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Pay back,2.65055894852,NA,5,1
-19,Dishonest,Friend,Promise,Promise,Trust,Sometimes,3.42071413994,Pay back,2.43623209,33.33,5,1
-19,Dishonest,Friend,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-19,Dishonest,Confederate,Not apply,Promise,Trust,NA,NA,Not to pay back,3.56983613968,NA,10,0
-19,Dishonest,Computer,No Promise,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-19,Dishonest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,2.90261602402,NA,5,1
-19,Dishonest,Computer,Not apply,No promise,Trust,NA,NA,Pay back,4.00263905525,NA,5,1
-19,Dishonest,Confederate,No Promise,No promise,Trust,NA,NA,Not to pay back,3.95294094086,NA,10,0
-19,Dishonest,Friend,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-19,Dishonest,Confederate,Not apply,No promise,Trust,NA,NA,Pay back,4.33618402481,NA,5,1
-19,Dishonest,Computer,Promise,Promise,No trust,Sometimes,6.25264596939,NA,NA,33.33,NA,NA
-19,Dishonest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,3.51956987381,NA,5,1
-19,Dishonest,Computer,Not apply,Promise,Trust,NA,NA,Not to pay back,1.8361120224,NA,10,0
-19,Dishonest,Friend,No Promise,No promise,Trust,NA,NA,Not to pay back,2.78613305092,NA,10,0
-19,Dishonest,Confederate,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-19,Dishonest,Confederate,Not apply,No promise,Trust,NA,NA,Not to pay back,3.43621778488,NA,10,0
-20,Honest,Confederate,Promise,Promise,Trust,Always,2.21996712685,Pay back,2.68702101707,100,5,1
-20,Honest,Computer,Not apply,Promise,Trust,NA,NA,Pay back,1.47025609016,NA,5,1
-20,Honest,Friend,Not apply,Promise,Trust,NA,NA,Pay back,1.52027893066,NA,5,1
-20,Honest,Computer,No Promise,No promise,Trust,NA,NA,Pay back,1.08693408966,NA,5,1
-20,Honest,Computer,Not apply,No promise,Trust,NA,NA,Pay back,4.57005310059,NA,5,1
-20,Honest,Friend,Not apply,No promise,Trust,NA,NA,Pay back,1.62064909935,NA,5,1
-20,Honest,Friend,Promise,Promise,Trust,Sometimes,2.62010717392,Pay back,3.32020902634,33.33,5,1
-20,Honest,Confederate,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-20,Honest,Computer,Not apply,Promise,Trust,NA,NA,Pay back,2.53678894043,NA,5,1
-20,Honest,Friend,Promise,Promise,Trust,Mostly,3.52022480965,Pay back,1.4204249382,66.66,5,1
-20,Honest,Friend,Not apply,Promise,No trust,NA,NA,NA,NA,NA,NA,NA
-20,Honest,Confederate,Not apply,Promise,Trust,NA,NA,Not to pay back,2.97032499313,NA,10,0
-20,Honest,Computer,No Promise,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-20,Honest,Friend,Not apply,No promise,Trust,NA,NA,Not to pay back,2.20361590385,NA,10,0
-20,Honest,Computer,Not apply,No promise,Trust,NA,NA,Pay back,2.60352897644,NA,5,1
-20,Honest,Confederate,No Promise,No promise,Trust,NA,NA,Pay back,1.45338797569,NA,5,1
-20,Honest,Friend,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-20,Honest,Confederate,Not apply,No promise,Trust,NA,NA,Not to pay back,3.27009892464,NA,10,0
-20,Honest,Computer,Promise,Promise,No trust,Never,2.08696508408,NA,NA,0,NA,NA
-20,Honest,Confederate,Not apply,Promise,Trust,NA,NA,Pay back,1.48700714111,NA,5,1
-20,Honest,Computer,Not apply,Promise,Trust,NA,NA,Pay back,2.23702597618,NA,5,1
-20,Honest,Friend,No Promise,No promise,Trust,NA,NA,Pay back,1.65328097343,NA,5,1
-20,Honest,Confederate,Not apply,No promise,No trust,NA,NA,NA,NA,NA,NA,NA
-20,Honest,Confederate,Not apply,No promise,Trust,NA,NA,Pay back,1.3039419651,NA,5,1
+"","id","partner","type_trial","promise","dec_partner","prom_keys","prom_keys_rt","decision","decision_rt","prom_percent","decision_gain","response"
+"1","1","Confederate","Promise","Promise","Trust","Mostly",2.85298609734,"Pay back",6.6363260746,66.66,5,1
+"2","1","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",5.25301814079,NA,10,0
+"3","1","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",3.15287804604,NA,5,1
+"4","1","Computer","No Promise","No promise","Trust",NA,NA,"Not to pay back",2.652821064,NA,10,0
+"5","1","Computer","Not apply","No promise","Trust",NA,NA,"Pay back",1.82026100159,NA,5,1
+"6","1","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",3.15264606476,NA,5,1
+"7","1","Friend","Promise","Promise","Trust","Mostly",5.76971292496,"Not to pay back",3.31951594353,66.66,10,0
+"8","1","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"9","1","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",4.3529047966,NA,5,1
+"10","1","Friend","Promise","Promise","Trust","Sometimes",4.96962690353,"Pay back",5.06642603874,33.33,5,1
+"11","1","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"12","1","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",5.05299210548,NA,5,1
+"13","1","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"14","1","Friend","Not apply","No promise","Trust",NA,NA,"Not to pay back",2.3528649807,NA,10,0
+"15","1","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",1.86936688423,NA,10,0
+"16","1","Confederate","No Promise","No promise","Trust",NA,NA,"Not to pay back",2.66970610619,NA,10,0
+"17","1","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"18","1","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",2.13401913643,NA,5,1
+"19","1","Computer","Promise","Promise","No trust","Always",5.48608803749,NA,NA,100,NA,NA
+"20","1","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",2.41950392723,NA,5,1
+"21","1","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",2.33405184746,NA,5,1
+"22","1","Friend","No Promise","No promise","Trust",NA,NA,"Pay back",1.50263905525,NA,5,1
+"23","1","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"24","1","Confederate","Not apply","No promise","Trust",NA,NA,"Not to pay back",2.70077800751,NA,10,0
+"25","2","Confederate","Promise","Promise","Trust","Always",3.06949210167,"Pay back",4.98592305183,100,5,1
+"26","2","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",4.28609204292,NA,5,1
+"27","2","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",3.46738409996,NA,5,1
+"28","2","Computer","No Promise","No promise","Trust",NA,NA,"Pay back",3.35276985168,NA,5,1
+"29","2","Computer","Not apply","No promise","Trust",NA,NA,"Pay back",3.53656220436,NA,5,1
+"30","2","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",2.90268516541,NA,5,1
+"31","2","Friend","Promise","Promise","Trust","Always",5.0362329483,"Pay back",4.86948418617,100,5,1
+"32","2","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"33","2","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",3.71807813644,NA,5,1
+"34","2","Friend","Promise","Promise","Trust","Always",3.33603906631,"Pay back",4.00074195862,100,5,1
+"35","2","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"36","2","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",3.05276489258,NA,5,1
+"37","2","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"38","2","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",3.13455104828,NA,5,1
+"39","2","Computer","Not apply","No promise","Trust",NA,NA,"Pay back",2.88442206383,NA,5,1
+"40","2","Confederate","No Promise","No promise","Trust",NA,NA,"Pay back",3.76745414734,NA,5,1
+"41","2","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"42","2","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",2.68472886086,NA,5,1
+"43","2","Computer","Promise","Promise","No trust","Always",3.33451318741,NA,NA,100,NA,NA
+"44","2","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",4.00111484528,NA,5,1
+"45","2","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",2.46880412102,NA,5,1
+"46","2","Friend","No Promise","No promise","Trust",NA,NA,"Pay back",3.18434381485,NA,5,1
+"47","2","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"48","2","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",3.25225710869,NA,5,1
+"49","3","Confederate","Promise","Promise","Trust","Sometimes",7.62033081055,"Pay back",3.40366101265,33.33,5,1
+"50","3","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",5.63425898552,NA,10,0
+"51","3","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",2.13694405556,NA,5,1
+"52","3","Computer","No Promise","No promise","Trust",NA,NA,"Not to pay back",4.2869720459,NA,10,0
+"53","3","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",2.75357699394,NA,10,0
+"54","3","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",3.38689494133,NA,5,1
+"55","3","Friend","Promise","Promise","Trust","Sometimes",3.62056612968,"Pay back",3.45357108116,33.33,5,1
+"56","3","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"57","3","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",2.38685297966,NA,10,0
+"58","3","Friend","Promise","Promise","Trust","Sometimes",1.72017288208,"Pay back",4.15367913246,33.33,5,1
+"59","3","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"60","3","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",3.38716101646,NA,5,1
+"61","3","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"62","3","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",3.2362549305,NA,5,1
+"63","3","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",2.73701810837,NA,10,0
+"64","3","Confederate","No Promise","No promise","Trust",NA,NA,"Not to pay back",5.35379981995,NA,10,0
+"65","3","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"66","3","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",5.67053794861,NA,5,1
+"67","3","Computer","Promise","Promise","No trust","Sometimes",2.37023591995,NA,NA,33.33,NA,NA
+"68","3","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",3.68685913086,NA,5,1
+"69","3","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",3.72049593925,NA,10,0
+"70","3","Friend","No Promise","No promise","Trust",NA,NA,"Pay back",2.27026796341,NA,5,1
+"71","3","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"72","3","Confederate","Not apply","No promise","Trust",NA,NA,"Not to pay back",5.15386009216,NA,10,0
+"73","4","Confederate","Promise","Promise","Trust","Mostly",5.86956501007,"Pay back",5.11940908432,66.66,5,1
+"74","4","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",4.18618106842,NA,10,0
+"75","4","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",2.1194999218,NA,5,1
+"76","4","Computer","No Promise","No promise","Trust",NA,NA,"Not to pay back",3.68384599686,NA,10,0
+"77","4","Computer","Not apply","No promise","Trust",NA,NA,"Pay back",1.90069007874,NA,5,1
+"78","4","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",1.56944513321,NA,5,1
+"79","4","Friend","Promise","Promise","Trust","Mostly",4.10264587402,"Pay back",1.91925001144,66.66,5,1
+"80","4","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"81","4","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",1.80290198326,NA,5,1
+"82","4","Friend","Promise","Promise","Trust","Sometimes",3.88408589363,"Pay back",2.16947984695,33.33,5,1
+"83","4","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"84","4","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",2.70729207993,NA,5,1
+"85","4","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"86","4","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",3.61964392662,NA,5,1
+"87","4","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",2.85284399986,NA,10,0
+"88","4","Confederate","No Promise","No promise","Trust",NA,NA,"Not to pay back",2.38409900665,NA,10,0
+"89","4","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"90","4","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",2.18665599823,NA,5,1
+"91","4","Computer","Promise","Promise","No trust","Always",3.01922106743,NA,NA,100,NA,NA
+"92","4","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",2.33403897285,NA,5,1
+"93","4","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",1.58618187904,NA,5,1
+"94","4","Friend","No Promise","No promise","Trust",NA,NA,"Pay back",3.61742401123,NA,5,1
+"95","4","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"96","4","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",1.56999206543,NA,5,1
+"97","5","Confederate","Promise","Promise","Trust","Always",4.03659932,"Pay back",3.902844214,100,5,1
+"98","5","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",2.802287192,NA,10,0
+"99","5","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",3.08579462,NA,5,1
+"100","5","Computer","No Promise","No promise","Trust",NA,NA,"Not to pay back",2.682974053,NA,10,0
+"101","5","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",2.402042942,NA,10,0
+"102","5","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",2.802303323,NA,5,1
+"103","5","Friend","Promise","Promise","Trust","Mostly",5.55428579,"Pay back",1.901613434,66.66,5,1
+"104","5","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"105","5","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",5.08747379,NA,10,0
+"106","5","Friend","Promise","Promise","Trust","Mostly",2.368562553,"Pay back",4.27010706,66.66,5,1
+"107","5","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"108","5","Confederate","Not apply","Promise","Trust",NA,NA,"Not to pay back",1.935008764,NA,10,0
+"109","5","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"110","5","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",1.568103751,NA,5,1
+"111","5","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",3.419244542,NA,10,0
+"112","5","Confederate","No Promise","No promise","Trust",NA,NA,"Pay back",1.985099377,NA,5,1
+"113","5","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"114","5","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",1.518018271,NA,5,1
+"115","5","Computer","Promise","Promise","No trust","Always",3.486240517,NA,NA,100,NA,NA
+"116","5","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",2.132085834,NA,5,1
+"117","5","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",2.63540183,NA,10,0
+"118","5","Friend","No Promise","No promise","Trust",NA,NA,"Pay back",2.085342564,NA,5,1
+"119","5","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"120","5","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",1.801506634,NA,5,1
+"121","6","Confederate","Promise","Promise","Trust","Always",4.5688419342,"Pay back",5.52107095718,100,5,1
+"122","6","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",4.34927892685,NA,5,1
+"123","6","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",4.80365204811,NA,5,1
+"124","6","Computer","No Promise","No promise","Trust",NA,NA,"Pay back",3.89315080643,NA,5,1
+"125","6","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",7.5542371273,NA,10,0
+"126","6","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",1.8762948513,NA,5,1
+"127","6","Friend","Promise","Promise","Trust","Mostly",5.3836889267,"Pay back",4.79533314705,66.66,5,1
+"128","6","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"129","6","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",5.09976196289,NA,5,1
+"130","6","Friend","Promise","Promise","Trust","Always",4.02036690712,"Pay back",2.14665412903,100,5,1
+"131","6","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"132","6","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",2.35150408745,NA,5,1
+"133","6","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"134","6","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",2.65684986115,NA,5,1
+"135","6","Computer","Not apply","No promise","Trust",NA,NA,"Pay back",1.94031500816,NA,5,1
+"136","6","Confederate","No Promise","No promise","Trust",NA,NA,"Pay back",2.08972096443,NA,5,1
+"137","6","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"138","6","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",2.3035030365,NA,5,1
+"139","6","Computer","Promise","Promise","No trust","Always",2.81564211845,NA,NA,100,NA,NA
+"140","6","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",3.42480802536,NA,5,1
+"141","6","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",2.13831090927,NA,5,1
+"142","6","Friend","No Promise","No promise","Trust",NA,NA,"Pay back",1.03769302368,NA,5,1
+"143","6","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"144","6","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",7.47606301308,NA,5,1
+"145","7","Confederate","Promise","Promise","Trust","Mostly",2.06680893898,"Pay back",3.53405499458,66.66,5,1
+"146","7","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",2.21980595589,NA,10,0
+"147","7","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",1.35181498528,NA,5,1
+"148","7","Computer","No Promise","No promise","Trust",NA,NA,"Not to pay back",2.902780056,NA,10,0
+"149","7","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",1.95274209976,NA,10,0
+"150","7","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",1.85274600983,NA,5,1
+"151","7","Friend","Promise","Promise","Trust","Mostly",2.33602190018,"Pay back",2.40057682991,66.66,5,1
+"152","7","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"153","7","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",3.23611283302,NA,10,0
+"154","7","Friend","Promise","Promise","Trust","Always",2.78614997864,"Pay back",1.71909999847,100,5,1
+"155","7","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"156","7","Confederate","Not apply","Promise","Trust",NA,NA,"Not to pay back",3.56978392601,NA,10,0
+"157","7","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"158","7","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",1.18585586548,NA,5,1
+"159","7","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",1.68608999252,NA,10,0
+"160","7","Confederate","No Promise","No promise","Trust",NA,NA,"Not to pay back",2.68624901772,NA,10,0
+"161","7","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"162","7","Confederate","Not apply","No promise","Trust",NA,NA,"Not to pay back",1.45117211342,NA,10,0
+"163","7","Computer","Promise","Promise","No trust","Always",2.90254306793,NA,NA,100,NA,NA
+"164","7","Confederate","Not apply","Promise","Trust",NA,NA,"Not to pay back",0.817193984985,NA,10,0
+"165","7","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",0.869384050369,NA,10,0
+"166","7","Friend","No Promise","No promise","Trust",NA,NA,"Not to pay back",0.669382095337,NA,10,0
+"167","7","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"168","7","Confederate","Not apply","No promise","Trust",NA,NA,"Not to pay back",0.867382049561,NA,10,0
+"169","8","Confederate","Promise","Promise","Trust","Sometimes",5.75448426045,"Pay back",4.53662751056,33.33,5,1
+"170","8","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",5.13760861452,NA,5,1
+"171","8","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",5.55460414896,NA,5,1
+"172","8","Computer","No Promise","No promise","Trust",NA,NA,"Not to pay back",4.8025766809,NA,10,0
+"173","8","Computer","Not apply","No promise","Trust",NA,NA,"Pay back",3.2528556867,NA,5,1
+"174","8","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",2.78572816518,NA,5,1
+"175","8","Friend","Promise","Promise","Trust","No response",NA,"Pay back",3.88652925356,0,5,1
+"176","8","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"177","8","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",2.63534870232,NA,10,0
+"178","8","Friend","Promise","Promise","Trust","Always",3.00226064515,"Pay back",2.90237540053,100,5,1
+"179","8","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"180","8","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",4.0867880946,NA,5,1
+"181","8","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"182","8","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",3.18587261788,NA,5,1
+"183","8","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",6.53821538831,NA,10,0
+"184","8","Confederate","No Promise","No promise","Trust",NA,NA,"Pay back",3.33569406858,NA,5,1
+"185","8","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"186","8","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",2.46867836942,NA,5,1
+"187","8","Computer","Promise","Promise","No trust","Sometimes",6.88869310799,NA,NA,33.33,NA,NA
+"188","8","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",6.77169390721,NA,5,1
+"189","8","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",3.5862007523,NA,10,0
+"190","8","Friend","No Promise","No promise","Trust",NA,NA,"Pay back",3.95272956579,NA,5,1
+"191","8","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"192","8","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",5.62126054987,NA,5,1
+"193","9","Confederate","Promise","Promise","Trust","Mostly",6.35381507874,"Pay back",3.68702292442,66.66,5,1
+"194","9","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",7.82050895691,NA,5,1
+"195","9","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",2.61956095695,NA,5,1
+"196","9","Computer","No Promise","No promise","Trust",NA,NA,"Not to pay back",3.60368490219,NA,10,0
+"197","9","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",1.98696208,NA,10,0
+"198","9","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",2.13408112526,NA,5,1
+"199","9","Friend","Promise","Promise","Trust","Mostly",3.3705739975,"Pay back",2.30354309082,66.66,5,1
+"200","9","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"201","9","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",1.52018213272,NA,5,1
+"202","9","Friend","Promise","Promise","Trust","Mostly",3.17008709908,"Pay back",1.32060599327,66.66,5,1
+"203","9","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"204","9","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",2.10372400284,NA,5,1
+"205","9","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"206","9","Friend","Not apply","No promise","Trust",NA,NA,"Not to pay back",2.56728601456,NA,10,0
+"207","9","Computer","Not apply","No promise","Trust",NA,NA,"Pay back",3.40085291862,NA,5,1
+"208","9","Confederate","No Promise","No promise","Trust",NA,NA,"Not to pay back",1.9535639286,NA,10,0
+"209","9","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"210","9","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",2.30339598656,NA,5,1
+"211","9","Computer","Promise","Promise","No trust","Always",2.80366301537,NA,NA,100,NA,NA
+"212","9","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",2.62025499344,NA,5,1
+"213","9","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",2.03692388535,NA,5,1
+"214","9","Friend","No Promise","No promise","Trust",NA,NA,"Pay back",1.05358290672,NA,5,1
+"215","9","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"216","9","Confederate","Not apply","No promise","Trust",NA,NA,"Not to pay back",2.3173391819,NA,10,0
+"217","10","Confederate","Promise","Promise","Trust","Always",4.00347018242,"Pay back",3.55384278297,100,5,1
+"218","10","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",2.87003517151,NA,10,0
+"219","10","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",1.65338993073,NA,5,1
+"220","10","Computer","No Promise","No promise","Trust",NA,NA,"Not to pay back",3.10350894928,NA,10,0
+"221","10","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",2.21990299225,NA,10,0
+"222","10","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",1.83385586739,NA,5,1
+"223","10","Friend","Promise","Promise","Trust","Always",5.270154953,"Pay back",2.16735696793,100,5,1
+"224","10","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"225","10","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",3.35376310349,NA,10,0
+"226","10","Friend","Promise","Promise","Trust","Mostly",3.98738098145,"Pay back",1.98685908318,66.66,5,1
+"227","10","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"228","10","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",3.41990399361,NA,5,1
+"229","10","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"230","10","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",1.98663496971,NA,5,1
+"231","10","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",2.3204100132,NA,10,0
+"232","10","Confederate","No Promise","No promise","Trust",NA,NA,"Not to pay back",1.3200109005,NA,10,0
+"233","10","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"234","10","Confederate","Not apply","No promise","Trust",NA,NA,"Not to pay back",5.8869240284,NA,10,0
+"235","10","Computer","Promise","Promise","No trust","Mostly",4.02022504807,NA,NA,66.66,NA,NA
+"236","10","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",1.2868180275,NA,5,1
+"237","10","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",1.80355787277,NA,10,0
+"238","10","Friend","No Promise","No promise","Trust",NA,NA,"Pay back",1.52032899857,NA,5,1
+"239","10","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"240","10","Confederate","Not apply","No promise","Trust",NA,NA,"Not to pay back",1.47029304504,NA,10,0
+"241","11","Confederate","Promise","Promise","Trust","Mostly",3.28606509895,"Pay back",7.85592988553,66.66,5,1
+"242","11","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",8.32303100964,NA,10,0
+"243","11","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",3.30259501236,NA,5,1
+"244","11","Computer","No Promise","No promise","Trust",NA,NA,"Not to pay back",4.78522294812,NA,10,0
+"245","11","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",5.12053938711,NA,10,0
+"246","11","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",3.20249088923,NA,5,1
+"247","11","Friend","Promise","Promise","Trust","No response",NA,"Pay back",3.60266467219,0,5,1
+"248","11","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"249","11","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",3.16892547865,NA,10,0
+"250","11","Friend","Promise","Promise","Trust","Mostly",2.8028017921,"Pay back",3.20259721216,66.66,5,1
+"251","11","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"252","11","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",2.80238676607,NA,5,1
+"253","11","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"254","11","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",3.65300637204,NA,5,1
+"255","11","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",2.91893354454,NA,10,0
+"256","11","Confederate","No Promise","No promise","Trust",NA,NA,"Pay back",2.16896874108,NA,5,1
+"257","11","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"258","11","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",3.98624254821,NA,5,1
+"259","11","Computer","Promise","Promise","No trust","Always",2.96946845873,NA,NA,100,NA,NA
+"260","11","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",3.99984564848,NA,5,1
+"261","11","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",3.41969027033,NA,10,0
+"262","11","Friend","No Promise","No promise","Trust",NA,NA,"Pay back",2.30193214398,NA,5,1
+"263","11","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"264","11","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",3.28599727224,NA,5,1
+"265","12","Confederate","Promise","Promise","Trust","Sometimes",5.88761411374,NA,NA,33.33,NA,NA
+"266","12","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",4.26988091832,NA,10,0
+"267","12","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",4.186553451,NA,5,1
+"268","12","Computer","No Promise","No promise","Trust",NA,NA,"Not to pay back",3.93409115914,NA,10,0
+"269","12","Computer","Not apply","No promise","Trust",NA,NA,"Pay back",3.80285971984,NA,5,1
+"270","12","Friend","Not apply","No promise","Trust",NA,NA,"Not to pay back",3.80320068635,NA,10,0
+"271","12","Friend","Promise","Promise","Trust","No response",NA,"Pay back",2.68534173653,0,5,1
+"272","12","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"273","12","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",2.48516465374,NA,10,0
+"274","12","Friend","Promise","Promise","Trust","Mostly",2.81904500024,"Pay back",2.40200950322,66.66,5,1
+"275","12","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"276","12","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",1.7847837247,NA,5,1
+"277","12","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"278","12","Friend","Not apply","No promise","Trust",NA,NA,"Not to pay back",3.43593384512,NA,10,0
+"279","12","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",3.28564897296,NA,10,0
+"280","12","Confederate","No Promise","No promise","Trust",NA,NA,"Not to pay back",3.38628471061,NA,10,0
+"281","12","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"282","12","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",2.31836526678,NA,5,1
+"283","12","Computer","Promise","Promise","No trust","Sometimes",2.95245312643,NA,NA,33.33,NA,NA
+"284","12","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",3.90302507021,NA,5,1
+"285","12","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",2.15195560851,NA,5,1
+"286","12","Friend","No Promise","No promise","Trust",NA,NA,"Pay back",2.46842722734,NA,5,1
+"287","12","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"288","12","Confederate","Not apply","No promise","Trust",NA,NA,"Not to pay back",1.76820101636,NA,10,0
+"289","13","Confederate","Promise","Promise","Trust","Always",3.28692293167,"Pay back",8.15377211571,100,5,1
+"290","13","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",3.25343799591,NA,5,1
+"291","13","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",1.37014198303,NA,5,1
+"292","13","Computer","No Promise","No promise","Trust",NA,NA,"Not to pay back",1.66735100746,NA,10,0
+"293","13","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",2.77007007599,NA,10,0
+"294","13","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",1.57018494606,NA,5,1
+"295","13","Friend","Promise","Promise","Trust","Mostly",7.28726410866,"Pay back",1.87024402618,66.66,5,1
+"296","13","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"297","13","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",2.55347585678,NA,10,0
+"298","13","Friend","Promise","Promise","Trust","Always",1.98391389847,"Pay back",2.03675794601,100,5,1
+"299","13","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"300","13","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",1.37007904053,NA,5,1
+"301","13","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"302","13","Friend","Not apply","No promise","Trust",NA,NA,"Not to pay back",3.15351009369,NA,10,0
+"303","13","Computer","Not apply","No promise","Trust",NA,NA,"Pay back",1.72016692162,NA,5,1
+"304","13","Confederate","No Promise","No promise","Trust",NA,NA,"Pay back",1.82009601593,NA,5,1
+"305","13","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"306","13","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",1.08900690079,NA,5,1
+"307","13","Computer","Promise","Promise","No trust","Always",1.83665204048,NA,NA,100,NA,NA
+"308","13","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",0.936830997467,NA,5,1
+"309","13","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",1.28682112694,NA,5,1
+"310","13","Friend","No Promise","No promise","Trust",NA,NA,"Pay back",1.55351901054,NA,5,1
+"311","13","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"312","13","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",0.887094020844,NA,5,1
+"313","14","Confederate","Promise","Promise","Trust","Mostly",3.98698997498,"Not to pay back",3.98697519302,66.66,10,0
+"314","14","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",3.17014980316,NA,10,0
+"315","14","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",1.56990695,NA,5,1
+"316","14","Computer","No Promise","No promise","Trust",NA,NA,"Pay back",3.72030711174,NA,5,1
+"317","14","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",2.38690304756,NA,10,0
+"318","14","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",2.67013502121,NA,5,1
+"319","14","Friend","Promise","Promise","Trust","Mostly",3.38685703278,"Pay back",2.103525877,66.66,5,1
+"320","14","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"321","14","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",3.98682785034,NA,5,1
+"322","14","Friend","Promise","Promise","Trust","Mostly",2.67006993294,"Pay back",3.47016596794,66.66,5,1
+"323","14","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"324","14","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",4.3535091877,NA,5,1
+"325","14","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"326","14","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",3.03673291206,NA,5,1
+"327","14","Computer","Not apply","No promise","Trust",NA,NA,"Pay back",3.62025284767,NA,5,1
+"328","14","Confederate","No Promise","No promise","Trust",NA,NA,"Pay back",4.12027978897,NA,5,1
+"329","14","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"330","14","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",3.92013907433,NA,5,1
+"331","14","Computer","Promise","Promise","No trust","Mostly",2.92016911507,NA,NA,66.66,NA,NA
+"332","14","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",2.83673787117,NA,5,1
+"333","14","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",3.80355906487,NA,10,0
+"334","14","Friend","No Promise","No promise","Trust",NA,NA,"Pay back",2.48707890511,NA,5,1
+"335","14","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"336","14","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",3.50333404541,NA,5,1
+"337","15","Confederate","Promise","Promise","Trust","Always",1.45047807693,"Pay back",3.13687181473,100,5,1
+"338","15","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",1.37014698982,NA,5,1
+"339","15","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",1.52017116547,NA,5,1
+"340","15","Computer","No Promise","No promise","Trust",NA,NA,"Pay back",3.07006001472,NA,5,1
+"341","15","Computer","Not apply","No promise","Trust",NA,NA,"Pay back",3.87012290955,NA,5,1
+"342","15","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",2.07017493248,NA,5,1
+"343","15","Friend","Promise","Promise","Trust","Always",2.07063698769,"Pay back",0.636730194092,100,5,1
+"344","15","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"345","15","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",2.47002100945,NA,5,1
+"346","15","Friend","Promise","Promise","Trust","Always",2.90346693993,"Pay back",0.803555011749,100,5,1
+"347","15","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"348","15","Confederate","Not apply","Promise","Trust",NA,NA,"Not to pay back",1.07011008263,NA,10,0
+"349","15","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"350","15","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",4.03663611412,NA,5,1
+"351","15","Computer","Not apply","No promise","Trust",NA,NA,"Pay back",4.45342898369,NA,5,1
+"352","15","Confederate","No Promise","No promise","Trust",NA,NA,"Pay back",3.13664293289,NA,5,1
+"353","15","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"354","15","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",3.03708791733,NA,5,1
+"355","15","Computer","Promise","Promise","No trust","Mostly",2.98392105103,NA,NA,66.66,NA,NA
+"356","15","Confederate","Not apply","Promise","Trust",NA,NA,"Not to pay back",3.40343093872,NA,10,0
+"357","15","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",1.60364079475,NA,5,1
+"358","15","Friend","No Promise","No promise","Trust",NA,NA,"Pay back",1.88683915138,NA,5,1
+"359","15","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"360","15","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",4.9533829689,NA,5,1
+"361","16","Confederate","Promise","Promise","Trust","Mostly",1.75158192055,"Pay back",2.35189231025,66.66,5,1
+"362","16","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",3.20245246722,NA,10,0
+"363","16","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",1.95165532005,NA,5,1
+"364","16","Computer","No Promise","No promise","Trust",NA,NA,"Not to pay back",2.80016307741,NA,10,0
+"365","16","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",2.25195240105,NA,10,0
+"366","16","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",1.75217476267,NA,5,1
+"367","16","Friend","Promise","Promise","Trust","Mostly",1.61811068513,"Pay back",1.88498752905,66.66,5,1
+"368","16","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"369","16","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",2.20188198959,NA,10,0
+"370","16","Friend","Promise","Promise","Trust","Mostly",2.00184818622,"Pay back",3.2359760942,66.66,5,1
+"371","16","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"372","16","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",2.40185566549,NA,5,1
+"373","16","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"374","16","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",2.48523925781,NA,5,1
+"375","16","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",2.38522932211,NA,10,0
+"376","16","Confederate","No Promise","No promise","Trust",NA,NA,"Pay back",2.11831911478,NA,5,1
+"377","16","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"378","16","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",1.68452660072,NA,5,1
+"379","16","Computer","Promise","Promise","No trust","Mostly",2.1350587471,NA,NA,66.66,NA,NA
+"380","16","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",1.34674774586,NA,5,1
+"381","16","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",2.85254436325,NA,10,0
+"382","16","Friend","No Promise","No promise","Trust",NA,NA,"Pay back",2.3018849593,NA,5,1
+"383","16","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"384","16","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",2.36831187382,NA,5,1
+"385","17","Confederate","Promise","Promise","Trust","Mostly",5.1376078811,"Pay back",5.90506207058,66.66,5,1
+"386","17","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",3.15256934811,NA,10,0
+"387","17","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",2.2520183021,NA,5,1
+"388","17","Computer","No Promise","No promise","Trust",NA,NA,"Not to pay back",2.98343415675,NA,10,0
+"389","17","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",1.63486584986,NA,10,0
+"390","17","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",2.06835646776,NA,5,1
+"391","17","Friend","Promise","Promise","Trust","Mostly",4.13672503433,"Pay back",1.65122857969,66.66,5,1
+"392","17","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"393","17","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",2.36846389051,NA,10,0
+"394","17","Friend","Promise","Promise","Trust","Mostly",2.65205386537,"Pay back",2.25192077842,66.66,5,1
+"395","17","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"396","17","Confederate","Not apply","Promise","Trust",NA,NA,"Not to pay back",3.40276549559,NA,10,0
+"397","17","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"398","17","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",3.80303313618,NA,5,1
+"399","17","Computer","Not apply","No promise","Trust",NA,NA,"Pay back",2.01826884295,NA,5,1
+"400","17","Confederate","No Promise","No promise","Trust",NA,NA,"Pay back",3.1194699253,NA,5,1
+"401","17","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"402","17","Confederate","Not apply","No promise","Trust",NA,NA,"Not to pay back",2.26845289161,NA,10,0
+"403","17","Computer","Promise","Promise","No trust","Sometimes",2.78572963178,NA,NA,33.33,NA,NA
+"404","17","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",2.41880998993,NA,5,1
+"405","17","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",4.5035717166,NA,10,0
+"406","17","Friend","No Promise","No promise","Trust",NA,NA,"Not to pay back",3.20281169121,NA,10,0
+"407","17","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"408","17","Confederate","Not apply","No promise","Trust",NA,NA,"Not to pay back",2.21870403364,NA,10,0
+"409","18","Confederate","Promise","Promise","Trust","Always",6.58620285988,"Pay back",8.02095198631,100,5,1
+"410","18","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",6.18383598328,NA,5,1
+"411","18","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",3.46954488754,NA,5,1
+"412","18","Computer","No Promise","No promise","Trust",NA,NA,"Not to pay back",2.45237493515,NA,10,0
+"413","18","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",3.56944394112,NA,10,0
+"414","18","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",2.40195798874,NA,5,1
+"415","18","Friend","Promise","Promise","Trust","No response",NA,"Pay back",2.10288095474,0,5,1
+"416","18","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"417","18","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",4.16684293747,NA,10,0
+"418","18","Friend","Promise","Promise","Trust","Mostly",3.66923499107,"Pay back",3.50267481804,66.66,5,1
+"419","18","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"420","18","Confederate","Not apply","Promise","Trust",NA,NA,"Not to pay back",3.21926116943,NA,10,0
+"421","18","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"422","18","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",3.6202070713,NA,5,1
+"423","18","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",2.06879997253,NA,10,0
+"424","18","Confederate","No Promise","No promise","Trust",NA,NA,"Not to pay back",1.93534898758,NA,10,0
+"425","18","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"426","18","Confederate","Not apply","No promise","Trust",NA,NA,"Not to pay back",1.40251898766,NA,10,0
+"427","18","Computer","Promise","Promise","No trust","Mostly",3.45296812057,NA,NA,66.66,NA,NA
+"428","18","Confederate","Not apply","Promise","Trust",NA,NA,"Not to pay back",2.2861790657,NA,10,0
+"429","18","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",3.90252900124,NA,10,0
+"430","18","Friend","No Promise","No promise","Trust",NA,NA,"Pay back",1.92020606995,NA,5,1
+"431","18","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"432","18","Confederate","Not apply","No promise","Trust",NA,NA,"Not to pay back",3.95273590088,NA,10,0
+"433","19","Confederate","Promise","Promise","Trust","Mostly",4.13610386848,"Pay back",2.86971116066,66.66,5,1
+"434","19","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",2.46985697746,NA,10,0
+"435","19","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",1.8529279232,NA,5,1
+"436","19","Computer","No Promise","No promise","Trust",NA,NA,"Not to pay back",3.26963400841,NA,10,0
+"437","19","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",4.05125880241,NA,10,0
+"438","19","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",1.41904401779,NA,5,1
+"439","19","Friend","Promise","Promise","Trust","Always",2.81749916077,"Pay back",2.16959500313,100,5,1
+"440","19","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"441","19","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",2.16957902908,NA,5,1
+"442","19","Friend","Promise","Promise","Trust","Always",2.5526869297,"Pay back",1.61928892136,100,5,1
+"443","19","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"444","19","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",2.23682379723,NA,5,1
+"445","19","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"446","19","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",2.55251812935,NA,5,1
+"447","19","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",2.06743097305,NA,10,0
+"448","19","Confederate","No Promise","No promise","Trust",NA,NA,"Pay back",2.01913380623,NA,5,1
+"449","19","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"450","19","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",1.98616409302,NA,5,1
+"451","19","Computer","Promise","Promise","No trust","Sometimes",3.81960892677,NA,NA,33.33,NA,NA
+"452","19","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",2.30307197571,NA,5,1
+"453","19","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",1.80271196365,NA,10,0
+"454","19","Friend","No Promise","No promise","Trust",NA,NA,"Pay back",1.8172621727,NA,5,1
+"455","19","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"456","19","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",2.15285491943,NA,5,1
+"457","20","Confederate","Promise","Promise","Trust","Mostly",3.00275266255,"Pay back",3.302910937,66.66,5,1
+"458","20","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",3.33616763231,NA,10,0
+"459","20","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",3.00271159995,NA,5,1
+"460","20","Computer","No Promise","No promise","Trust",NA,NA,"Pay back",4.56806772106,NA,5,1
+"461","20","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",2.23578857293,NA,10,0
+"462","20","Friend","Not apply","No promise","Trust",NA,NA,"Not to pay back",2.65210788767,NA,10,0
+"463","20","Friend","Promise","Promise","Trust","Sometimes",2.80241286932,"Pay back",1.61800830858,33.33,5,1
+"464","20","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"465","20","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",3.46978578874,NA,10,0
+"466","20","Friend","Promise","Promise","Trust","Never",2.46877535479,"Not to pay back",2.25196174867,0,10,0
+"467","20","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"468","20","Confederate","Not apply","Promise","Trust",NA,NA,"Not to pay back",1.73506319427,NA,10,0
+"469","20","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"470","20","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",1.83532236546,NA,5,1
+"471","20","Computer","Not apply","No promise","Trust",NA,NA,"Pay back",3.5525423816,NA,5,1
+"472","20","Confederate","No Promise","No promise","Trust",NA,NA,"Not to pay back",1.83515334874,NA,10,0
+"473","20","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"474","20","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",2.91883531722,NA,5,1
+"475","20","Computer","Promise","Promise","No trust","Always",3.98749862972,NA,NA,100,NA,NA
+"476","20","Confederate","Not apply","Promise","Trust",NA,NA,"Not to pay back",3.34944662612,NA,10,0
+"477","20","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",1.45120824946,NA,10,0
+"478","20","Friend","No Promise","No promise","Trust",NA,NA,"Pay back",2.35200644098,NA,5,1
+"479","20","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"480","20","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",3.25250802829,NA,5,1
+"481","21","Confederate","Promise","Promise","Trust","Mostly",4.23678898811,"Pay back",4.37036705017,66.66,5,1
+"482","21","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",2.27013802528,NA,10,0
+"483","21","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",1.73684406281,NA,5,1
+"484","21","Computer","No Promise","No promise","Trust",NA,NA,"Pay back",2.38673496246,NA,5,1
+"485","21","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",2.00345611572,NA,10,0
+"486","21","Friend","Not apply","No promise","Trust",NA,NA,"Not to pay back",1.47044491768,NA,10,0
+"487","21","Friend","Promise","Promise","Trust","Always",2.35327792168,"Pay back",2.23686718941,100,5,1
+"488","21","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"489","21","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",1.73708200455,NA,5,1
+"490","21","Friend","Promise","Promise","Trust","Sometimes",2.77002596855,"Pay back",1.63679814339,33.33,5,1
+"491","21","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"492","21","Confederate","Not apply","Promise","Trust",NA,NA,"Not to pay back",1.55335903168,NA,10,0
+"493","21","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"494","21","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",3.0868139267,NA,5,1
+"495","21","Computer","Not apply","No promise","Trust",NA,NA,"Pay back",1.21996712685,NA,5,1
+"496","21","Confederate","No Promise","No promise","Trust",NA,NA,"Not to pay back",2.52006196976,NA,10,0
+"497","21","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"498","21","Confederate","Not apply","No promise","Trust",NA,NA,"Not to pay back",2.53688502312,NA,10,0
+"499","21","Computer","Promise","Promise","No trust","Always",2.57040095329,NA,NA,100,NA,NA
+"500","21","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",1.72012090683,NA,5,1
+"501","21","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",1.73671603203,NA,5,1
+"502","21","Friend","No Promise","No promise","Trust",NA,NA,"Pay back",1.30357289314,NA,5,1
+"503","21","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"504","21","Confederate","Not apply","No promise","Trust",NA,NA,"Not to pay back",1.30353212357,NA,10,0
+"505","22","Confederate","Promise","Promise","Trust","Mostly",4.88615202904,"Pay back",3.44176387787,66.66,5,1
+"506","22","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",2.58353090286,NA,5,1
+"507","22","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",2.5217359066,NA,5,1
+"508","22","Computer","No Promise","No promise","Trust",NA,NA,"Pay back",3.13719105721,NA,5,1
+"509","22","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",3.18696594238,NA,10,0
+"510","22","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",1.84755015373,NA,5,1
+"511","22","Friend","Promise","Promise","Trust","Always",3.11524295807,"Pay back",2.22653698921,100,5,1
+"512","22","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"513","22","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",1.75729608536,NA,5,1
+"514","22","Friend","Promise","Promise","Trust","Sometimes",3.33753299713,"Pay back",1.28107094765,33.33,5,1
+"515","22","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"516","22","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",3.53530502319,NA,5,1
+"517","22","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"518","22","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",2.33850884438,NA,5,1
+"519","22","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",3.93783307076,NA,10,0
+"520","22","Confederate","No Promise","No promise","Trust",NA,NA,"Pay back",4.72633504868,NA,5,1
+"521","22","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"522","22","Confederate","Not apply","No promise","Trust",NA,NA,"Not to pay back",1.53380393982,NA,10,0
+"523","22","Computer","Promise","Promise","No trust","Mostly",6.1225771904,NA,NA,66.66,NA,NA
+"524","22","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",2.85547709465,NA,5,1
+"525","22","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",7.25333714485,NA,5,1
+"526","22","Friend","No Promise","No promise","Trust",NA,NA,"Pay back",2.95675516129,NA,5,1
+"527","22","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"528","22","Confederate","Not apply","No promise","Trust",NA,NA,"Not to pay back",2.13866710663,NA,10,0
+"529","23","Confederate","Promise","Promise","Trust","Sometimes",6.40271902084,"Pay back",9.01969504356,33.33,5,1
+"530","23","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",4.30311083794,NA,10,0
+"531","23","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",5.48429298401,NA,5,1
+"532","23","Computer","No Promise","No promise","Trust",NA,NA,"Pay back",4.68630385399,NA,5,1
+"533","23","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",4.13428497314,NA,10,0
+"534","23","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",2.81956601143,NA,5,1
+"535","23","Friend","Promise","Promise","Trust","Mostly",4.15307092667,"Pay back",2.93621706963,66.66,5,1
+"536","23","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"537","23","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",4.80096101761,NA,5,1
+"538","23","Friend","Promise","Promise","Trust","Mostly",4.93644809723,"Pay back",3.95296287537,66.66,5,1
+"539","23","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"540","23","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",5.23637104034,NA,5,1
+"541","23","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"542","23","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",1.95284795761,NA,5,1
+"543","23","Computer","Not apply","No promise","Trust",NA,NA,"Pay back",2.53597688675,NA,5,1
+"544","23","Confederate","No Promise","No promise","Trust",NA,NA,"Pay back",2.31743502617,NA,5,1
+"545","23","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"546","23","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",5.85303902626,NA,5,1
+"547","23","Computer","Promise","Promise","No trust","Always",3.15299010277,NA,NA,100,NA,NA
+"548","23","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",3.35304999352,NA,5,1
+"549","23","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",2.61965298653,NA,10,0
+"550","23","Friend","No Promise","No promise","Trust",NA,NA,"Pay back",2.28619289398,NA,5,1
+"551","23","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"552","23","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",3.63632702827,NA,5,1
+"553","24","Confederate","Promise","Promise","Trust","Always",6.50083899498,"Pay back",2.3703250885,100,5,1
+"554","24","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",1.27015089989,NA,5,1
+"555","24","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",0.934007883072,NA,5,1
+"556","24","Computer","No Promise","No promise","Trust",NA,NA,"Pay back",1.70345211029,NA,5,1
+"557","24","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",1.17001986504,NA,10,0
+"558","24","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",0.703378915787,NA,5,1
+"559","24","Friend","Promise","Promise","Trust","Mostly",3.50351285934,"Pay back",1.48670601845,66.66,5,1
+"560","24","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"561","24","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",1.03407502174,NA,5,1
+"562","24","Friend","Promise","Promise","Trust","Always",2.91744995117,"Pay back",1.03676199913,100,5,1
+"563","24","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"564","24","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",3.8200609684,NA,5,1
+"565","24","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"566","24","Friend","Not apply","No promise","Trust",NA,NA,"Not to pay back",0.88694190979,NA,10,0
+"567","24","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",1.57045388222,NA,10,0
+"568","24","Confederate","No Promise","No promise","Trust",NA,NA,"Not to pay back",0.919924974442,NA,10,0
+"569","24","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"570","24","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",0.903370141983,NA,5,1
+"571","24","Computer","Promise","Promise","No trust","Always",2.22048211098,NA,NA,100,NA,NA
+"572","24","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",0.836975097656,NA,5,1
+"573","24","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",0.986958026886,NA,5,1
+"574","24","Friend","No Promise","No promise","Trust",NA,NA,"Pay back",0.736794948578,NA,5,1
+"575","24","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"576","24","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",2.37005186081,NA,5,1
+"577","25","Confederate","Promise","Promise","Trust","Mostly",4.53695584188,"Pay back",3.46920319012,66.66,5,1
+"578","25","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",5.18259353946,NA,5,1
+"579","25","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",3.11545279463,NA,5,1
+"580","25","Computer","No Promise","No promise","Trust",NA,NA,"Not to pay back",3.0024725586,NA,10,0
+"581","25","Computer","Not apply","No promise","Trust",NA,NA,"Pay back",1.95162708948,NA,5,1
+"582","25","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",2.54829830115,NA,5,1
+"583","25","Friend","Promise","Promise","Trust","Mostly",5.40418230501,"Pay back",4.38232157267,66.66,5,1
+"584","25","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"585","25","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",8.75669202163,NA,5,1
+"586","25","Friend","Promise","Promise","Trust","Mostly",2.86901525514,"Pay back",2.73158513957,66.66,5,1
+"587","25","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"588","25","Confederate","Not apply","Promise","Trust",NA,NA,"Not to pay back",2.7691450058,NA,10,0
+"589","25","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"590","25","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",2.08505872876,NA,5,1
+"591","25","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",5.70438222881,NA,10,0
+"592","25","Confederate","No Promise","No promise","Trust",NA,NA,"Not to pay back",4.65375747147,NA,10,0
+"593","25","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"594","25","Confederate","Not apply","No promise","Trust",NA,NA,"Not to pay back",3.71976129396,NA,10,0
+"595","25","Computer","Promise","Promise","No trust","Always",5.20375547334,NA,NA,100,NA,NA
+"596","25","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",1.59874890881,NA,5,1
+"597","25","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",1.38493418426,NA,5,1
+"598","25","Friend","No Promise","No promise","Trust",NA,NA,"Pay back",3.2363727888,NA,5,1
+"599","25","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"600","25","Confederate","Not apply","No promise","Trust",NA,NA,"Not to pay back",4.21997448982,NA,10,0
+"601","26","Confederate","Promise","Promise","Trust","Mostly",5.2192928791,"Pay back",5.35295414925,66.66,5,1
+"602","26","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",2.96740603447,NA,10,0
+"603","26","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",2.3695089817,NA,5,1
+"604","26","Computer","No Promise","No promise","Trust",NA,NA,"Not to pay back",5.93592691422,NA,10,0
+"605","26","Computer","Not apply","No promise","Trust",NA,NA,"Not to pay back",3.26745915413,NA,10,0
+"606","26","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",2.85280394554,NA,5,1
+"607","26","Friend","Promise","Promise","Trust","Sometimes",6.33410215378,"Pay back",3.30293989182,33.33,5,1
+"608","26","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"609","26","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",2.65055894852,NA,5,1
+"610","26","Friend","Promise","Promise","Trust","Sometimes",3.42071413994,"Pay back",2.43623209,33.33,5,1
+"611","26","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"612","26","Confederate","Not apply","Promise","Trust",NA,NA,"Not to pay back",3.56983613968,NA,10,0
+"613","26","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"614","26","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",2.90261602402,NA,5,1
+"615","26","Computer","Not apply","No promise","Trust",NA,NA,"Pay back",4.00263905525,NA,5,1
+"616","26","Confederate","No Promise","No promise","Trust",NA,NA,"Not to pay back",3.95294094086,NA,10,0
+"617","26","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"618","26","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",4.33618402481,NA,5,1
+"619","26","Computer","Promise","Promise","No trust","Sometimes",6.25264596939,NA,NA,33.33,NA,NA
+"620","26","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",3.51956987381,NA,5,1
+"621","26","Computer","Not apply","Promise","Trust",NA,NA,"Not to pay back",1.8361120224,NA,10,0
+"622","26","Friend","No Promise","No promise","Trust",NA,NA,"Not to pay back",2.78613305092,NA,10,0
+"623","26","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"624","26","Confederate","Not apply","No promise","Trust",NA,NA,"Not to pay back",3.43621778488,NA,10,0
+"625","27","Confederate","Promise","Promise","Trust","Always",2.21996712685,"Pay back",2.68702101707,100,5,1
+"626","27","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",1.47025609016,NA,5,1
+"627","27","Friend","Not apply","Promise","Trust",NA,NA,"Pay back",1.52027893066,NA,5,1
+"628","27","Computer","No Promise","No promise","Trust",NA,NA,"Pay back",1.08693408966,NA,5,1
+"629","27","Computer","Not apply","No promise","Trust",NA,NA,"Pay back",4.57005310059,NA,5,1
+"630","27","Friend","Not apply","No promise","Trust",NA,NA,"Pay back",1.62064909935,NA,5,1
+"631","27","Friend","Promise","Promise","Trust","Sometimes",2.62010717392,"Pay back",3.32020902634,33.33,5,1
+"632","27","Confederate","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"633","27","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",2.53678894043,NA,5,1
+"634","27","Friend","Promise","Promise","Trust","Mostly",3.52022480965,"Pay back",1.4204249382,66.66,5,1
+"635","27","Friend","Not apply","Promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"636","27","Confederate","Not apply","Promise","Trust",NA,NA,"Not to pay back",2.97032499313,NA,10,0
+"637","27","Computer","No Promise","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"638","27","Friend","Not apply","No promise","Trust",NA,NA,"Not to pay back",2.20361590385,NA,10,0
+"639","27","Computer","Not apply","No promise","Trust",NA,NA,"Pay back",2.60352897644,NA,5,1
+"640","27","Confederate","No Promise","No promise","Trust",NA,NA,"Pay back",1.45338797569,NA,5,1
+"641","27","Friend","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"642","27","Confederate","Not apply","No promise","Trust",NA,NA,"Not to pay back",3.27009892464,NA,10,0
+"643","27","Computer","Promise","Promise","No trust","Never",2.08696508408,NA,NA,0,NA,NA
+"644","27","Confederate","Not apply","Promise","Trust",NA,NA,"Pay back",1.48700714111,NA,5,1
+"645","27","Computer","Not apply","Promise","Trust",NA,NA,"Pay back",2.23702597618,NA,5,1
+"646","27","Friend","No Promise","No promise","Trust",NA,NA,"Pay back",1.65328097343,NA,5,1
+"647","27","Confederate","Not apply","No promise","No trust",NA,NA,NA,NA,NA,NA,NA
+"648","27","Confederate","Not apply","No promise","Trust",NA,NA,"Pay back",1.3039419651,NA,5,1

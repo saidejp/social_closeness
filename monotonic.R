@@ -51,7 +51,7 @@ m0 <- brm(not_pay ~ 1 + (1 | id),
           family = bernoulli("logit"),
           control = list(adapt_delta = 0.95))
 
-m0 <- add_criterion(m0, "kfold", K = 10)
+m0 <- add_criterion(m0, criterion = "waic")
 
 
 # M1 ordinal predictor prom -----------------------------------------------
@@ -66,7 +66,7 @@ m1 <- brm(not_pay ~ mo(prom_ord) + (mo(prom_ord) | id),
           family = bernoulli("logit"),
           control = list(adapt_delta = 0.95))
 
-m1 <- add_criterion(m1, "kfold", K = 10)
+m1 <- add_criterion(m1, criterion = "waic")
 
 
 # M2 ordinal predictor partner --------------------------------------------
@@ -82,39 +82,82 @@ m2 <- brm(not_pay ~ mo(part_ord) + (mo(part_ord) | id),
           family = bernoulli("logit"),
           control = list(adapt_delta = 0.95))
 
-m2 <- add_criterion(m2, "kfold", K = 10)
+m2 <- add_criterion(m2, criterion = "waic")
 
 
-# M3 ordinal predictos prom + partner -------------------------------------
+# M3 ordinal predictors prom + partner -------------------------------------
 
 prior3 <- prior(normal(0, 10), class = "b") +
   prior(dirichlet(1, 1, 1, 1), class = "simo", coef = "moprom_ord1") +
   prior(dirichlet(1, 1), class = "simo", coef = "mopart_ord1")
 
-m3 <- brm(not_pay ~ mo(prom_ord) + mo(part_ord) + (mo(prom_ord) + mo(part_ord) | id),
-          data = d_ord,
-          prior = prior3,
-          sample_prior = "yes",
-          family = bernoulli("logit"),
-          control = list(adapt_delta = 0.95))
+m3 <- brm(
+  not_pay ~ mo(prom_ord) + mo(part_ord) + (mo(prom_ord) + mo(part_ord) | id),
+  data = d_ord,
+  prior = prior3,
+  sample_prior = "yes",
+  family = bernoulli("logit"),
+  control = list(adapt_delta = 0.95)
+  )
 
-m3 <- add_criterion(m3, "kfold", K = 10)
-
-
-# M4 ordinal predictos prom * partner -------------------------------------
-
-m4 <- brm(not_pay ~ mo(prom_ord) *  mo(part_ord) + (mo(prom_ord) *  mo(part_ord) | id),
-          data = d_ord,
-          prior = prior3,
-          sample_prior = "yes",
-          family = bernoulli("logit"),
-          control = list(adapt_delta = 0.95))
+m3 <- add_criterion(m3, criterion = "waic")
 
 
-m4 <- add_criterion(m4, "kfold", K = 10)
+# M4 ordinal predictors mo(prom) * partner ---------------------------------
 
+prior4 <- prior(normal(0, 10), class = "b") +
+  prior(dirichlet(1, 1, 1, 1), class = "simo", coef = "moprom_ord1") +
+  prior(dirichlet(1, 1, 1, 1), class = "simo", coef = "moprom_ord:part_ord1")
+
+m4 <- brm(
+  not_pay ~ mo(prom_ord) * part_ord + (mo(prom_ord) * part_ord | id),
+  data = d_ord,
+  prior = prior4,
+  sample_prior = "yes",
+  family = bernoulli("logit"),
+  control = list(adapt_delta = 0.95)
+  )
+
+m4 <- add_criterion(m4, criterion = "waic")
+
+
+# M5 ordinal predictors prom * mo(partner) ---------------------------------
+
+prior5 <- prior(normal(0, 10), class = "b") +
+  prior(dirichlet(1, 1), class = "simo", coef = "mopart_ord1") +
+  prior(dirichlet(1, 1), class = "simo", coef = "mopart_ord:prom_ord1")
+
+m5 <- brm(
+  not_pay ~ prom_ord * mo(part_ord) + (prom_ord * mo(part_ord) | id),
+  data = d_ord,
+  prior = prior5,
+  sample_prior = "yes",
+  family = bernoulli("logit"),
+  control = list(adapt_delta = 0.99)
+)
+
+m5 <- add_criterion(m5, criterion = "waic")
+
+# M6 ordinal predictors mo(prom) * mo(part) ---------------------------------
+
+prior6 <- prior(normal(0, 10), class = "b") +
+  prior(dirichlet(1, 1, 1, 1), class = "simo", coef = "moprom_ord1") +
+  prior(dirichlet(1, 1), class = "simo", coef = "mopart_ord1") +
+  prior(dirichlet(1, 1, 1, 1), class = "simo", coef = "moprom_ord:mopart_ord1") +
+  prior(dirichlet(1, 1), class = "simo", coef = "moprom_ord:mopart_ord2")
+
+m6 <- brm(
+  not_pay ~ mo(prom_ord) * mo(part_ord) + (mo(prom_ord) *  mo(part_ord) | id),
+  data = d_ord,
+  prior = prior6,
+  sample_prior = "yes",
+  family = bernoulli("logit"),
+  control = list(adapt_delta = 0.99)
+)
+
+m6 <- add_criterion(m6, criterion = "waic")
 
 # Comparing models --------------------------------------------------------
 
-loo_compare(m0, m1, m2, m3, m4, criterion =  "kfold")
+model_weights(m0, m1, m2, m3, m4, m5, m6) %>% round(3)
 
