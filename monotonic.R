@@ -157,7 +157,28 @@ m6 <- brm(
 
 m6 <- add_criterion(m6, criterion = "waic")
 
+# m7
+
+m7 <- brm(
+  not_pay ~ mo(prom_ord) + (mo(prom_ord)  | id),
+  data = d_ord,
+  #prior = prior4,
+  sample_prior = "yes",
+  family = mixture(bernoulli, bernoulli),
+  control = list(adapt_delta = 0.99)
+)
+
+m7 <- add_criterion(m7, criterion = "waic")
+
+
+
 # Comparing models --------------------------------------------------------
 
-model_weights(m0, m1, m2, m3, m4, m5, m6) %>% round(3)
+model_weights(m0, m1, m2, m3, m4, m5, m6, weights = "waic") %>% round(5)
+
+pp_check(m4, type = "bars_grouped", group = "id", nsamples = 200)
+
+
+
+
 
