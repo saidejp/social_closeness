@@ -103,5 +103,24 @@ pp_cases_2 <- data3 %>%
   theme(legend.position = "top", 
         axis.text.x = element_text(size = 10)))
 
-  
+
+# Clustering --------------------------------------------------------------
+
+perc <- cases %>% 
+  group_by(id) %>% 
+  summarise(perc = mean(response)) 
+
+x <- cases %>% 
+  group_by(id) %>% 
+  summarise(perc = mean(response)) %>% 
+  pull(perc)
+
+id <- cases %>% 
+  group_by(id) %>% 
+  summarise(perc = mean(response)) %>% 
+  pull(id)
+
+clust <- hclust(dist(x), method = "ward.D", members = id)
+p_clust <- plot(clust)
+
 
