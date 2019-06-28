@@ -1,0 +1,73 @@
+---
+title: "Social closeness in the face of deception"
+author: "Said E. Jiménez"
+date: "6/27/2019"
+output: 
+  pdf_document:
+    toc: true
+    number_sections: true
+fontsize: 12pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, fig.align='center', dev = "png", dpi = 400)
+load("~/Documents/R/github_Said/website/said/public/candidatura/candidatura.RData")
+pacman::p_load(tidyverse)
+
+```
+
+# Introducción
+
+
+# Métodos
+
+## Sujetos
+
+Se incluyeron 45 sujetos (15 hombres), reclutados en la Universidad Nacional Autónoma de México, en un rango de edad de 19 a 33 años y su nivel educativo mínimo fue licenciatura. Los participantes acudieron al estudio con un amigo considerado _cercano_ por ellos mismos, quien cumplía las siguientes características: era una persona del mismo sexo que el participante, no tenía un vínculo familiar y no se trataba de una persona con una relación de tipo sentimental y/o sexual. 
+
+## Tarea y procedimiento
+
+Todos los participantes realizaron una adaptación de la tarea de confianza y promesas presentada por Baumgartner (2009), que consiste en 24 ensayos entre dos jugadores **A** y **B**, el jugador **A** tiene originalmente 0 pesos mexicanos y el jugador **B** tiene 2 pesos, al jugador **B** se le presenta la oportunidad de invertir su dinero al jugador **A** o conservarlo, si invierte su dinero se multiplica por 5 pesos, de modo que el jugador **A** recibe 10 pesos. Finalmente, el jugador **A** toma la decisión de pagar la mitad al jugador **B** o quedarse los 10 pesos. La estructura descrita se repite en 24 ensayos, sin embargo, en 4 de los ensayos el jugador **A** puede enviar una promesa a **B**, las promesas son que _siempre_, _casi siempre_, _algunas veces_ o _nunca_ pagaran la mitad. Cada promesa es válida por tres ensayos, de modo que 12 de los ensayos tienen el efecto de la promesa y los otros 12 no lo tienen. 
+
+La variación respecto a la tarea original es que en nuestro experimento se presentaron tres compañeros de juego con tres niveles de cercanía social en el papel del jugador **B**: **computadora** (cercanía nula), **confederado** (cercanía baja) y **amigo** (cercanía alta), mientras que el participante principal siempre fungió el papel del jugador **A**. Cada compañero de juego realizó el rol de **B** en 8 de los 24 ensayos totales, sin embargo, tanto la condición de promesas como la de cercanía social fueron presentadas al sujeto **A** en orden pseudoaleatorio, lo que significa que se realizó la aleatorización de los ensayos una vez y se mantuvo el mismo orden para todos los sujetos. Con el fin de simplificar la tarea y homogeneizar la experiencia de todos nuestros participantes, se programaron _a priori_ las decisiones de los compañeros **B** sobre si invertían o no su monto inicial, se programó que los tres compañeros decidieran invertir en 6 ensayos y no invertir en 2, los cuales también se presentaron al sujeto **A** en orden pseudoaleatorio. La historia encubierta para todos nuestros sujetos en el papel de **A** fue que estarían jugando en tiempo real con su amigo, el confederado (que se le dijo que sería otra persona desconocida de su mismo sexo) y la computadora. 
+
+En la Figura 1 se muestra un diagrama de la cronología de la tarea experimental con las duraciones de cada fase en segundos, cada caja de izquierda a derecha representa una pantalla que se le mostró a los sujetos de manera secuencial. La parte A$_{1}$ corresponde a un ejemplo de los ensayos sin promesas y la A$_{2}$ de los ensayos con promesas. La fase de fijación sólo consistió en un período en el que el sujeto prestaba atención sin realizar ninguna conducta en particular, la **fase de promesas** en la parte A$_{1}$ le indicó al sujeto que los siguientes tres ensayos se podían decidir sin el efecto de la promesa, mientras que en A$_{2}$ se le pidió al sujeto que decidiera entre _siempre_, _casi siempre_, _algunas veces_ o _nunca_ pagar la mitad. A lo anterior, le siguió otro período de fijación, posteriormente los ensayos tanto en A$_{1}$ como en A$_{2}$ continuaron aproximadamente de la misma forma, en la **fase de anticipación/asignación** se le indicó a los sujetos quién era su compañero de juego para ese ensayo (computadora, confederado o amigo) y se le dió el mensaje de que su compañero estaba tomando su decisión, posteriormente en la **fase de decisión** se le dió al participante la información sobre cuál había sido la decisión de su compañero (si invirtió sus 2 pesos o no), se le recordaba su nivel de promesas (si se trataba de ensayos con promesas) y, en el caso de que su compañero hubiera invertido, se le pedía que decidiera si pagaba de regreso o no. Finalmente, en la **fase de feedback** se mostraban los pagos para ese ensayo y se repetía la secuencia. La tarea se programó en PsychoPy2 versión 1.84.2, que registraba las respuestas de los sujetos y los tiempos de reacción en segundos. 
+
+
+```{r figA, fig.cap='Task of promises and social closeness', out.width='80%'}
+
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/task.png")
+
+```
+
+
+# Resultados
+
+## Descriptivos
+
+Se analizaron 756 decisiones sobre pagar o no la mitad (18 por sujeto), así cómo 168 
+promesas (4 por sujeto), 69.6% de las decisiones fueron pagar la mitad, mientras que la proporción de las promesas seleccionadas fueron 4.17%, 14.9% 41.1%, 37.5%, respectivamente para las promesas, nunca, algunas veces, casi siempre y siempre. En la Figura 2 se muestra la proporción de pagos dependiendo de los niveles de promesas y los compañeros de juego. Romper promesas, es decir, que el sujeto haya prometido siempre y posteriormente decida no pagar la mitad ocurrió solamente el 11.1% de los ensayos, de los cuales, 7.63% fueron ensayos con la computadora, 3.47% con el desconocido y 0% con el amigo. 
+
+
+```{r fig2, fig.cap='Pay back rate by partners and promises levels'}
+
+g14 + theme(text = element_text(size = 10),
+            axis.text.x = element_text(size = 8))
+
+```
+
+
+## Modelamiento Bayesiano Jerárquico
+
+
+
+### Efectos variantes por sujeto
+
+### Efectos variantes por promesas
+
+### Análisis de cluster jerárquico
+
+# Discusión
+
+# Referencias
+

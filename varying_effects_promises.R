@@ -13,7 +13,7 @@ pacman::p_load(tidyverse, brms)
 
 # Pay by promise level and partner ----------------------------------------
 
-d_ord %>% 
+(g14 <- d_ord %>% 
   mutate(pay_back = ifelse(response == 1, "Pay back", "Not to pay back")) %>% 
   filter(dec_partner == "Trust") %>% 
   ggplot(aes(x = prom_ord, fill = pay_back)) +
@@ -25,8 +25,8 @@ d_ord %>%
   scale_fill_manual(values = c("#A4CAE3", "#053778")) +
   my_theme +
   coord_flip() +
-  theme(legend.position = "bottom", 
-        axis.text.x = element_text(size = 10)) 
+  theme(legend.position = "top", 
+        axis.text.x = element_text(size = 10)))
 
 
 # Model: varying effects by promise level ---------------------------------
@@ -105,44 +105,19 @@ pp_cases_2 <- data3 %>%
         axis.text.x = element_text(size = 10)))
 
 
-# Clustering --------------------------------------------------------------
 
-perc <- cases %>% 
-  group_by(id) %>% 
-  summarise(perc = mean(response)) 
-
-x <- cases %>% 
-  group_by(id) %>% 
-  summarise(perc = mean(response)) %>% 
-  pull(perc)
-
-id <- cases %>% 
-  group_by(id) %>% 
-  summarise(perc = mean(response)) %>% 
-  pull(id)
-
-clust <- hclust(dist(x), method = "ward.D", members = id)
-plot(clust)
-
-
-
-high <- c(32, 15, 6, 13, 38, 36, 20, 19, 7, 14, 23, 28, 37, 42, 31, 3, 9, 10, 40)
-low <- c(33, 16, 29, 12, 25, 30, 39, 27, 24, 22, 17, 11, 2, 5, 35, 26, 21, 1, 8, 
-         41, 34, 4, 18)
-
-data3 <- data3 %>% 
-  mutate(group = ifelse(id %in% high, "Unselfish", "Selfish") %>% 
-           factor(levels = c("Unselfish", "Selfish")))
-
-data3 %>% 
-  group_by(group) %>% 
-  summarise(mean = mean(response),
-            sd = sd(response),
-            sum = sum(response),
-            n = n())
-
-prop.test(c(286, 240), n = c(342, 414))
-
+(g13b <- ggplot(d_g13, aes(x = part_ord, y = rate, col = case))  +
+  geom_hline(yintercept = 0.5, lty = 2, col = "gray") +
+  geom_pointrange(aes(ymax = rate + pred_sd, ymin = rate - pred_sd),
+                  position = position_dodge(width = .5)) +
+  facet_wrap(~prom_ord) +
+  scale_color_manual(values = c("#053778", "#A4CAE3")) +
+  labs(x = NULL,
+       y = "Rate",
+       col = NULL) +
+  my_theme +
+  theme(legend.position = c(0.83, 0.25), 
+        axis.text.x = element_text(size = 10)))
 
 
 
@@ -199,5 +174,64 @@ bayesplot::mcmc_intervals(
   labs(x = "Probability of a Broken Promise") +
   geom_vline(xintercept = 0, lty = 2, col = "gray") +
   my_theme
+
+
+# Clustering --------------------------------------------------------------
+
+perc <- cases %>% 
+  group_by(id) %>% 
+  summarise(perc = mean(response)) 
+
+x <- cases %>% 
+  group_by(id) %>% 
+  summarise(perc = mean(response)) %>% 
+  pull(perc)
+
+id <- cases %>% 
+  group_by(id) %>% 
+  summarise(perc = mean(response)) %>% 
+  pull(id)
+
+clust <- hclust(dist(x), method = "ward.D", members = id)
+plot(clust)
+
+
+
+high <- c(32, 15, 6, 13, 38, 36, 20, 19, 7, 14, 23, 28, 37, 42, 31, 3, 9, 10, 40)
+low <- c(33, 16, 29, 12, 25, 30, 39, 27, 24, 22, 17, 11, 2, 5, 35, 26, 21, 1, 8, 
+         41, 34, 4, 18)
+
+data4 <- data3 %>% 
+  mutate(group = ifelse(id %in% high, "High", "Low") %>% 
+           factor(levels = c("High", "Low"))) %>% 
+  mutate(prom_ord = factor(prom_ord, ordered = T))
+
+data4 %>% 
+  group_by(group) %>% 
+  summarise(mean = mean(response),
+            sd = sd(response),
+            sum = sum(response),
+            n = n())
+
+prop.test(c(286, 240), n = c(342, 414))
+
+
+data4 %>% 
+  count(group, prom_ord)
+
+# Qué tan deshonestos podríamos considerarlos si su compromiso es significativamente menor?
+fit3 <- brm(prom_ord ~ group + (1 | id + trial), 
+            data = data4,
+            family = cumulative("probit"),
+            sample_prior = "yes",
+            chains = 4,
+            cores = 4,
+            control = list(adapt_delta = 0.99, 
+                           max_treedepth = 15))
+
+marginal_effects(fit3, categorical = T)
+
+hypothesis(fit3, "groupLow < 0")
+
 
 
