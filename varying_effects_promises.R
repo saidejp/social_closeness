@@ -8,7 +8,7 @@ load("~/Documents/R/github_Said/website/said/public/candidatura/candidatura.RDat
 
 # Packages ----------------------------------------------------------------
 
-pacman::p_load(tidyverse, brms)
+pacman::p_load(tidyverse, brms, tidybayes)
 
 
 # Pay by promise level and partner ----------------------------------------
@@ -233,5 +233,21 @@ marginal_effects(fit3, categorical = T)
 
 hypothesis(fit3, "groupLow < 0")
 
+diff_data <- posterior_samples(fit3) %>% 
+  select(low = b_groupLow)
 
-
+ggplot(diff_data, aes(x = low)) +
+  geom_histogram(fill = "#A4CAE3",
+                 col = "#A4CAE3",
+                 alpha = 0.4) +
+  geom_vline(xintercept = 0,
+             lty = 2,
+             col = "#787878",
+             size = .6) +
+  stat_pointintervalh(aes(y = 0),
+                      .width = .95,
+                      size = 10,
+                      col = "#053778") +
+  labs(x = "Low",
+       y = "Count") +
+  my_theme
