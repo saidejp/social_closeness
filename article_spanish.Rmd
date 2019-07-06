@@ -37,7 +37,7 @@ La variación respecto a la tarea original es que en nuestro experimento se pres
 En la Figura 1 se muestra un diagrama de la cronología de la tarea experimental con las duraciones de cada fase en segundos, cada caja de izquierda a derecha representa una pantalla que se le mostró a los sujetos de manera secuencial. La parte A$_{1}$ corresponde a un ejemplo de los ensayos sin promesas y la A$_{2}$ de los ensayos con promesas. La fase de fijación sólo consistió en un período en el que el sujeto prestaba atención sin realizar ninguna conducta en particular, la **fase de promesas** en la parte A$_{1}$ le indicó al sujeto que los siguientes tres ensayos se podían decidir sin el efecto de la promesa, mientras que en A$_{2}$ se le pidió al sujeto que decidiera entre _siempre_, _casi siempre_, _algunas veces_ o _nunca_ pagar la mitad. A lo anterior, le siguió otro período de fijación, posteriormente los ensayos tanto en A$_{1}$ como en A$_{2}$ continuaron aproximadamente de la misma forma, en la **fase de anticipación/asignación** se le indicó a los sujetos quién era su compañero de juego para ese ensayo (computadora, confederado o amigo) y se le dió el mensaje de que su compañero estaba tomando su decisión, posteriormente en la **fase de decisión** se le dió al participante la información sobre cuál había sido la decisión de su compañero (si invirtió sus 2 pesos o no), se le recordaba su nivel de promesas (si se trataba de ensayos con promesas) y, en el caso de que su compañero hubiera invertido, se le pedía que decidiera si pagaba de regreso o no. Finalmente, en la **fase de feedback** se mostraban los pagos para ese ensayo y se repetía la secuencia. La tarea se programó en PsychoPy2 versión 1.84.2, que registraba las respuestas de los sujetos y los tiempos de reacción en segundos. 
 
 
-```{r figA, fig.cap='Task of promises and social closeness', out.width='80%'}
+```{r figA, fig.cap='Task of promises and social closeness'}
 
 knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/task.png")
 
@@ -48,7 +48,7 @@ knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_close
 
 ## Descriptivos
 
-Se analizaron 756 decisiones sobre pagar o no la mitad (18 por sujeto), así cómo 168 
+Se analizaron 756 decisiones sobre pagar o no la mitad (18 por sujeto), así como 168 
 promesas (4 por sujeto), 69.6% de las decisiones fueron pagar la mitad, mientras que la proporción de las promesas seleccionadas fueron 4.17%, 14.9% 41.1%, 37.5%, respectivamente para las promesas, nunca, algunas veces, casi siempre y siempre. En la Figura 2 se muestra la proporción de pagos dependiendo de los niveles de promesas y los compañeros de juego. Romper promesas, es decir, que el sujeto haya prometido siempre y posteriormente decida no pagar la mitad ocurrió solamente el 11.1% de los ensayos, de los cuales, 7.63% fueron ensayos con la computadora, 3.47% con el desconocido y 0% con el amigo. 
 
 
@@ -62,10 +62,11 @@ g14 + theme(text = element_text(size = 10),
 
 ## Modelamiento Bayesiano Jerárquico
 
+Todos los modelos presentados a continuación se programaron en R por medio del paquete **brms** [@Burkner2017; @R2019], que realiza la inferencia mediante el muestreo por Markov chain Monte Carlo a través de **Stan** [@Rstan2018]. Para cada modelo, las distribuciones posteriores de todos los parámetros fueron aproximadas con cuatro cadenas de 2000 iteraciones cada una, las primeras 1000 iteraciones de cada cadena fueron descartadas (periodo de calentamiento), para un total de 4000 muestras post-calentamiento. La convergencia de los modelos fue evaluada a través de la inspección visual de las cadenas y el cálculo del estadístico $\hat{R}$, que para todos los parámetros fue de 1, lo que se interpreta como convergencia.  
 
 ### Efecto de la cercanía social en el engaño
 
-Para evaluar la hipótesis de que la cercanía social reduciría el engaño, se filtraron todos los ensayos en los que los sujetos promieteron que _siempre_ pagarían y después decidieron no pagar. Posteriormente, se utilizó inferencia bayesiana para evaluar el efecto de los compañeros de juego en la decisión de romper la promesa a nivel individual y poblacional. Para tal propósito, se realizó un modelo bayesiano jerárquico que asume que la incertidumbre en la estimación del efecto de los compañeros sobre la decisión de romper la promesa varía dependiendo de cada individuo, sin embargo, también asume que dichas variaciones pertenecen a distribuciones poblacionales comunes para el efecto de cada compañero sobre la decisión. 
+Para evaluar la hipótesis de que la cercanía social reduciría el engaño, se filtraron todos los ensayos en los que los sujetos promieteron que _siempre_ pagarían y después decidieron no pagar. Posteriormente, se utilizó inferencia bayesiana para evaluar el efecto de los compañeros de juego en la decisión de romper la promesa a nivel individual y poblacional. Para tal propósito, se realizó un modelo bayesiano jerárquico que asume que la incertidumbre en la estimación del efecto de los compañeros sobre la decisión de romper la promesa varía dependiendo de cada individuo, sin embargo, también asume que dichas variaciones pertenecen a distribuciones poblacionales comunes para el efecto de cada compañero sobre la decisión [@Gelman2006]. 
 
 $$
 \begin{aligned}
@@ -74,16 +75,21 @@ $$
 \end{aligned}
 $$
 
-En el modelo anterior, la decisión de romper la promesa $y_i$ proviene de una distribución Bernoulli con probabilidad de pagar $\theta_i$, el objetivo del modelo jerárquico es predecir cada decisión a través la combinación lineal de los efectos de cada compañero de juego, transformados por su función ligadora inversa $\mathrm{logit}$. En este modelo, $\beta$ y $u$ son coeficientes a nivel poblacional y nivel individual respectivamente, mientras que $\mathbf{X}$, $\mathbf{Z}$ son sus correpondientes matrices del diseño. El modelo estima que la probabilidad $\theta_i$ de que en cada ensayo se decida romper la promesa está en función del efecto de la presencia de los compañeros con cercanía nula $\beta^{computer}$, baja $\beta^{confederate}$ y alta $\beta^{friend}$.
+En el modelo anterior, la decisión de romper la promesa $y_i$ proviene de una distribución Bernoulli con probabilidad de pagar $\theta_i$, el objetivo del modelo jerárquico es predecir cada decisión a través de la combinación lineal de los efectos de cada compañero de juego, transformados por su función ligadora inversa $\mathrm{logit}$ [@Burkner2017]. En este modelo, $\beta$ y $u$ son coeficientes a nivel poblacional y nivel individual respectivamente, mientras que $\mathbf{X}$, $\mathbf{Z}$ son sus correpondientes matrices del diseño. En este caso, los coeficientes poblacionales corresponden con la presencia de los compañeros con cercanía social nula $\beta^{computer}$, baja $\beta^{confederate}$ y alta $\beta^{friend}$.
 
-El modelo se programó en R por medio del paquete **brms**, que realiza la inferencia mediante el muestreo por Markov chain Monte Carlo a través de **Stan**. Las distribuciones posteriores de todos los parámetros fueron aproximadas con cuatro cadenas de 2000 iteraciones cada una, las primeras 1000 iteraciones de cada cadena fueron descartadas (periodo de calentamiento), para un total de 4000 muestras post-calentamiento. La convergencia del modelo fue evaluada a través de la inspección visual de las cadenas y el cálculo del estadístico $\hat{R}$, que para todos los parámetros fue de 1, lo que se interpreta como convergencia.  
+En la Figura 3, se muestra la probabilidad posterior de romper la promesa dependiendo del compañero de juego, los circulos corresponden con las medianas de las distribuciones de las estimaciones posteriores de los efectos, la barra gruesa y la barra delgada corresponden con el intervalo del 50% y 95% de probabilidad posterior. Es claro que la probabilidad de romper la promesa va disminuyendo conforme va aumentando la cercanía social, sin embargo, calculamos las razones de evidencia para las siguientes hipótesis: 
 
-En la Figura 3, se muestra la probabilidad posterior de romper la promesa dependiendo del compañero de juego, los circulos corresponden con las medianas de las distribuciones de las estimaciones posteriores de los efectos, la barra gruesa y la barra delgada corresponden con el intervalo del 50% y 97% de probabilidad posterior. 
+1. Hay mayor probabilidad de que se rompa la promesa a un compañero con cercanía nula (computadora) en comparación con los compañeros con cercanía social (desconocido y amigo).
 
+2. Hay mayor probabilidad de que se rompa la promesa a un compañero con cercanía social baja (desconocido) en comparación con el compañero de cercanía social alta (amigo).
+
+La razón entre la probabilidad posterior de las hipótesis mencionadas y sus correspondientes hipótesis alternativas fue de 10.33 y 5.58 respectivamente para las hipótesis 1 y 2. Cabe mencionar que la hipótesis de que la cercanía social reduciría el engaño fue expresada _a priori_ como parte de un proyecto de investigación más amplio y se puede consultar aquí: https://osf.io/re7kp/.
+
+ 
 ```{r fig3, fig.cap='Posterior probability of Breaking the Promise'}
 bayesplot::mcmc_intervals(
   samples_fit2,
-  prob_outer = 0.97
+  prob_outer = 0.95
   ) +
   labs(x = "Posterior Probability") +
   geom_vline(xintercept = 0, lty = 2, col = "gray") +
@@ -93,11 +99,12 @@ bayesplot::mcmc_intervals(
 
 ### Efectos de las promesas y la cercanía social en la decisión
 
-Para evaluar el efecto las condiciones experimentales en la decisión de pagar la mitad, se utilizaron todos los ensayos en los que los compañeros decidieron invertir. Nuevamente, se realizó un modelo bayesiano jerárquico, que asume que las promesas y los compañeros de juego tienen un efecto que varía para cada individuo, sin embargo, también asume que dichas variaciones pertenecen a distribuciones poblacionales comunes. El modelo estima que la probabilidad $\theta_i$ de que en cada ensayo se decida pagar la mitad está en función del efecto de la presencia de promesas $\beta^{promise}$, así como de los compañeros con cercanía social baja $\beta^{confederate}$ y alta $\beta^{friend}$. 
+Para evaluar el efecto de las condiciones experimentales en la decisión de pagar la mitad, se utilizaron todos los ensayos en los que los compañeros decidieron invertir. Nuevamente, se realizó un modelo bayesiano jerárquico, que asume que las promesas y los compañeros de juego tienen un efecto que varía para cada individuo, sin embargo, también asume que dichas variaciones pertenecen a distribuciones poblacionales comunes. El modelo estima que la probabilidad $\theta_i$ de que en cada ensayo se decida pagar la mitad está en función del efecto de la presencia de promesas $\beta^{promise}$, así como de los compañeros con cercanía social baja $\beta^{confederate}$ y alta $\beta^{friend}$. 
 
-El modelo se programó en R por medio del paquete **brms**, que realiza la inferencia mediante el muestreo por Markov chain Monte Carlo a través de **Stan**. Las distribuciones posteriores de todos los parámetros fueron aproximadas con cuatro cadenas de 2000 iteraciones cada una, las primeras 1000 iteraciones de cada cadena fueron descartadas (periodo de calentamiento), para un total de 4000 muestras post-calentamiento. La convergencia del modelo fue evaluada a través de la inspección visual de las cadenas y el cálculo del estadístico $\hat{R}$, que para todos los parámetros fue de 1, lo que se interpreta como convergencia.  
+En la Figura 4 se presentan las distribuciones posteriores de los coeficientes $\beta$ en escala logit, la linea central representa la mediana de la distribución y el área sombreada corresponde con el intervalo de 50% de probabilidad posterior. Como se puede observar, más del 95% de la densidad posterior de los coeficientes poblacionales está superior al 0, lo que indica fuerte evidencia del efecto de las condiciones experimentales en la decisión de pagar, de modo que la presencia de promesas y del confederado aumentan claramente la probabilidad de pagar, pero la presencia del amigo es la condición que más efecto tiene en esta conducta. 
 
-En la Figura 4 se presentan las distribuciones posteriores de los coeficientes $\beta$ en escala logit, la linea central representa la mediana de la distribución y el área sombreada coresponde con el intervalo de 50% de probabilidad posterior. 
+Asimismo, la Figura 5 presenta la distribución posterior predictiva en contraste con la proporción de las decisiones a cada compañero, cada panel corresponde con uno de los primeros doce sujetos en la fase de promesas. Las respuestas sobre la linea punteada indicarían que el sujeto pago la mitad de los ensayos en que ese compañero estuvo presente. La distribución posterior predictiva simula observaciones del modelo y las compara con los datos reales, nos sirve para identificar si el modelo es suficientemente cercano al proceso que ha generado los datos [@Schad2019; @Lee2014]. Se puede observar que existe gran correspondencia entre la respuesta de los sujetos y las predicciones del modelo, aún en los casos en los que el modelo se "equivoca" (por ejemplo el sujeto 1) la respuesta observada se sitúa en el margen de error de la predicción, lo que da credibilidad a las estimaciones. 
+
 
 
 ```{r fig4, fig.cap='Posterior estimates in logit scale'}
@@ -107,25 +114,35 @@ g5
 ```
 
 
-Asimismo, la Figura 5 presenta la distribución posterior predictiva en contraste con la proporción de las decisiones de los primeros doce sujetos en la fase de promesas. La distribución posterior predictiva simula observaciones del modelo y las compara con los datos reales, nos sirve para identificar si el modelo es suficientemente cercano al proceso que ha generado los datos.
+```{r fig5, fig.cap='Posterior predictive over pay back rate', out.width='100%', out.height='100%'}
 
-```{r fig5, fig.cap='Posterior predictive over pay back rate', out.width='100%'}
+d_g9 %>% 
+    ggplot(aes(x = treatment, y = rate, col = case)) +
+    geom_hline(yintercept = 0.5, lty = 2, col = "gray") +
+    geom_line(aes(group = case), show.legend = F) +
+    geom_pointrange(aes(ymax = rate + pred_sd, ymin = rate - pred_sd),
+                    shape = 21, fill = "white", size = 0.4) +
+    scale_color_manual(values = c("#053778", "#A4CAE3")) +
+    facet_wrap(~id) +
+    my_theme +
+    scale_y_continuous(breaks = c(0, 0.5, 1.0)) +  
+    theme(axis.text.x = element_text(angle = 75, hjust = 1), 
+          legend.position = "top",
+          text = element_text(size = 10)) +
+    labs(x = NULL, y = "Rate", col = NULL)
 
-g9 + 
-  labs(x = NULL, y = "Rate") +
-  theme(axis.text.y = element_text(size = 8),
-           strip.text.x = element_text(size = 8)) 
 
 ```
 
 
 ### Efectos de la cercanía social variantes por promesas
 
-En este modelo se asume que la cercanía social tiene un efecto que varía para cada nivel de promesa, lo que implica que hay niveles de promesas que son más sensibles al efecto de los compañeros de juego. Nuevamente, se realizó un modelo bayesiano jerárquico para estimar el efecto de los compañeros de juego a nivel poblacional y la variabilidad dependiendo de los niveles de promesa. En la Figura 6 se muestra la distribución posterior predictiva, comparada con las tasas de pago de todos los individuos a los diferentes compañeros y su variación por el nivel de promesa. 
+En este modelo se asume que la cercanía social tiene un efecto que varía para cada nivel de promesa, lo que implica que hay niveles de promesa que son más sensibles que otros al efecto de los compañeros de juego sobre la decisión de pagar la mitad. Nuevamente se realizó un modelo bayesiano jerárquico para estimar el efecto de los compañeros de juego a nivel poblacional y las variaciones dependiendo de los niveles de promesa. La Tabla 1 resume las distribuciones posteriores de los coeficientes del modelo en escala logit, incluye los estimadores puntuales, sus errores estándar y los intervalos de credibilidad bayesianos del 95%. Se puede observar una estimación similar a los modelos anteriores, con evidencia fuerte del efecto de la cercanía social sobre la decisión de pagar la mitad. Por otra parte, en la Figura 6 se muestra la distribución posterior predictiva, comparada con las tasas de pago de todos los individuos a los diferentes compañeros y su variación por el nivel de promesa. A excepción de con la promesa _never_, se observa un efecto positivo monotónico de los compañeros de juego en todos los niveles de promesa, sin embargo se puede observar cómo el efecto de la cercanía social varía dependiendo de la fuerza de la promesa.
 
 ```{r fig6, fig.cap='Posterior predictive over pay back rate, Social Closeness Varying effects by Promise levels'}
 
 g13b + 
+  scale_y_continuous(breaks = c(0, 0.5, 1.0)) +  
   theme(axis.text.x = element_text(size = 7))
 
 
@@ -152,9 +169,31 @@ kable(tabla1,
 
 
 
-### Análisis de cluster jerárquico
+### Compromiso expresado en las promesas
 
-En el estudio orginal de promesas [@Baumgartner2009], los autores optaron por dividir su muestra en dos de acuerdo a la técnica de agrupamiento jerárquico con el método de Ward. De esta manera obtuvieron dos conjuntos de participantes que eran diferentes en sus tasas de pago, a pesar de que ambos hacían promesas muy altas, por tal motivo los autores denominaron al grupo que pagaba poco _deshonestos_ y al grupo que pagaba mucho _honestos_. En un ejercicio similar, en el presente estudio realizamos la técnica de agrupamiento jerárquico para obtener una solución de 2 grupos y encontramos dos conjuntos similares en $n$ (Grupo 1 = 23, Grupo 2 = 19), con proporciones de pago bastante diferentes (Grupo 1 = 58%, Grupo 2 = 84%), con una diferencia en un intervalo de confianza del 95% de 19% a 32% en favor del Grupo 2. 
+En el estudio orginal de promesas [@Baumgartner2009], los autores optaron por dividir su muestra en dos de acuerdo a la técnica de agrupamiento jerárquico con el método de Ward. De esta manera obtuvieron dos conjuntos de participantes que eran diferentes en sus tasas de pago, a pesar de que ambos hacían promesas muy altas, por tal motivo los autores denominaron al grupo que pagaba poco _deshonestos_ y al grupo que pagaba mucho _honestos_. En un ejercicio similar, en el presente estudio realizamos la técnica de agrupamiento jerárquico para obtener una solución de 2 grupos y encontramos dos conjuntos similares en $n$ que denominamos grupo "Low" y "High" (Low = 23, High = 19), con proporciones de pago bastante diferentes (Low = 58%, High = 84%), con una diferencia en un intervalo de confianza del 95% de 19% a 32% en favor del grupo High. 
+
+Aunque pareciera un resultado similar al reportado en el trabajo de Baumgartner (2009), exploramos el patrón de promesas de ambos grupos para determinar si era posible clasificar a nuestros sujetos como honestos y deshonestos. Si hipotetizamos que el compromiso de pagar seria reflejado en el nivel de promesas seleccionado, un grupo de deshonestos podría generar en sus compañeros la creencia de que pagará al seleccionar un nivel alto de promesas (siempre o casi siempre) y, posteriormente, traicionar esa confianza al decidir no pagar la mitad. 
+
+Con el objetivo de explorar si los grupos representan a poblaciones que no difieren en el nivel de compromiso expresado en las promesas, utilizamos un modelo bayesiano acumulativo, que asume que los niveles de promesas son una varable ordinal observada $Y$ que se origina de la categorización de una variable latente continua $\tilde{Y}$, para este caso, _el compromiso expresado de pagar la mitad_ [@Burkner2019]. El grado en que los sujetos del grupo High difieren del grupo Low, en desviaciones estándar normales ($z$-values), en la escala latente de $\tilde{Y}$, tiene un estimador puntual de 0.95, lo que implica que el grupo de High tiene 0.95 $z$-values mayor compromiso de pagar la mitad que el grupo Low.
+
+El intervalo de credibilidad bayesiano del 95% indica que el grupo High está entre 0.35 a 1.58 $z$-values de diferencia con respecto a Low. Por lo que podemos concluir con al menos 95% de probabilidad posterior que las personas que pertenecen al grupo High expresaron en sus promesas mayor compromiso de pagar la mitad de lo que hicieron los sujetos del grupo Low. Si observamos la Figura 7, la probabilidad de seleccionar los diferentes niveles de promesas varía dependiendo del grupo, el que tuvo mayor porcentaje de decisiones de pagar la mitad tiene más probabilidad de seleccionar _Always_ (grupo High), mientras que el grupo que tuvo menor porcentaje de decisiones de pagar la mitad tiene más probabilidad de seleccionar _Mostly_ (grupo Low). 
+
+Según nuestros datos, no podríamos justificar la clasificación de nuestros grupos de acuerdo con su honestidad o deshonestidad, al menos no con la técnica empleada en Baumgartner (2009). Ya que las personas fueron bastante consistentes con cumplir lo que prometían pagar.  
+
+```{r fig7, fig.cap='Promise choices by group'}
+
+# Cumulative model
+plt$`group:cats__` +
+  labs(x = "Group",
+       col = "Promise",
+       fill = "Promise") +
+  scale_fill_manual(values = RColorBrewer::brewer.pal(9, "Blues")[c(3, 5, 7, 9)], 
+                    aesthetics = "col") +
+  my_theme 
+
+```
+
 
 
 # Discusión

@@ -251,3 +251,43 @@ ggplot(diff_data, aes(x = low)) +
   labs(x = "Low",
        y = "Count") +
   my_theme
+
+
+
+data5 <- data4 %>% 
+  filter(prom_ord != "No response") %>% 
+  mutate(prom_ord = fct_drop(prom_ord),
+         group = factor(group, levels = c("Low", "High")))
+  
+fit4 <- brm(prom_ord ~ group + (1 | id + trial), 
+            data = data5,
+            family = cumulative("probit"),
+            sample_prior = "yes",
+            chains = 4,
+            cores = 4,
+            control = list(adapt_delta = 0.99, 
+                           max_treedepth = 15))
+
+plt <-  plot(marginal_effects(fit4, categorical = T))
+
+
+plt$`group:cats__` +
+  labs(x = NULL,
+       col = "Promise",
+       fill = "Promise") +
+  scale_fill_manual(values = RColorBrewer::brewer.pal(9, "Blues")[c(3,5,7,9)], 
+                    aesthetics = "col") +
+  my_theme 
+
+
+data %>% 
+  mutate(ahead = lead(decision)) %>% 
+  select(partner, dec_partner, decision, ahead) %>% 
+  count(partner, dec_partner, ahead)
+
+
+d_ord %>% 
+  mutate(ahead = lead(prom_ord, n = 2L)) %>% 
+  filter(ahead != "No response") %>% 
+  select(dec_partner, ahead) %>% 
+  count(dec_partner, ahead)
