@@ -21,7 +21,25 @@ pacman::p_load(tidyverse, kableExtra)
 
 # Introducción
 
-A la fecha, la inmensa mayoría de los estudios sobre engaño en economía, psicología y neurociencias, se han realizado en personas que NO se conocen entre sí [por indicar algunos, @Gneezy2005; @Gneezy2013; @Baumgartner2009; @Baumgartner2013; @Charness2006; @Mazar2008; @Fischbacher2013a]. En psicología social existen estudios que abordan el engaño en las relaciones interpersonales cercanas, sin embargo utilizan metodologías de autorreporte [@DePaulo1998; @DePaulo2004] o bien exploran las habilidades de detección del engaño en amigos del mismo sexo [@Anderson2002].
+
+Los seres humanos somos animales sociales y obtenemos ventajas de serlo. Historicamente, pertenecer a un grupo social ha brindado protección y garantizado el acceso a recursos como el alimento, actualmente se ha mostrado evidencia de que pertencer a un circulo social tiene un efecto positivo en la longevidad, la salud física y mental [@Tough2017; @Holt-Lunstad2018]. La interrelación entre la cercanía social y la cooperación es clave para la conformación de grandes grupos de individuos sin una relación genética, dichos grupos conforman la base de comunidades, sociedades y naciones, así como probablemente constituyen una de las condiciones más importantes para la supervivencia humana [@Fehr2003; @Fehr2018]. 
+
+Un requisito importante para que haya cooperación entre individuos es la comunicación, un metaanálisis que evaluó el efecto de la comunicación verbal o escrita en la cooperación en dilemas sociales, con base en 45 tamaños de efecto reportó un efecto positivo grande ($d = 1.01$) independientemente de la vía de comunicación [@Balliet2010].  
+
+
+Si las relaciones sociales son tan importantes, se podría pensar que una buena cantidad de las interacciones en que ocurre el engaño involucran personas de nuestro circulo social, de hecho la literatura ha mostrado que la gente frecuentemente miente a personas de las que se depende para obtener recursos [@VonHippel2011; @DePaulo1998; @Steinel2004].
+
+
+A la fecha, la inmensa mayoría de los estudios sobre toma de decisiones que involucran engaño en economía, psicología y neurociencias, se han realizado en personas que NO se conocen entre sí [por mencionar algunos, @Gneezy2005; @Gneezy2013; @Baumgartner2009; @Baumgartner2013; @Charness2006; @Mazar2008; @Fischbacher2013a]. En psicología social existen estudios que abordan el engaño en las relaciones interpersonales cercanas, sin embargo utilizan metodologías de autorreporte [@DePaulo1998; @DePaulo2004] o más bien exploran el desarrollo de habilidades de detección del engaño en amigos del mismo sexo [@Anderson2002]. 
+
+
+
+
+
+Economia cooperación 
+
+IDT dice qué
+
 
 # Métodos
 
