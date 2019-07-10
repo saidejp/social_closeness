@@ -7,7 +7,7 @@ output:
     toc: true
     number_sections: true
 fontsize: 12pt
-bibliography: judgement.bib
+bibliography: promises.bib
 csl: apa.csl
 header-includes: \usepackage{float}
 ---
@@ -21,6 +21,7 @@ pacman::p_load(tidyverse, kableExtra)
 
 # Introducción
 
+A la fecha, la inmensa mayoría de los estudios sobre engaño en economía, psicología y neurociencias, se han realizado en personas que NO se conocen entre sí [por indicar algunos, @Gneezy2005; @Gneezy2013; @Baumgartner2009; @Baumgartner2013; @Charness2006; @Mazar2008; @Fischbacher2013a]. En psicología social existen estudios que abordan el engaño en las relaciones interpersonales cercanas, sin embargo utilizan metodologías de autorreporte [@DePaulo1998; @DePaulo2004] o bien exploran las habilidades de detección del engaño en amigos del mismo sexo [@Anderson2002].
 
 # Métodos
 
