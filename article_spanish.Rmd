@@ -1,5 +1,5 @@
 ---
-title: "Social closeness in the face of deception"
+title: "Good guys or potential cooperators: an experimental and Bayesian account for two explanations"
 author: "Said E. Jiménez"
 date: "July 2019"
 output: 
@@ -22,23 +22,14 @@ pacman::p_load(tidyverse, kableExtra)
 
 Los seres humanos somos animales sociales y obtenemos ventajas de serlo. Historicamente, pertenecer a un grupo social ha brindado protección y garantizado el acceso a recursos como el alimento, actualmente se ha mostrado evidencia de que pertencer a un circulo social tiene un efecto positivo en la longevidad, la salud física y mental [@Tough2017; @Holt-Lunstad2018]. La interrelación entre la cercanía social y la cooperación es clave para la conformación de grandes grupos de individuos sin una relación genética, dichos grupos conforman la base de comunidades, sociedades y naciones, así como probablemente constituyen una de las condiciones más fundamentales para la supervivencia humana [@Fehr2003; @Fehr2018]. 
 
+
 Un requisito importante para que haya cooperación entre individuos es la comunicación, un metaanálisis  de 45 estudios reportó un efecto positivo grande ($d = 1.01$) de la comunicación en la cooperación independientemente del medio comunicativo [@Balliet2010]. De manera paralela, se sabe que posteriormente a sesiones de comunicación entre individuos completamente desconocidos hay un incremento de la cercanía social subjetiva [@Aron1997]. Sugiriendo una relación positiva entre la comunicación, la cooperación y la cercanía social. 
 
 
-Una de las formas de comunicación que ha recibido mayor atención en la teoría de juegos psicológica son las promesas, en una interacción entre quien la envía y la recibe, se cree que las promesas influyen en las creencias del receptor generando confianza y cooperación [@Charness2006; @Vanberg2008; @Baumgartner2009]. Sin embargo, existen situaciones en que se traiciona la confianza, se rompen las promesas o se engaña, por ejemplo, aproximadamente el 11% de las personas encuestadas por la General Social Survey (GSS) en 2018 respondieron que sí han tenido sexo con alguien diferente a su pareja mientras están casados [@GSS2018]. Otro ejemplo, de acuerdo con el Washington Post el presidente Trump ha dicho 10,796 afirmaciones falsas o engañosas en 869 días en el cargo [@Kessler2019].
+Una de las formas de comunicación que ha recibido mayor atención en la teoría de juegos psicológica son las promesas, en una interacción entre quien la envía y la recibe, se cree que las promesas influyen en las creencias del receptor generando confianza y cooperación [@Charness2006; @Vanberg2008]. Sin embargo, existen situaciones en que se traiciona la confianza, se rompen las promesas o se engaña, por ejemplo, aproximadamente el 11% de las personas encuestadas por la General Social Survey (GSS) en 2018 respondieron que sí han tenido sexo con alguien diferente a su pareja mientras están casados [@GSS2018]. Otro ejemplo, de acuerdo con el Washington Post el presidente Trump ha dicho 10,796 afirmaciones falsas o engañosas en 869 días en el cargo [@Kessler2019].
 
 
-
-
-
-
-
-
-Si las relaciones sociales son tan importantes, se podría pensar que una buena cantidad de las interacciones en que ocurre el engaño involucran personas de nuestro circulo social, de hecho la literatura ha mostrado que la gente frecuentemente miente a personas de las que se depende para obtener recursos [@VonHippel2011; @DePaulo1998; @Steinel2004].
-
-
-A la fecha, la inmensa mayoría de los estudios sobre toma de decisiones que involucran engaño en economía, psicología y neurociencias, se han realizado en personas que NO se conocen entre sí [por mencionar algunos, @Gneezy2005; @Gneezy2013; @Baumgartner2009; @Baumgartner2013; @Charness2006; @Mazar2008; @Fischbacher2013a]. En psicología social existen estudios que abordan el engaño en las relaciones interpersonales cercanas, sin embargo utilizan metodologías de autorreporte [@DePaulo1998; @DePaulo2004] o más bien exploran el desarrollo de habilidades de detección del engaño en amigos del mismo sexo [@Anderson2002]. 
-
+En el laboratorio se han estudiado explícitamente estas transgresiones a la confianza en experimentos donde las personas tienen incentivos para mentir o no cumplir sus promesas. Sin embargo, la inmensa mayoría de estos estudios en economía, psicología y neurociencias, se han realizado en personas que NO se conocen entre sí [por mencionar algunos, @Gneezy2005; @Gneezy2013; @Baumgartner2009; @Baumgartner2013; @Charness2006; @Mazar2008; @Fischbacher2013a]. En psicología social existen estudios que abordan el engaño en las relaciones interpersonales cercanas, sin embargo utilizan metodologías de autorreporte [@DePaulo1998; @DePaulo2004] o más bien exploran el desarrollo de habilidades de detección del engaño en amigos del mismo sexo [@Anderson2002]. 
 
 
 
