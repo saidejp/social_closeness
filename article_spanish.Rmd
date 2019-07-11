@@ -1,10 +1,9 @@
 ---
 title: "Social closeness in the face of deception"
 author: "Said E. Jiménez"
-date: "6/27/2019"
+date: "July 2019"
 output: 
   pdf_document:
-    toc: true
     number_sections: true
 fontsize: 12pt
 bibliography: promises.bib
@@ -22,9 +21,16 @@ pacman::p_load(tidyverse, kableExtra)
 # Introducción
 
 
-Los seres humanos somos animales sociales y obtenemos ventajas de serlo. Historicamente, pertenecer a un grupo social ha brindado protección y garantizado el acceso a recursos como el alimento, actualmente se ha mostrado evidencia de que pertencer a un circulo social tiene un efecto positivo en la longevidad, la salud física y mental [@Tough2017; @Holt-Lunstad2018]. La interrelación entre la cercanía social y la cooperación es clave para la conformación de grandes grupos de individuos sin una relación genética, dichos grupos conforman la base de comunidades, sociedades y naciones, así como probablemente constituyen una de las condiciones más importantes para la supervivencia humana [@Fehr2003; @Fehr2018]. 
+Los seres humanos somos animales sociales y obtenemos ventajas de serlo. Historicamente, pertenecer a un grupo social ha brindado protección y garantizado el acceso a recursos como el alimento, actualmente se ha mostrado evidencia de que pertencer a un circulo social tiene un efecto positivo en la longevidad, la salud física y mental [@Tough2017; @Holt-Lunstad2018]. La interrelación entre la cercanía social y la cooperación es clave para la conformación de grandes grupos de individuos sin una relación genética, dichos grupos conforman la base de comunidades, sociedades y naciones, así como probablemente constituyen una de las condiciones más fundamentales para la supervivencia humana [@Fehr2003; @Fehr2018]. 
 
-Un requisito importante para que haya cooperación entre individuos es la comunicación, un metaanálisis que evaluó el efecto de la comunicación verbal o escrita en la cooperación en dilemas sociales, con base en 45 tamaños de efecto reportó un efecto positivo grande ($d = 1.01$) independientemente de la vía de comunicación [@Balliet2010].  
+Un requisito importante para que haya cooperación entre individuos es la comunicación, un metaanálisis  de 45 estudios reportó un efecto positivo grande ($d = 1.01$) de la comunicación en la cooperación independientemente del medio comunicativo [@Balliet2010]. De manera paralela, se sabe que posteriormente a sesiones de comunicación entre individuos completamente desconocidos hay un incremento de la cercanía social subjetiva [@Aron1997]. Una de las formas de comunicación que ha recibido mayor atención en la teoría de juegos psicológica son las promesas, en una interacción entre quien la envía y la recibe, se cree que las promesas influyen en las creencias del receptor generando confianza y cooperación [@Charness2006; @Vanberg2008; @Baumgartner2009].
+
+Sin embargo, existen situaciones donde se traiciona la confianza y se rompen las promesas, 
+
+
+tasas de divorcio, engaños politicos,
+
+
 
 
 Si las relaciones sociales son tan importantes, se podría pensar que una buena cantidad de las interacciones en que ocurre el engaño involucran personas de nuestro circulo social, de hecho la literatura ha mostrado que la gente frecuentemente miente a personas de las que se depende para obtener recursos [@VonHippel2011; @DePaulo1998; @Steinel2004].
