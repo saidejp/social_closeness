@@ -44,6 +44,11 @@ Las manipulaciones mencionadas nos permiten evaluar varias hipótesis, la primer
 
 1. La cercanía social reducirá la conducta de romper la promesa. De acuerdo con la motivación _instrumental_, esperamos que los sujetos mantengan sus promesas con los amigos por el propósito de facilitar la cooperación en el futuro, la cual se puede extender inclusive más allá de los ensayos en el experimento. También esperamos, aunque en menor grado, que los sujetos cumplan las promesas a los extraños, con el propósito de facilitar la cooperación por lo menos durante los ensayos que dure el experimento. Finalmente, anticipamos que los participantes rompan las promesas a la computadora, por tratarse de un compañero sin cercanía social y del que no podrían asegurar cooperación en futuros ensayos. Cabe destacar que si los participantes cumplen las promesas a la computadora, se daría evidencia en favor de la motivación _intrínseca_.
 
+2. Habrá un efecto de la cercanía social en la cooperación, independientemente de las promesas. Esperamos que haya más probabilidad de pagarle al _amigo_ que al _extraño_ y más probabilidad de pagarle al extraño que la _computadora_. De acuerdo con la motivación _instrumental_, la cooperación será mayor para compañeros con los que el sujeto anticipe mayor cooperación en el futuro (amigo > extraño > computadora). 
+
+3. Las promesas incrementarán la cooperación mediadas por la cercanía social. Exploramos la posibilidad de que el _mecanismo_ que explica el efecto de la comunicación en la cooperación sea el incremento en la cercanía social. 
+
+4. Finalmente, obtendremos dos submuestras de acuerdo con la tasa de cooperación de los sujetos como se realizó en otro estudio [@Baumgartner2009]. Sin embargo, lo que en el estudio mencionado se clasificó como grupo de _honestos_ y _deshonestos_, mostraremos que en nuestra muestra no se sostiene porque si los grupos difieren es su tasa de pago será por la diferencia en su nivel de compromiso expresado en las promesas.
 
 
 
