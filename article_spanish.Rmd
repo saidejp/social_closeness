@@ -265,7 +265,11 @@ En nuestro caso, como se mostró en la Figura 5, el *modelo jerárquico* nos per
 
 Por otra parte, los *modelos acumulativos* nos permitieron modelar la fuerza del compromiso expresado a través de las promesas. Un problema muy frecuente que se ha señalado recientemente, es que analizar datos ordinales con métodos que asumen que las observaciones son _métricas_ puede llevar a graves errores de inferencia [@Liddell2018]. Los *modelos acumulativos* asumen que las respuestas observadas provienen de la categorización de una variable latente continua [@Burkner2019], por lo que en nuestro estudio pudimos identificar que los grupos con distintas tasas de pago, que en otros artículos se han llamado de _deshonestos_ y _honestos_, difieren en el compromiso que expresan a través de sus promesas. Considerando que las herramientas para realizar los modelos acumulativos son relativamente recientes, sería valioso realizar la replicación de estudios publicados [por ejemplo, @Baumgartner2009; @Baumgartner2013] considerando las nuevas alternativas de inferencia. 
 
-Aunque los *modelos jerárquicos* y *acumulativos* no son herramientas exclusivamente de la inferencia Bayesiana...
+Aunque los *modelos jerárquicos* y *acumulativos* no son herramientas exclusivamente de la inferencia Bayesiana, su aplicación desde dicha aproximación representa varias ventajas en comparación con la aproximación frecuentista. Problemas clásicos de la anterior como son: las múltiples comparaciones, la decisión de cúando detenerse en la recolección de sujetos (stopping rule), o el uso de comparaciones planeadas versus _post hoc_, no son factores que afecten el apoyo que brindan los datos a las hipótesis desde la aproximación Bayesiana [@Dienes2011]. Cómo las inferencias y el contraste de hipótesis desde la aproximación que utilizamos, hacen uso de la probabilidad para expresar la plausibilidad de las teorías, en nuestro caso pudimos obtener razones de evidencia respecto a la medida en que nuestros datos apoyan nuestras hipótesis, independientemente de si se éstas fueron propuestas _a priori_ o _post hoc_.
+
+
+
+
 
 
 
