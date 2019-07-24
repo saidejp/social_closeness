@@ -270,6 +270,13 @@ Aunque los *modelos jerárquicos* y *acumulativos* no son herramientas exclusiva
 Una limitación del presente trabajo es el uso de recompensas hipóteticas en comparación con recompensas reales. Un estudio relativamente reciente sobre toma de decisiones, reportó que existe más aversión a la pérdida cuando los sujetos tienen recomensas monetarias reales en comparación con recompensas hipotéticas en una tarea de riesgo [@Xu2016]. Sin embargo, existen otros trabajos que no reportan diferencias entre el uso de ambos tipos de recompensas en tareas de autocontrol, descuento temporal y descuento social [@Locey2011; @Johnson2006; @Rachlin2006]. Asimismo, se puede argumentar que los resultados tienen congruencia teórica [@Fehr2018] y están en la misma dirección que otros trabajos que utilizan dinero real [@Croson1996; @Glaeser2000], por lo que no hay muchas razones para esperar que otro tipo de recompensas hubieran modificado nuestros resultados. 
 
 
+Otra posible limitación es el uso de ensayos múltiples con cada compañero de juego. Aunque la decisión de utilizar medidas repetidas durante nuestro diseño atiende más al propósito de reducir fuentes de error extrañas e incrementar la validez interna [@Maxwell2018], para tener más claridad respecto a la diferencia en las motivaciones _intrínseca_ e _instrumental_, los estudios podrían beneficiarse de sólo incluir un ensayo para cada compañero. Jugar un _one-shot_ con cada compañero
+evita la posibilidad de que los múltiples ensayos pudieran generar la creencia de que la computadora también puede variar su comportamiento de acuerdo las decisiones del _fideicomisario_.
+
+
+# Conclusiones
+
+
 
 
 
