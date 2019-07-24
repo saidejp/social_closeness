@@ -267,12 +267,7 @@ Por otra parte, los *modelos acumulativos* nos permitieron modelar la fuerza del
 
 Aunque los *modelos jerárquicos* y *acumulativos* no son herramientas exclusivamente de la inferencia Bayesiana, su aplicación desde dicha aproximación representa varias ventajas en comparación con la aproximación frecuentista. Problemas clásicos de la anterior como son: las múltiples comparaciones, la decisión de cúando detenerse en la recolección de sujetos (stopping rule), o el uso de comparaciones planeadas versus _post hoc_, no son factores que afecten el apoyo que brindan los datos a las hipótesis desde la aproximación Bayesiana [@Dienes2011]. Cómo las inferencias y el contraste de hipótesis desde la aproximación que utilizamos, hacen uso de la probabilidad para expresar la plausibilidad de las teorías, en nuestro caso pudimos obtener razones de evidencia respecto a la medida en que nuestros datos apoyan nuestras hipótesis, independientemente de si se éstas fueron propuestas _a priori_ o _post hoc_.
 
-
-
-
-
-
-
+Una limitación del presente trabajo es el uso de recompensas hipóteticas en comparación con recompensas reales. Un estudio relativamente reciente sobre toma de decisiones, reportó que existe más aversión a la pérdida cuando los sujetos tienen recomensas monetarias reales en comparación con recompensas hipotéticas en una tarea de riesgo [@Xu2016]. Sin embargo, existen otros trabajos que no reportan diferencias entre el uso de ambos tipos de recompensas en tareas de autocontrol, descuento temporal y descuento social [@Locey2011; @Johnson2006; @Rachlin2006]. Asimismo, se puede argumentar que los resultados tienen congruencia teórica [@Fehr2018] y están en la misma dirección que otros trabajos que utilizan dinero real [@Croson1996; @Glaeser2000], por lo que no hay muchas razones para esperar que otro tipo de recompensas hubieran modificado nuestros resultados. 
 
 
 
