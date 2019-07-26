@@ -1,5 +1,5 @@
 ---
-title: "Nice guys or potential cooperators: an experimental and Bayesian account for two explanations"
+title: "Nice guys or potential cooperators when keeping promises: an experimental and Bayesian account for two explanations"
 author: "Said E. Jiménez"
 date: "July 2019"
 output: 
@@ -59,7 +59,7 @@ Se incluyeron 45 sujetos (15 hombres), reclutados en la Universidad Nacional Aut
 
 ## Tarea
 
-Todos los sujetos realizaron una adaptación de la tarea de confianza y promesas presentada por Baumgartner (2009). La tarea se programó en PsychoPy2 versión 1.84.2 [@Peirce2019; @Peirce2008] y consiste en 24 ensayos entre dos jugadores: fideicomisario e inversor. El fideicomisario tiene originalmente 0 pesos mexicanos y el inversor tiene 2 pesos, al inversor se le presenta la oportunidad de dar su dinero al fideicomisario o conservarlo, si invierte su dinero se multiplica por 5 pesos, de modo que el fideicomisario tenga 10 pesos. Finalmente, el fideicomisario toma la decisión de pagar la mitad al inversor o quedarse los 10 pesos.
+Todos los sujetos realizaron una adaptación del juego de confianza y promesas con recompensas monetarias hipotéticas [@Baumgartner2009]. La tarea se programó en PsychoPy2 versión 1.84.2 [@Peirce2019; @Peirce2008] y consistió en 24 ensayos entre dos jugadores: fideicomisario e inversor. El fideicomisario tiene originalmente 0 pesos mexicanos y el inversor tiene 2 pesos, al inversor se le presenta la oportunidad de dar su dinero al fideicomisario o conservarlo, si invierte su dinero se multiplica por 5 pesos, de modo que el fideicomisario tenga 10 pesos. Finalmente, el fideicomisario toma la decisión de pagar la mitad al inversor o quedarse los 10 pesos.
 
 La estructura descrita se repite en 24 ensayos, sin embargo, en 4 de los ensayos el fideicomisario puede enviar una promesa al inversor, las promesas son que _siempre_, _casi siempre_, _algunas veces_ o _nunca_ pagaran la mitad. Cada promesa es válida por tres ensayos, de modo que 12 de los ensayos tienen el efecto de la promesa y los otros 12 no lo tienen. Cabe mencionar, que las promesas no se realizan hacia algún compañero en particular, si no que el sujeto expresa su nivel de compromiso de pagar la mitad independientemente de quiénes sean sus compañeros en los tres siguientes ensayos en que la promesa es valida. 
 
@@ -276,9 +276,7 @@ evita la posibilidad de que los múltiples ensayos pudieran generar la creencia 
 
 # Conclusiones
 
-En resumen, los sujetos cumplen sus promesas por una mezcla entre la motivación _intrínseca_ e _instrumental_. Son predominantemente _nice guys_ porque mantienen su palabra inclusive ante inversores con nula cercanía social. Sin embargo, su integridad dista de ser perfecta, ya que existe una proporción pequeña, pero confiablemente mayor que cero, de traiciones cometidas hacia este socio. Tal parece ser, que si los sujetos no pueden asegurar que su inversor será un _potential cooperator_, la deshonestidad puede emerger en la forma de promesas rotas. 
-
-
+Los sujetos cumplen sus promesas por una combinación de motivaciones entre la  _intrínseca_ y la _instrumental_. Son predominantemente _nice guys_ porque mantienen su palabra inclusive ante inversores con nula cercanía social. Sin embargo, su integridad dista de ser perfecta, ya que existe una proporción pequeña, pero confiablemente mayor que cero, de traiciones cometidas hacia este socio. Tal parece ser, que si los sujetos no pueden asegurar que su inversor será un _potential cooperator_, la deshonestidad puede emerger en la forma de promesas rotas. Las predicciones teóricas de la norma social _cooperación condicional_ enmarcan el hallazgo de que la cercanía social disminuya la probabilidad de romper la promesa y aumente la cooperación. De la misma forma que sugiere la correspondencia entre el compromiso expresado a través de las promesas y la conducta posterior. 
 
 
 # Referencias
