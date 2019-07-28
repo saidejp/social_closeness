@@ -1,0 +1,85 @@
+---
+title: "Nice guys or potential cooperators when keeping promises: an experimental and Bayesian account for two explanations"
+author: "Said Jiménez"
+date: "July 2019"
+output: 
+  pdf_document:
+    number_sections: true
+fontsize: 12pt
+bibliography: promises.bib
+csl: apa.csl
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, fig.align='center', dev='png', dpi=400, out.width='80%')
+load("~/Google Drive/PromesaConducta_8to2/data/promesas_analisis/Analisis-Comportamiento/promesas_analisis/data.RData")
+pacman::p_load(tidyverse, kableExtra)
+
+```
+
+# Introduction
+
+
+Human beings are social animals and we get advantages from being so. Historically, belonging to a social group has provided protection and guaranteed access to resources such as food, currently there has been evidence that belonging to a social circle has a positive effect on longevity, physical and mental health [@Tough2017; @Holt-Lunstad2018]. The interrelation between social closeness and cooperation is key to the formation of large groups of individuals without a genetic relationship, such groups form the basis of communities, societies, and nations, as well as probably constitute one of the most fundamental conditions for human survival [@Fehr2003; @Fehr2018].
+
+An important requirement for cooperation between individuals is communication, a meta-analysis of 45 studies reported a large positive effect ($d =  1.01$) of communication in cooperation regardless of the communication medium [@Balliet2010]. In parallel, it is known that after communication sessions between completely unknown individuals there is an increase in subjective social closeness [@Aron1997]. Thus, the findings suggest a positive relationship between communication, cooperation, and social closeness.
+
+One of the forms of communication that have received the most attention in psychological game theory is the promises, in an interaction between the sender and the recipient, it is believed that promises influence beliefs of the recipient, generating trust and cooperation [@Charness2006; @Vanberg2008]. However, there are situations where trust is betrayed, promises are broken or people deceive, for example, approximately 11% of people surveyed by the General Social Survey (GSS) in 2018 responded that they have had sex with someone different to their partner while they are married [@GSS2018]. Another example, according to the Washington Post, President Trump has said 10,796 false or misleading statements in 869 days in office [@Kessler2019].
+
+In the laboratory, these transgressions to trust have been explicitly studied in experiments where subjects have incentives to lie or not keep their promises. However, the vast majority of these studies in economics, psychology and neurosciences have been conducted in people who do NOT know each other [to name a few, @Gneezy2005; @Gneezy2013; @Baumgartner2009; @Baumgartner2013; @Charness2006; @Mazar2008; @Fischbacher2013a]. In social psychology some studies address deception in close interpersonal relationships, however, they use self-report measurements [@DePaulo1998; @DePaulo2004] or rather explore the development of deception detection skills in same-sex friends [@Anderson2002]. Despite the widespread presence of interactions between human beings belonging to the same group, it is not known how social closeness between subjects can affect keeping or breaking promises.
+
+In this manuscript, we explore the effects of three partners with different levels of social closeness on keeping or breaking promises, as well as on cooperation in a trust game. The above, we analyze it in the light of the two main motivations that have been pointed out in the literature regarding keeping promises [@Baumgartner2009]:
+
+1. The _instrumental_ suggests that promises are kept to make future cooperation easier.
+
+2. The _intrinsic_ mentions that the promises are kept to do what is morally right.
+
+In our study, subjects perform a standard trust game in pairs with three phases: _first_, the trustee makes a promise to pay half of his earnings regardless of who his investor is; _second_, the investor receives the promise and decides if he invests his initial budget; _third_, in case the investor has given the budget, the trustee faces the decision to pay or not to pay half of his earnings. To evaluate the effect of social closeness, our subjects participate in the role of trustee in front of three partners with different levels of social closeness (zero, low and high) in the role of the investor: a _computer_, a _stranger_, and a _friend_.
+
+The manipulations mentioned allow us to evaluate several hypotheses, the first one was proposed a priori and is derived from a larger research project (you can check the pre-registration of the hypothesis here: https://osf.io/u97fd), while the following are exploratory:
+
+1. Social closeness will reduce the decision of breaking the promise. According to the _instrumental_ motivation, we expect that subjects keep their promises with friends for the purpose of facilitating future cooperation, which can be extended even beyond the trials in the experiment. We also expect, although to a lesser extent, that the subjects keep promises to strangers, with the purpose of facilitating cooperation at least during the trials during the experiment. Finally, we anticipate that the participants break the promises to the computer because it is a partner without social closeness and they could not ensure cooperation in future trials. It should be noted that if the participants keep the promises to the computer, evidence would be given in favor of intrinsic motivation.
+
+2. There will be an effect of social closeness on cooperation, regardless of promises. We expect that there is more probability of paying the _ friend_ than the _ stranger_ and more probability of paying the stranger than the _computer_. According to the _instrumental_ motivation, the cooperation will be greater for partners with whom the subject anticipates greater cooperation in the future (friend> stranger> computer).
+
+3. Finally, we will obtain two subsamples according to the cooperation rate of the subjects as was done in another study [@Baumgartner2009]. However, what in the aforementioned study was classified as a group of _honest_ and _dishonest_, we will show that in our sample it is not supported because if the groups differ in their payment rate it will be due to the difference in their level of commitment expressed in the promises. 
+
+# Methods
+
+## Subjects
+
+We included 45 subjects (15 men), recruited from the National Autonomous University of Mexico, the age range from 19 to 33 years and their minimum educational level were bachelor's degrees. Subjects went to the study with a friend considered _close_ by themselves, who fulfilled the following characteristics: he was matched by sex, did not have a family bond and was not a person with a sentimental or sexual relationship. 30 subjects (15 men) performed the task within a Magnetic Resonance Imaging (MRI) scanner, however, their image data is not analyzed in the present work.
+
+## Task
+
+All subjects performed an adaptation of the trust game with promises, using hypothetical monetary rewards [@Baumgartner2009]. The task was programmed in PsychoPy2 version 1.84.2 [@Peirce2019; @Peirce2008] and consisted of 24 trials between two players: trustee and investor. The trustee originally has 0 Mexican pesos and the investor has 2 pesos, the investor is presented with the opportunity to give his money to the trustee or keep it. If he invests his money it is multiplied by 5 pesos, so that the trustee has 10 pesos. Finally, the trustee decides to pay half to the investor or keep the 10 pesos.
+
+The structure described is repeated in 24 trials, however, in 4 of the trials the trustee can send a promise to the investor, the promises were that _always_, _mostly_, _sometimes_,  or _never_ would pay back. Each promise was valid for three trials so that 12 of the trials have the effect of the promise and the other 12 do not. It is worth mentioning that the promises are not made to a particular partner, but the subject expresses their level of commitment to pay back regardless of who their partners are in the next three trials in which the promise is valid.
+
+The variation with respect to the original task is that in our experiment three partners were presented with three levels of social closeness in the role of the investor: *computer* (no closeness), *strange* (low closeness) and *friend* (high closeness), while the subject acts as the trustee. Each partner performs the role of investor in 8 of 24 total trials, however, both the promises and social closeness conditions were presented to the trustee in pseudorandom order.
+
+Since our main interest was the trustee's behavior, investors' decisions were programmed _a priori_ to give their amount in 6 trials and in 2 did not. The covert story for all our subjects was that they would be playing in real-time with their friend, the stranger (was told he would be another same-sex unknown person) and the computer. A diagram of the chronology of the experimental task with the duration of each phase in seconds is shown in Figure 1, each box from left to right represents a screen that was shown to the subjects sequentially. Section A$_1$ corresponds to an example of trials without promises and section A$_2$ to trials with promises.
+
+Fixation phase consisted only of a period in which the subject paid attention without performing any particular behavior, then, **promises phase** in part A$_1$ indicated to the subject that the following three trials they could decide without the effect of the promise, while in A$_2$  the subject was asked to decide between _always_, _mostly_, _sometimes_ or _never_ pay back. This was followed by another fixation period, subsequently, trails in both A$_1$ and A$_2$ continue in the same way.
+
+In the **anticipation/assignment phase**, subjects were told who their partner was for that trial (computer, stranger or friend) and was given the message that their partner was making their decision. Later in the **decision phase**, the subject was informed if his partner invested his $2 or not, he was reminded of his promise level (if they were trails with promises) and, in case of his partner had invested, he was asked to decide whether to pay back or not. Finally, in **feedback phase** payments for that trial were shown and the sequence was repeated.
+
+
+```{r figA, fig.cap='Trust game with promises'}
+
+knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_closeness/Manuscript/figures/task.png")
+
+```
+
+## Procedure
+
+Subjects came with a same-sex friend considered close by him or her, it was emphasized that they must not have a romantic or family relationship with their friends, to try to exclude the effect on cooperation due to a consanguineous relationship or sexual attraction. Also, to ensure that the subjects and their companions had a similar degree of social closeness to each other, in the laboratory both responded to the "Inclusion of the Other in Self" IOS scale [@Aron1997] without observing their partner responses. The scale consists of seven pairs of circles that vary in the degree of overlap between them, the respondent must select the pair of circles that best represents the subjective closeness to his partner.
+
+
+
+
+
+# Bibliography
+
+
