@@ -76,8 +76,167 @@ knitr::include_graphics("/Users/saidjimenez/Documents/R/github_Said/social_close
 
 Subjects came with a same-sex friend considered close by him or her, it was emphasized that they must not have a romantic or family relationship with their friends, to try to exclude the effect on cooperation due to a consanguineous relationship or sexual attraction. Also, to ensure that the subjects and their companions had a similar degree of social closeness to each other, in the laboratory both responded to the "Inclusion of the Other in Self" IOS scale [@Aron1997] without observing their partner responses. The scale consists of seven pairs of circles that vary in the degree of overlap between them, the respondent must select the pair of circles that best represents the subjective closeness to his partner.
 
+Subjects were trained in the task by two of the researchers, the game was first explained verbally, and then the computerized interface was presented to them on a portable computer. They were told that they would make their decisions with four buttons on the computer keyboard, which corresponded to the levels of promises and with only two of these to make their decision to pay back or not. Friends heard the explanation, they were told that they would make their decisions in a separate room on another computer. Subjects performed between 3 and 6 practice tests together with the researcher who exemplified the course of the game when the investor gave his budget. In the practice trials, all the phases indicated in Figure 1 were shown, however, the identity of the investors was replaced by question marks.
+
+When the subjects did not report doubts we proceeded to take them without their companions to another room where they would make their decisions on a laptop, or, with the Lumina Cedrus response system in the case that it was a subject to which we also performed MRI. The subjects began the task believing that they would really play with the three partners of different social closeness. In the other room, another of the researchers performed the _debriefing_ to the companion, they were told that the purpose of the research was to know if their mere presence had an effect on the subject's decisions, but that to simplify the analysis their responses were programmed _a priori_ so your participation ended there.
+
+When the subject finished the task, _debriefing_ was also carried out, he was told that the decisions of his partners had been programmed. Although no participant exercised their right, both subjects and their friends were told that they could withdraw their participation and informed consent if they considered disagreeing with any of the manipulations made by researchers.
+
+# Results
+
+## Descriptives
+
+We analyzed 810 decisions about paying back or not (18 per subject), as well as 180 promises (4 per subject), 69% of the decisions,  were pay back, while the proportion of the promises selected were 5.4%, 16.2% 43.8%, 40.2%, respectively for promises _never_, _sometimes_, _mostly_ and _always_. Figure 2 shows the payment proportion depending on the levels of promises and partners. 
+
+Breaking promises, that is, that the subject had promised _always_ and subsequently decides not to pay back occurred only 12.4% of trials (19 times they did not pay back of 153 when promised _always_), of which, 8.50% (13/153) were trials with the computer, 3.92% (6/153) with the stranger and 0% (0/153) with the friend. It is essential to note that breaking the promise was not the most frequent decision, in 91.5% of trials when they promised _always_ and had the computer as a partner they decided to pay back.
 
 
+
+```{r fig2, fig.cap='Pay back proportion by partners and promises levels'}
+
+p2 + theme(text = element_text(size = 10),
+            axis.text.x = element_text(size = 8))
+
+```
+
+
+
+## Hierarchical Bayesian Modeling
+
+All models presented below were programmed in R via the **brms** package [@Burkner2017; @R2019], which performs the inference using sampling by Markov chain Monte Carlo through **Stan** [@Rstan2018]. For each model, the posteriors distributions of all parameters were approximated with four chains of 2000 iterations each, the first 1000 iterations of each chain were discarded (burning period), for a total of 4000 post-burning samples. Models convergence was evaluated through visual inspection of the chains and calculation of the $\hat{R}$ statistic, which for all parameters was 1, which is interpreted as convergence. Vaguely informative prior distributions were used for the parameters of interest in the models, which allows the data to dominate the inference, also assumes as little as possible regarding the nature of the phenomenon, which could be adequate for the current state of evidence in the problem we are studying [@McElreath2018].
+
+
+### Social closeness between partners
+
+To assess social closeness, 30 (15 men) of our subjects and their friends responded to the IOS scale [@Aron1997; @Fareri2014; @Sip2015], which consist of seven pairs of circles that vary in the degree of overlap and represent the social closeness that an individual perceives with respect to the other. A Hierarchical and Cumulative Bayesian Model (See section: Commitment expressed in the promises), supports the hypothesis that there are no differences in subjective social closeness between subjects and their friends, with a posterior evidence ratio of 2.74 in its favor.
+
+
+### Effect of social closeness on breaking promises
+
+To evaluate the hypothesis that social closeness would reduce the behavior of breaking the promise, we filtered all trials in which subjects promised that they would _always_ pay back and then decided not to pay. Subsequently, Bayesian inference was used to assess the effect of partners on the decision to break the promise at the individual and population level. For this purpose, a Hierarchical Bayesian Model was carried out that assumes that the uncertainty in partners effect on the decision to break the promise varies depending on each individual, however, it also assumes that these variations belong to common population distributions [@Gelman2006].
+
+$$
+\begin{aligned}
+&y_i \sim \mathrm{Bernoulli}(\theta_i) \\
+&\mathrm{logit(\theta_i)} = \mathbf{X}\beta  +  \mathbf{Z}u
+\end{aligned}
+$$
+
+
+In the previous model, the decision to break the promise $y_i$ comes from a Bernoulli distribution with probability $\theta_i$, the goal of the Hierarchical Model is to predict each decision through the linear combination of the effects of each partner, transformed by its inverse link function $\mathrm{logit}$ [@Burkner2017]. In this model, $\beta$ and $u$ are coefficients at the population level and individual level respectively, while $\mathbf{X}$, $\mathbf{Z}$ are their corresponding design matrices. In this case, the population coefficients correspond to the presence of partners with no social closeness $\beta^{computer}$, low $\beta^{stranger}$ and high $\beta^{friend}$.
+
+Figure 3 shows the posterior probability of breaking the promise depending on the partner, circles correspond to the medians of the distributions of the posterior estimates effects, the thick bar, and the thin bar correspond to the interval of 50% and 95% posterior probability. It is clear that the probability of breaking the promise decreases as social closeness increases, however, we calculate the reasons for evidence for the following hypotheses:
+
+- There is a greater probability to break the promise to the computer than the stranger.
+
+- There is more probability to break the promise to the stranger compared to a friend.
+
+The evidence ratio, which is the ratio between the posterior probability of the mentioned hypotheses and their corresponding alternative hypotheses was 7.47 and 8.64 respectively in favor of the previous hypotheses. As can be seen in Figure 5 in the estimate for $\beta^{computer}$, when there is no social closeness we have a 95% posterior probability that the parameter for promise-breaking is between 4-38%, although it is a small proportion, it clearly excludes the probability that promises are not broken.
+
+ 
+```{r fig3, fig.cap='Posterior probability of Promise Breaking'}
+p3
+
+```
+
+### Effects of promises and social closeness on cooperation
+
+To evaluate the effect of the experimental conditions on the decision to pay back, we used all trials were partners invest. Again, a Hierarchical Bayesian Model was fit, which assumes that the promises and partners have an effect that varies for each individual, however, it also assumes that these variations belong to common population distributions. The model estimates that the probability $\theta_i$ of the decision to pay back is based on the effect of the presence of promises $\beta^{promise}$, as well as partners with low $\beta^{stranger}$ and high $\beta^{friend}$ social closeness.
+
+Figure 4 shows the posterior distributions of the $\beta$ coefficients in the logit scale, the center line represents the median of the distribution and the shaded area corresponds to the interval of 50% posterior probability. As can be seen, more than 95% of the posterior density of the population coefficients is greater than 0, which indicates strong evidence of the effect of experimental conditions on the decision to pay back, so that the presence of promises and the stranger increase clearly the probability of paying, but the presence of the friend is the condition that has the greatest effect on this behavior. Posterior distributions clearly show that the probability of cooperation increases as social closeness does.
+
+Also, Figure 5 presents the posterior predictive distribution in contrast to the proportion of decisions to each partner during the promises phase, each panel corresponds to one of the first twelve subjects. The responses on the dotted line would indicate that the subject paid back random to that partner. Posterior predictive distribution simulates observations of the model and compares them with the actual data, it helps us to identify if the model is sufficiently close to the process that generated the data [@Schad2019; @Lee2014]. It can be seen that there is a great correspondence between the subject's responses and predictions of the model, even in cases where the model is "wrong" (for example, subject 1), the observed response is in the range of a predicted standard deviation, which gives credibility to estimates.
+
+
+
+```{r fig4, fig.cap='Posterior estimates in logit scale'}
+
+p4
+
+```
+
+
+```{r fig5, fig.cap='Posterior predictive over pay back rate', out.width='100%', out.height='100%'}
+
+d_g9 %>% 
+    ggplot(aes(x = treatment, y = rate, col = case)) +
+    geom_hline(yintercept = 0.5, lty = 2, col = "gray") +
+    geom_line(aes(group = case), show.legend = F) +
+    geom_pointrange(aes(ymax = rate + pred_sd, ymin = rate - pred_sd),
+                    shape = 21, fill = "white", size = 0.4) +
+    scale_color_manual(values = c("#053778", "#A4CAE3")) +
+    facet_wrap(~id) +
+    my_theme +
+    scale_y_continuous(breaks = c(0, 0.5, 1.0)) +  
+    theme(axis.text.x = element_text(angle = 75, hjust = 1), 
+          legend.position = "top",
+          text = element_text(size = 10)) +
+    labs(x = NULL, y = "Rate", col = NULL)
+
+
+```
+
+
+### Effects of social closeness on cooperation varying by promises
+
+In this model, it is assumed that social closeness has an effect that varies for each level of promise, which implies that there are levels of promise that are more sensitive than others to the effect of the partners on the decision to pay back. Again, a Hierarchical Bayesian Model was made to estimate the effect of partners at the population level and the variations depending on the promise levels. Table 1 summarizes the subsequent distributions of the model coefficients in the logit scale, including point estimates, standard errors and Bayesian Credibility Intervals of 95%. An estimate similar to the previous models can be observed, with strong evidence of the effect of social closeness on the decision to pay back. Although the credibility range for the friend's effect includes 0, the evidence ratio that the effect is greater than zero is 15.81 with 94% of posterior probability.
+
+On the other hand, Figure 6 shows the subsequent predictive distribution, compared to the payment rates of all individuals to the different partners and their variation by the level of promise. With the exception of the promise _never_, a monotonic positive effect of partners is observed at all levels of promise, however, it can be observed how the effect of social closeness varies depending on the strength of the promise, mainly for the decisions towards the computer.
+
+
+```{r fig6, fig.cap='Posterior predictive over pay back rate, Social Closeness Varying effects by Promise levels'}
+
+p6 + 
+  scale_y_continuous(breaks = c(0, 0.5, 1.0)) +  
+  theme(axis.text.x = element_text(size = 7))
+
+
+```
+
+
+
+```{r tabla}
+
+tabla1 <- broom::tidy(fit) %>% 
+  slice(1:3)
+
+tabla1[, 1] <- c("Intercept", "Stranger", "Friend")
+
+kable(tabla1, 
+      digits = 3, 
+      booktabs = T,
+      col.names = c("Term", "Estimate", "Est.Error", "Lower", "Upper"),
+      caption = c("Posterior coefficients estimates")) %>%
+  add_header_above(c(" ", " " = 2, "95 % CI" = 2)) %>% 
+  kable_styling(latex_options = "hold_position")
+
+```
+
+
+### Commitment expressed in promises
+
+In the original study of promises, authors chose to divide their sample into two according to the hierarchical clustering technique with Ward's method  [@Baumgartner2009]. In this way they obtained two sets of participants that were different in their payment rates, despite the fact that they both made very high promises, for this reason, the authors named the group that paid little _dishonest_ and the group that paid a lot _honest_. In a similar exercise, in the present study we performed the hierarchical grouping technique to obtain a solution of 2 groups and we found two similar sets in $n$ that we call the group "Low" and "High" (Low = 25, High = 20), with quite different payment ratios (Low = 58%, High = 83%), and a 95% confidence interval of 20% to 32% in the difference favor of the High group.
+
+
+Although it seems a similar result to that reported in that paper, we explore the pattern of promises of both groups to determine if it was possible to classify our subjects as _honest_ and _dishonest_. If we hypothesize that the commitment to pay would be reflected in the level of promises selected, a group of _dishonest_ people could generate in their partners the belief that they will pay by choosing a high level of promises (mostly or always) and, later, betraying that trust when deciding not to pay back.
+
+
+In order to explore whether the groups represent populations that do not differ in the level of commitment expressed in the promises, we use a Cumulative Bayesian Model, which assumes that the levels of promises are an observed ordinal variable $Y$ that originates from the categorization of a continuous latent variable $\tilde{Y}$, for this case, _the expressed commitment to pay back_ [@Burkner2019]. The degree to which the subjects of the High group differ from the Low group, in normal standard deviations ($z$-values), on the latent scale of $\tilde{Y}$, has a point estimate of 0.95, which implies that the High group has 0.95 $z$-values greater commitment to pay back than the Low group.
+
+
+The 95% Bayesian Credibility Interval indicates that the High group is between 0.40 to 1.51 $z$-values of difference from Low. So we can conclude with at least a 95% probability that people belonging to the High group expressed in their promises a greater commitment to pay back than the subjects of the Low group. If we look at Figure 7, the probability of choosing the different levels of promises varies depending on the group, the one who had the highest percentage of decisions to pay back is more likely to choose _always_ (High group), while the group that had the lowest percentage of decisions to pay back are more likely to choose _mostly_ (Low group).
+
+According to our data, we could not justify the classification of our groups according to their honesty or dishonesty, at least not with the technique used in Baumgartner et al. (2009). Since people were quite consistent with keeping what they promised to pay.
+
+```{r fig7, fig.cap='Promise choices by group'}
+
+# Cumulative model
+p7
+
+```
+
+
+# Discussion
 
 
 # Bibliography
