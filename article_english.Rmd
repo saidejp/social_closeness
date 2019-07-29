@@ -2,7 +2,7 @@
 title: "Nice guys or potential cooperators when keeping promises: an experimental and Bayesian account for two explanations"
 author: "Said Jiménez"
 date: "July 2019"
-output: 
+output:  
   pdf_document:
     number_sections: true
     keep_tex: true
