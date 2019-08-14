@@ -1,3 +1,21 @@
+\AtBeginDocument{%
+  \paperwidth=\dimexpr
+    1in + \oddsidemargin
+    + \textwidth
+    % + \marginparsep + \marginparwidth
+    + 1in + \oddsidemargin
+  \relax
+  \paperheight=\dimexpr
+    1in + \topmargin
+    + \headheight + \headsep
+    + \textheight
+    % + \footskip
+    + 1in + \topmargin
+  \relax
+  \usepackage[pass]{geometry}\relax
+}
+
+
 % !TeX program = pdfLaTeX
 \documentclass[smallextended]{svjour3}       % onecolumn (second format)
 %\documentclass[twocolumn]{svjour3}          % twocolumn
@@ -66,7 +84,7 @@
         Eduardo A. Garza-Villarreal \at
      Institute of Neurobiology, UNAM \\
      \email{\href{mailto:egarza@gmail.com}{\nolinkurl{egarza@gmail.com}}}  %  \\
-%             \emph{Present address:} of F. Author  %  if needed
+    }
 
 \date{Received: date / Accepted: date}
 % The correct dates will be entered by the editor
