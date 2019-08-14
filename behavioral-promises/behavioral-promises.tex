@@ -1,22 +1,3 @@
-\AtBeginDocument{%
-  \paperwidth=\dimexpr
-    1in + \oddsidemargin
-    + \textwidth
-    % + \marginparsep + \marginparwidth
-    + 1in + \oddsidemargin
-  \relax
-  \paperheight=\dimexpr
-    1in + \topmargin
-    + \headheight + \headsep
-    + \textheight
-    % + \footskip
-    + 1in + \topmargin
-  \relax
-  \usepackage[pass]{geometry}\relax
-}
-
-
-
 % !TeX program = pdfLaTeX
 \documentclass[smallextended]{svjour3}       % onecolumn (second format)
 %\documentclass[twocolumn]{svjour3}          % twocolumn
@@ -72,7 +53,7 @@
 
     \titlerunning{Nice people or potential cooperators}
 
-\author{  Said Jiménez  \and  Roberto E. Mercadillo \and  Diego Angeles-Valdez \and  Jairo Muñoz-Delgado \and  Juan J. Sánchez-Sosa \and  Eduardo A. Garza-Villarreal \and  }
+\author{  Said Jiménez \and  Kamila E. Sip \and  Roberto E. Mercadillo \and  Diego Angeles-Valdez \and  Jairo Muñoz-Delgado \and  Juan J. Sánchez-Sosa \and  Eduardo A. Garza-Villarreal \and  }
 
     \authorrunning{ S. Jiménez, et al. }
 
@@ -80,8 +61,12 @@
         Said Jiménez \at
      Department of Psychology, National University of México (UNAM) \\
      \email{\href{mailto:said.ejp@gmail.com}{\nolinkurl{said.ejp@gmail.com}}}  %  \\
- %           \emph{Present address:} of F. Author  %  if needed
-    }
+%             \emph{Present address:} of F. Author  %  if needed
+    \and
+        Eduardo A. Garza-Villarreal \at
+     Institute of Neurobiology, UNAM \\
+     \email{\href{mailto:egarza@gmail.com}{\nolinkurl{egarza@gmail.com}}}  %  \\
+%             \emph{Present address:} of F. Author  %  if needed
 
 \date{Received: date / Accepted: date}
 % The correct dates will be entered by the editor
@@ -91,30 +76,30 @@
 
 \begin{abstract}
 Promises increase cooperation between non-genetically related
-individuals, however, lies and betrayals occur daily in close social
+individuals, whereas lies and betrayals occur daily even in close social
 relationships. Despite this, the effect of social closeness on the
-decision to keep or break a promise has not been studied. We conducted
-an experiment in which subjects could freely decide if they broke or
-kept their promise to three partners with different levels of social
-closeness: null (computer), low (strange) and high (friend). If subjects
-keep their word with the computer, it provides evidence in favor of
-intrinsic motivation (comply to do the correct thing), otherwise
+decision to keep or break a promise has not been thoroughly studied. We
+conducted an experiment in which subjects could freely decide if they
+broke or kept a promise to three partners with different levels of
+social closeness: null (computer), low (strange) and high (friend). If
+subjects kept their word with the computer, it provides evidence in
+favor of intrinsic motivation (comply to do the correct thing), while
 extrinsic motivation would be supported (comply to facilitate future
-cooperation). Using Hierarchical Bayesian Modeling, we find that if
+cooperation). Using Hierarchical Bayesian Modeling, we found that as
 social closeness increases, the probability of breaking promises
-decreases monotonically, the evidence ratio in favor to the hypothesis
+decreases monotonically. The evidence ratio in favor of the hypothesis
 stranger \textless{} computer was 7.47, and friend \textless{} stranger
-was 8.64. Furthermore, using Bayesian Cumulative Modeling we find that
-subjects were very consistent between their promises and the subsequent
-decisions they make. Although is more probable that our subjects keep
-their promises to any of the three partners, there is a proportion of
-transgressions to the computer, whose inference excludes zero with a
-95\% posterior probability. Also, subjects never broke the promise to
-their friends. Our results indicate that subjects are predominantly
-``nice people'' because they keep their promises even to partners
-without social closeness, however, if the subjects are not certain that
-their partner will also be a ``potential cooperator'', dishonesty
-emerges in the form of broken promises.
+was 8.64. Furthermore, using Bayesian Cumulative Modeling we found that
+subjects were very consistent between their promises and their choices.
+Although it was more probable that our subjects kept their promises to
+any of the three partners, there was a proportion of transgressions to
+the computer, whose inference excludes zero with a 95\% posterior
+probability. Also, our subjects never broke the promise to their
+friends. Our results suggest that subjects were predominantly ``nice
+people'' because they kept their promises even to partners without
+social closeness. However, if the subjects were not certain that their
+partner will also be a ``potential cooperator'', dishonesty emerged in
+the form of broken promises.
 \\
 \keywords{
         Deception \and
@@ -135,123 +120,113 @@ emerges in the form of broken promises.
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 
-Human are social animals and we get survival advantages from being such.
-Historically, belonging to a social group has provided protection and
-guaranteed access to resources such as food, and currently, there has
-been evidence that belonging to a social group has a positive effect on
-longevity, physical and mental health (Tough, Siegrist, and Fekete 2017;
-Holt-Lunstad 2018). The relationship between social closeness and
-cooperation is key to the formation of large groups of individuals
-without a genetic relationship, and such groups form the basis of
-communities, societies, and nations, arguably constituting one of the
-most fundamental conditions for human survival (Fehr and Fischbacher
-2003; Fehr and Schurtenberger 2018). An important requirement for
-cooperation between individuals is communication. A meta-analysis of 45
-studies reported a large positive effect (\(d = 1.01\)) of communication
-in cooperation regardless of the communication medium (Balliet 2010). In
-parallel, it is known that after communication sessions between
-completely unknown individuals there is an increase in subjective social
-closeness (Aron et al. 1997). Thus, these findings suggest a positive
-relationship between communication, cooperation, and social closeness.
+Humans are social animals and we obtain survival advantages from proper
+socialization. Historically, belonging to a social group has provided
+protection and guaranteed access to resources such as food, and
+currently, there is evidence that belonging to a social group has a
+positive effect on longevity, physical and mental health (Tough,
+Siegrist, and Fekete 2017; Holt-Lunstad 2018). The interaction between
+social closeness and cooperation seems to be a key feature to the
+formation of large groups of individuals without a genetic relationship,
+and such groups form the basis of communities, societies, and nations,
+arguably constituting one of the most fundamental conditions for human
+survival (Fehr and Fischbacher 2003; Fehr and Schurtenberger 2018). A
+recent meta-analysis showed that communication, regardless of the
+medium, is the most important element for cooperation between
+individuals (Balliet 2010). In parallel, there is evidence that
+following communication sessions between completely unknown individuals,
+there is an increase in subjective social closeness(Aron et al. 1997).
+These findings suggest the importance of the relationship between
+communication, cooperation, and social closeness.
 
 One of the forms of communication that have received the most attention
 in psychological game theory is ``the promise''. In an interaction
-between sender and recipient, it is believed that promises influence
-beliefs of the recipient, generating trust and cooperation (Charness and
-Dufwenberg 2006; Vanberg 2008). However, there are situations where
-trust is betrayed, promises are broken or people deceived. The General
-Social Survey (GSS) in 2018 showed that approximately 11\% of people
-surveyed responded that they have had sex with someone different to
-their partner while they are married (Smith et al. 2018). In economic
-and social terms, the United Nations Organization has stressed that
-deception (corruption) has a global cost of at least 5 percent of the
-annual gross domestic product (GDP), and it is a generator of conflict
-and instability in all nations (UN 2018).
+between a sender and a recipient, it is believed that the sender's
+promises influence the recipient's beliefs, influencing their ability to
+trust and cooperate (Charness and Dufwenberg 2006; Vanberg 2008).
+Commonly, however, there are situations where promises are broken, trust
+is betrayed and people are deceived. The General Social Survey (GSS) in
+2018 showed that approximately 11\% of people surveyed responded that
+they have had sexual intercourse with someone different to their partner
+while they were married (Smith et al. 2018). In economic and social
+terms, the United Nations Organization has stressed that deception
+(corruption) has a global cost of at least 5 percent of the annual gross
+domestic product (GDP), and it is a generator of conflict and
+instability in all nations (UN 2018). Hence, breaking promises may
+greatly affect our own social groups and society itself.
 
 Despite the widespread presence of interactions between human belonging
 to the same group, it is not known how social closeness between
 participants can affect keeping or breaking promises. This is important
 because it has been pointed out that lies and betrayals of trust occur
-daily in close relationships, such as friends, workmates, or classmates.
-And, their consequences can be serious such as loss of the relationship,
-work or damage to reputation (DePaulo et al. 2004). In the laboratory,
-these transgressions to trust have been explicitly studied in
-experiments where subjects have incentives to lie or not keep their
-promises. However, the vast majority of these studies have been
-conducted in people who do NOT know each other (Gneezy 2005; Gneezy,
+daily even in close relationships such as friends, coworkers, or
+classmates, and their consequences can be serious, from loss of the
+relationship to work loss and damage to reputation (DePaulo et al.
+2004). The two main motivations that have been pointed out in the
+literature regarding keeping promises are: instrumental and intrinsic
+(Baumgartner et al. 2009). The instrumental suggests that promises are
+kept to make future cooperation easier while the intrinsic suggests that
+the promises are kept to do what is ``morally right''. In the
+laboratory, the betrayals of trust have been explicitly studied in
+experiments where subjects have incentives to lie and break promises.
+However, the vast majority of studies have been conducted in people
+without any social closeness (strangers) (Gneezy 2005; Gneezy,
 Rockenbach, and Serra-Garcia 2013; Baumgartner et al. 2009; Baumgartner,
 Gianotti, and Knoch 2013; Charness and Dufwenberg 2006; Mazar, Amir, and
-Ariely 2008; Fischbacher and Föllmi-Heusi 2013). Some studies address
-deception in close interpersonal relationships using self-report
-measurements, however, they have limitations due to social desirability
-bias (DePaulo and Kashy 1998; DePaulo et al. 2004) or rather explore the
-development of deception detection skills in same-sex friends (Anderson,
-DePaulo, and Ansfield 2002).
+Ariely 2008; Fischbacher and Föllmi-Heusi 2013). Some studies have
+addressed deception in close interpersonal relationships using
+self-report measurements or rather explore the development of deception
+detection skills in same-sex friends, with clear limitations due to the
+social desirability bias (DePaulo and Kashy 1998; DePaulo et al. 2004;
+Anderson, DePaulo, and Ansfield 2002).
 
-In this study, we wanted to understand the effects of three partners
-with different levels of social closeness on keeping or breaking
-promises, as well as on cooperation, using an experimental trust game.
-We analyzed it in light of the two main motivations that have been
-pointed out in the literature regarding keeping promises which are:
-instrumental and intrinsic (Baumgartner et al. 2009):
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  The \emph{instrumental} suggests that promises are kept to make future
-  cooperation easier.
-\item
-  The \emph{intrinsic} mentions that the promises are kept to do what is
-  morally right.
-\end{enumerate}
-
-In our study, subjects perform a standard trust game in pairs with three
-phases: \emph{first}, the trustee makes a promise to pay half of his
-earnings regardless of who his investor is; \emph{second}, the investor
-receives the promise and decides if he invests his initial budget;
-\emph{third}, in case the investor has given the budget, the trustee
-faces the decision to pay or not to pay half of his earnings. To
-evaluate the effect of social closeness, our subjects participate in the
-role of trustee in front of three partners with different levels of
-social closeness (null, low and high) in the role of the investor: a
-computer, a stranger, and a friend. The manipulations mentioned allow us
-to evaluate several hypotheses, the first one was proposed a priori and
-is derived from a larger research project (you can check the
-preregistration of the hypothesis here: \url{https://osf.io/u97fd}),
-while the following are exploratory:
+In this study, we wanted to understand the effects of social closeness
+on keeping or breaking promises and cooperation, by means of an
+experimental trust game with three partners with different levels of
+social closeness. For this, subjects performed a standard trust game in
+pairs with three phases: 1) the trustee makes a promise to pay half of
+his earnings regardless of who his/her investor; 2) the investor
+receives the promise and decides if he/she invests his/her initial
+budget; 3) in case the investor has given the budget, the trustee faces
+the decision to pay or not to pay half of his earnings (keep or break
+promise). To evaluate the effect of social closeness, our subjects
+participate in the role of trustee with three partners with different
+levels of social closeness (zero, low and high) in the role of the
+investor: a computer, a stranger, and a close friend. Our main
+pre-registered hypothesis was:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
+\tightlist
 \item
   Social closeness will reduce the decision of breaking the promise.
-  According to the \emph{instrumental} motivation, we expect that
-  subjects keep their promises with friends for the purpose of
-  facilitating future cooperation, which can be extended even beyond the
-  trials in the experiment. We also expect, although to a lesser extent,
-  that the subjects keep promises to strangers, with the purpose of
-  facilitating cooperation at least during the trials during the
-  experiment. Finally, we anticipate that the participants break the
-  promises to the computer because it is a partner without social
-  closeness and they could not ensure cooperation in future trials. It
-  should be noted that if the participants keep the promises to the
-  computer, evidence would be given in favor of \emph{intrinsic}
-  motivation.
+  According to the instrumental motivation, we expect that subjects keep
+  their promises with friends for the purpose of facilitating future
+  cooperation, which probably can be extended even beyond the trials in
+  the experiment. We also expect, although to a lesser extent, that the
+  subjects keep promises to strangers, with the purpose of facilitating
+  cooperation during the experiment. Finally, we anticipate that the
+  participants break the promises to the computer because it is a
+  partner without any social closeness and they could not ensure
+  cooperation in future trials. It should be noted that if the
+  participants keep the promises to the computer, evidence would be
+  given in favor of intrinsic motivation.
+\end{enumerate}
+
+Our secondary exploratory hypotheses were:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
 \item
   There will be an effect of social closeness on cooperation, regardless
-  of promises. We expect that there is more probability of paying the
-  friend than the stranger and more probability of paying the stranger
-  than the computer. According to the \emph{instrumental motivation},
-  the cooperation will be greater for partners with whom the subject
-  anticipates greater cooperation in the future (friend \textgreater{}
-  stranger \textgreater{} computer).
+  of promises. According to the instrumental motivation, the payment
+  will be greater for partners with whom the subject anticipates greater
+  cooperation in the future (friend \textgreater{} stranger
+  \textgreater{} computer).
 \item
-  Finally, we will obtain two subsamples according to the cooperation
-  rate of the subjects as was done in another study (Baumgartner et al.
-  2009). However, what in the aforementioned study was classified as a
-  group of ``honest'' and ``dishonest'', we will show that in our sample
-  it is not supported because if the groups differ in their payment rate
-  it will be due to the difference in their level of commitment
-  expressed by promises.
+  We hypothesize that the subjects will cooperate according to their
+  degree of commitment expressed through promises.
 \end{enumerate}
 
 \hypertarget{methods}{%
@@ -261,49 +236,52 @@ while the following are exploratory:
 \subsection{Subjects}\label{subjects}}
 
 We recruited 45 subjects (15 male) from the National Autonomous
-University of Mexico, the age range from 19 to 33 years and their
-minimum educational level were bachelor. Subjects were asked to come to
-the study with a ``close'' friend, who fulfilled the following
-characteristics: 1) he/she was matched by sex, 2) did not have a family
-bond and 3) was not a person with a sentimental or sexual relationship.
-From this sample, 30 subjects (15 men) performed the task in a magnetic
-resonance imaging (MRI) scanner, however, their image data was not
-analyzed for the present work.
+University of Mexico, age range from 19 to 33 years, their minimum
+educational level were bachelor and right handed (for MRI). Subjects
+were asked to come to the study with a ``close'' friend, who fulfilled
+the following criteria: 1) he/she was matched by sex, 2) did not have a
+family bond and 3) was not a person with a sentimental or sexual
+relationship. From this sample (n = 45), 30 subjects (15 men) performed
+the task in a magnetic resonance imaging (MRI) scanner, however, their
+image data was not analyzed for the present work.
 
 \hypertarget{task}{%
 \subsection{Task}\label{task}}
 
 All subjects performed an adaptation of the trust game with promises,
 using hypothetical monetary rewards (Baumgartner et al. 2009). The
-variation with respect to the original task is that in our experiment
-three partners were presented with three levels of social closeness in
+variation with respect to the original task was that, in our experiment,
+three partners with three levels of social closeness were presented in
 the role of the investor: computer (no closeness), strange (low
 closeness) and friend (high closeness), while the participant acted as
 the trustee. The task was programmed in PsychoPy2 version 1.84.2 (Peirce
 et al. 2019; Peirce 2008) and consisted of 24 trials between two
-players: trustee and investor. The trustee originally has 0 Mexican
-pesos and the investor has 2 pesos, the investor is presented with the
-opportunity to give his money to the trustee or keep it. If investor
-gives his money, it is multiplied by 5 pesos, so that the trustee has 10
-pesos. Finally, the trustee decides to pay half to the investor or keep
-the 10 pesos. The structure described is repeated in 24 trials, however,
-in 4 of the trials the trustee can send a promise to the investor, the
-promises were that always, mostly, sometimes, or never would pay back.
-Each promise was valid for three trials so that 12 of the trials have
-the effect of the promise and the other 12 do not. Each partner performs
-the role of investor in 8 of 24 total trials, however, both the promises
-and social closeness conditions were presented to the trustee in
-pseudorandom order.
+players: trustee and investor. The trustee originally had 0 Mexican
+pesos and the investor had 2 pesos, the investor was presented with the
+opportunity to give his/her money to the trustee or keep it. If the
+investor gave his/her money, it was multiplied by 5 pesos, so that the
+trustee had 10 pesos. Finally, the trustee had to decide if he/she
+wanted to pay half to the investor or keep the 10 pesos. The structure
+described was repeated in 24 trials, however, in 4 of the trials the
+trustee could send a promise to the investor, the promises were that
+he/she would: always, mostly, sometimes, or never pay back. Each promise
+was valid for three trials, so that 12 of the trials had the effect of
+the promise and the other 12 did not. Each partner performed the role of
+investor in 8 of 24 total trials, however, both the promises and social
+closeness conditions were presented to the trustee in pseudorandom
+order.
 
-Since our main interest was the trustee's behavior, investors' decisions
-were programmed \emph{a priori} to give their amount in 6 trials and in
-2 did not randomly. The covert story for all our subjects was that they
-would be playing in real-time with their friend (whom they brought to
-the study), the stranger (was told he would be another same-sex unknown
-person) and the computer. After the study ended, the participants were
-debriefed about our own deception. A diagram of the chronology of the
-experimental task with the duration of each phase in seconds is shown in
-Figure 1.
+Since our main interest was the trustee's behavior and to avoid
+unbalanced responses from investors, the investor was always the
+computer although the trustee was shown to have 3 types of investors,
+and the investors' decisions were programmed \emph{a priori} to randomly
+give their amount in 6 trials and withhold the amount in 2 trials. The
+covert story for all our subjects was that they would be playing in
+real-time with their friend (whom they brought to the study), the
+stranger (was told it would be another same-sex unknown person) and the
+computer. After the study ended, the participants were debriefed about
+our deception. A diagram of the the experimental task is shown in Figure
+1.
 
 \begin{figure}
 
@@ -314,21 +292,18 @@ Figure 1.
 \caption{Trust game with promises, each box from left to right represents a screen that was shown to the subjects sequentially. Section A1 corresponds to an example of trials without promises and section A2 to trials with promises.}\label{fig:figA}
 \end{figure}
 
-Fixation phase consisted only of a period in which the subject paid
-attention without performing any particular behavior. Then,
-\textbf{promises phase} in part A1 indicated that in the following three
-trials they could decide without the effect of the promise. In A2, the
-subject was asked to decide between 1) always, 2) mostly, 3) sometimes
-or 4) never pay back. This pattern was repeated. In the
-\textbf{anticipation/assignation phase}, subjects were told who their
-partner was for that trial (computer, stranger or friend) and was given
-the message that their partner was making their decision. Later in the
-\textbf{decision phase}, the subject was informed if his partner
-invested his \$2 or not, he was reminded of his promise level (if they
-were trails with promises) and, in case the partner had invested, he was
-asked to decide whether to pay back or not. Finally, payments for each
-trial were shown in the \textbf{feedback phase} and the sequence was
-repeated until the task finished.
+Promise phase in part A1 indicated that in the following three trials
+they could decide without the effect of the promise. In A2, the subject
+was asked to decide between 1) always, 2) mostly, 3) sometimes or 4)
+never pay back. This pattern was repeated. In the
+anticipation/assignation phase, subjects were told who their partner was
+for that trial (computer, stranger or friend) and was given the message
+that their partner was making their decision. Later in the decision
+phase, the subject was informed if his partner invested his \$2 or not,
+he was reminded of his promise level (if they were trails with promises)
+and, in case the partner had invested, he was asked to decide whether to
+pay back or not. Finally, payments for each trial were shown in the
+feedback phase and the sequence was repeated until the task finished.
 
 \hypertarget{procedure}{%
 \subsection{Procedure}\label{procedure}}
@@ -408,7 +383,7 @@ back in 91.5\% of trials.
 
 }
 
-\caption{Pay back proportion by partners and promises levels}\label{fig:fig2}
+\caption{Pay back proportion by partners and promises levels, the x-axis represents all decisions made to each partner, the different shades of blue shows the proportions in which the subjects paid back or not. The y-axis presents how these proportions vary according to the promises made.}\label{fig:fig2}
 \end{figure}
 
 \hypertarget{social-closeness-between-partners}{%
@@ -495,7 +470,7 @@ that promises are not broken.
 
 }
 
-\caption{Posterior probability of Promise Breaking}\label{fig:fig3}
+\caption{Inference regarding the probability of breaking the promise depending on social closeness. The x-axis shows the posterior probability of breaking the promise, and the y-axis indicates the three partners. The dotted line shows the probability that breaking the promise would be zero.}\label{fig:fig3}
 \end{figure}
 
 \hypertarget{effects-of-promises-and-social-closeness-on-cooperation}{%
@@ -530,7 +505,7 @@ as social closeness does.
 
 }
 
-\caption{Posterior estimates in logit scale}\label{fig:fig4}
+\caption{Posterior estimates in logit scale. We show posteriors distributions of the hierarchical Bayesian model coefficients for the effect of experimental conditions on the decision to cooperate. The x-axis shows the magnitude of the logit scale coefficients, and the y-axis shows the experimental conditions associated with that effect.}\label{fig:fig4}
 \end{figure}
 
 Figure 5 shows the posterior predictive distribution in contrast to the
@@ -553,7 +528,7 @@ which gives credibility to estimates.
 
 }
 
-\caption{Posterior predictive over pay back rate}\label{fig:fig5}
+\caption{Posterior predictive over pay back rate. Correspondence between payment proportions and model predictions depending on the game partner for the first twelve subjects in the sample. The x-axis pointed the three playmates when the subjects had made a promise, while the y-axis indicates the proportion of decisions in which subjects payback.}\label{fig:fig5}
 \end{figure}
 
 \hypertarget{effects-of-social-closeness-on-cooperation-varying-by-promises}{%
@@ -580,7 +555,7 @@ is greater than zero is 15.81 with 94\% of posterior probability.
 
 }
 
-\caption{Posterior predictive over pay back rate, Social Closeness Varying effects by Promise levels}\label{fig:fig6}
+\caption{Posterior predictive over pay back rate, social closeness varying effects by promise levels. Correspondence between payment proportions and model predictions depending on the game partner at the group level. The x-axis pointed the three playmates when the subjects had made a promise, while the y-axis indicates the proportion of decisions in which subjects payback.}\label{fig:fig6}
 \end{figure}
 
 On the other hand, Figure 6 shows the posterior predictive distribution,
@@ -667,7 +642,7 @@ people were quite consistent with keeping what they promised to pay.
 
 }
 
-\caption{Promise choices by group}\label{fig:fig7}
+\caption{Promise choices by group. We show posterior probability estimates regarding the level of promise depending on the group. The Low group (which paid 58/100 of the trials) is more likely to promise mostly, while the High group (which paid 83/100 of the trials) is more likely to promise always.}\label{fig:fig7}
 \end{figure}
 
 \hypertarget{discussion}{%
@@ -694,77 +669,71 @@ their measurements to evaluate transgressions are self-reported (DePaulo
 and Kashy 1998; DePaulo et al. 2004), they do not directly quantify the
 breaking of promises (Vanberg 2008; Charness and Dufwenberg 2006), or as
 we will discuss later, they use heterogeneous measures of social
-closeness (Glaeser et al. 2000). Our experiment is the first one to
-include a partner without social closeness (computer). Our data suggest
-that the mere fact of considering that subjects play with a human
-diminishes the probability of breaking the promise. It is more likely to
-break the promise to the computer than to the stranger, even though that
-partner was not known. Also, null social closeness is important because
-it allows us to explore the intrinsic motivation to keep the promises.
-If humans keep their word because it is morally correct, we would
-anticipate that the probability of breaking a promise was very low in
-the three partners and, particularly, the inference regarding the
+closeness (Glaeser et al. 2000). Our results suggest that the mere fact
+of considering that subjects play with a human diminishes the
+probability of breaking the promise. It is more likely to break the
+promise to the computer than to the stranger, even though that partner
+was not known. Also, zero social closeness is important to include
+because it allows us to explore the intrinsic motivation to keep the
+promises. If humans keep their word because it is morally correct, we
+would anticipate that the probability of breaking a promise was very low
+in the three partners and, particularly, the inference regarding the
 probability of breaking the promise to the computer would include zero.
 However, we found that, although low, the probability was greater than
-zero, which provides evidence that seems to contradict, at least in
-degree, the hypothesis of intrinsic motivation. We cannot exclude the
-possibility that the subjects keep promises mainly due to moral
-motivation because, even in the case of the computer, the subjects kept
-a large proportion. We can, however, exclude that this is their only
-motivation.
+zero, which provides evidence that seems to contradict, at least in some
+degree, the hypothesis of intrinsic motivation. This means that we
+cannot exclude the possibility that the subjects keep promises mainly
+due to moral motivation because, even in the case of the computer, the
+subjects kept a large proportion of promises. We can, however, exclude
+that this is their \emph{only} motivation.
 
-On the other hand, high social closeness allows us to explore the
-instrumental motivation to keep promises (Baumgartner et al. 2009). In
-our study, it was more likely to break the promise to the stranger than
-to the friend. If humans keep their word to facilitate cooperation in
-the future, we would anticipate that with a partner of high social
-closeness (with whom they are very likely to cooperate, even after the
-experiment) there would be less of a chance to break the promise. In
-fact, the promise to friends was not broken on any occasion, hence the
-inference in this case, was met.
-
-The findings concerning motivations could be explained by the social
-norm called ``conditional cooperation'', which indicates that the belief
-that other people cooperate at high levels also induces high levels of
-cooperation (Fehr and Schurtenberger 2018). Thus, the lack of certainty
-regarding the decisions that the computer would make could explain the
-probability of breaking the promise that exists towards this partner.
-Similarly, the information that the subjects have regarding as their
-friend's behavior -even before the experiment- could explain the high
-levels of cooperation and keeping of promises towards this partner.
+High social closeness allows us to explore the instrumental motivation
+to keep promises (Baumgartner et al. 2009). In our study, subjects were
+more likely to break the promise to the stranger than to the friend. If
+humans keep their word to facilitate cooperation in the future, we would
+anticipate that there would be less of a chance to break the promise
+with a partner of high social closeness (with whom they are very likely
+to cooperate, even after the experiment) and, in fact, the promise to
+friends was not broken on any occasion. The findings concerning
+motivations could be explained by the social norm called ``conditional
+cooperation'', which indicates that the belief that other people
+cooperate at high levels also induces high levels of cooperation (Fehr
+and Schurtenberger 2018). Thus, the uncertainty regarding the computer's
+decisions could explain the probability of breaking the promise.
+Similarly, the information that the subjects have regarding their
+friend's behavior, even before the experiment, could explain the high
+levels of cooperation and keeping of promises towards the friend.
 
 Cooperation has been studied with diverse experimental manipulations. In
-one study, the contribution in a public goods game was evaluated during
-several trials in a group made up of the same individuals (partners),
-and compared to another group of new different subjects for each trial
-(strangers) (Croson 1996). In the condition of partners the cooperation
-was greater because it is a stable group compared to the group of
-strangers. The mentioned study does not give details regarding the
-recruitment of participants, so we could assume that even in the
-condition of partners these are individuals who do not consider
-themselves socially close.
-
-Another study showed an increase in cooperation in a trust game when
-individuals were socially close (Glaeser et al. 2000). In this study,
-subjects knew each other and the researchers carefully measured several
-variables regarding their social connection.However, some individuals
-who arrived together were allowed to perform the task between themselves
-and others were paired with unclear criteria. The above allows social
-closeness between partners to be heterogeneous, allows for romantic
-relationships and assumes that two individuals who come together to
-class are considered close to each other. Also, since it is a study of
-one-shot, it excludes the possibility of evaluating how the same subject
-varies his behavior based on different levels of social closeness.
-
-To try to homogenize social closeness between our subjects and their
-partners, they performed the task with a same-sex friend considered to
-be close, emphasizing their companion could not be a romantic or sexual
-partner. Bayesian analysis of the IOS scale showed evidence in favor
-that the degree of social closeness between 30 of our 45 subjects and
-their friends was the same. Results of the two mentioned studies also
-found that social closeness enhance cooperation (Croson 1996; Glaeser et
-al. 2000), in the future would be valuable to homogenize both the
-performed tasks and the statistical procedure used, to establish
+one study, the contribution in a ``public goods game'' was evaluated
+during several trials in a group made up of the same individuals
+(partners), and compared to another group of new different subjects for
+each trial (strangers) (Croson 1996). In the condition of partners, the
+cooperation was greater because it was a stable group compared to the
+group of strangers. The mentioned study does not give details regarding
+the recruitment of participants, thus we could assume that even in the
+condition of partners these were individuals who did not consider
+themselves socially close. Another study showed an increase in
+cooperation in a trust game when individuals were socially close
+(Glaeser et al. 2000). In this study, subjects knew each other and the
+researchers carefully measured several variables regarding their social
+connection such as the number of friends in common and years of
+relationship. They found greater cooperation depending on the degree of
+social connection. However, the study did not control for social
+closeness as some individuals who arrived together were allowed to
+perform the task together whereas others were paired differently. This
+limitation allowed social closeness between partners to be
+heterogeneous, allowed for romantic relationships and assumed that two
+individuals who arrived together to class were considered close to each
+other. To try to homogenize social closeness between our subjects and
+their partners, they performed the task with a same-sex friend
+considered to be close, emphasizing their companion could not be a
+romantic or sexual partner. Bayesian analysis of the IOS scale showed
+evidence in favor that the degree of social closeness between 30 of our
+45 subjects and their friends was the same. Although results of the two
+mentioned studies also found that social closeness enhance cooperation
+(Croson 1996; Glaeser et al. 2000), it would be valuable to homogenize
+both the performed tasks and the statistical procedure used to establish
 similarity in effects magnitudes.
 
 Our methodological contribution to the field is the use of Bayesian
@@ -777,36 +746,31 @@ have traditionally been analyzed with repeated measures AN(C)OVA,
 however, Hierarchical Models grant the advantages of naturally dealing
 with unbalanced data, include categorical and/or numerical predictors,
 explicitly incorporate individual variability, among others (Vuorre and
-Bolger 2018; Gelman and Hill 2006; McElreath 2018; Bürkner 2017).
-
-In our case, the Hierarchical Model allowed us to capture how the
-experimental conditions affected the decisions of each subject and the
-differences between them. For example, there are obviously motivated
-instrumental subjects such as number 8 or 12 who are very sensitive to
-the identity of their investors and modify their cooperation under
-social closeness. At the same time, there were notably intrinsic
-subjects such as 9 and 10 who cooperate all the time regardless of who
-their partners are. The Hierarchical Model naturally includes this
-information for the estimation of population effects, which, if not
-considered, would lead to inaccurate inferences(Bürkner 2017; Gelman and
-Hill 2006; McElreath 2018).
-
-On the other hand, the Cumulative Model allowed us to capture the
-strength of the commitment expressed through promises. A very frequent
-problem that has been pointed out recently is that analyzing ordinal
-data with methods that assume that observations are metric can lead to
-serious inference errors (Liddell and Kruschke 2018). The Cumulative
-Models assumes that the observed responses come from the categorization
-of a continuous latent variable (Bürkner and Vuorre 2019). In our study,
-we could identify that groups with different payment proportions, which
-in other studies have been called ``dishonest'' and
-``honest''(Baumgartner et al. 2009; Baumgartner, Gianotti, and Knoch
-2013), differ in the commitment they express through their promises.
-Considering that the tools to perform the Cumulative Models are
-relatively recent, in future studies, it would be valuable to also use
-the new alternatives for inference.
-
-Although the Hierarchical and Cumulative models are not tools
+Bolger 2018; Gelman and Hill 2006; McElreath 2018; Bürkner 2017). In our
+case, the Hierarchical Model allowed us to capture how the experimental
+conditions affected the decisions of each subject and the differences
+between them. For example, there were obviously motivated instrumental
+subjects such as number 8 or 12 who are very sensitive to the identity
+of their investors and modify their cooperation under social closeness.
+At the same time, there were notably intrinsic subjects such as 9 and 10
+who cooperate all the time regardless of who their partners are. The
+Hierarchical Model naturally includes this information for the
+estimation of population effects, which, if not considered, would lead
+to inaccurate inferences (Bürkner 2017; Gelman and Hill 2006; McElreath
+2018). The Cumulative Model allowed us to capture the strength of the
+commitment expressed through promises. A very frequent problem that has
+been pointed out recently is that analyzing ordinal data with methods
+that assume that observations are metric can lead to serious inference
+errors (Liddell and Kruschke 2018). The Cumulative Models assumes that
+the observed responses come from the categorization of a continuous
+latent variable (Bürkner and Vuorre 2019). In our study, we could
+identify that groups with different payment proportions, which in other
+studies have been called ``dishonest'' and ``honest'' (Baumgartner et
+al. 2009; Baumgartner, Gianotti, and Knoch 2013), differ in the
+commitment they express through their promises. Considering that the
+tools to perform the Cumulative Models are relatively recent, in future
+studies, it would be valuable to also use the new alternatives for
+inference. Although the Hierarchical and Cumulative models are not tools
 exclusively for Bayesian inference, their application from this approach
 represents several advantages compared to frequentist statistics.
 Classic problems such as multiple comparisons, the decision of when to
@@ -821,7 +785,7 @@ priori} or \emph{post hoc}.
 \hypertarget{limitations}{%
 \subsection{Limitations}\label{limitations}}
 
-A limitation of this paper is the use of hypothetical rewards compared
+A limitation of our study was the use of hypothetical rewards compared
 to real rewards. A relatively recent study on decision-making reported
 that there is more loss aversion when subjects have real monetary
 rewards compared to hypothetical in a risk task (Xu et al. 2016).
@@ -831,36 +795,33 @@ types of rewards in self-control, temporal and social discount tasks
 Jones 2006). Likewise, it can be argued that our results have
 theoretical congruence (Fehr and Schurtenberger 2018) and are in the
 same direction as other works that use real money (Croson 1996; Glaeser
-et al. 2000), thus, there are not many reasons to expect that other
+et al. 2000). Thus, there are not many reasons to expect that other
 types of rewards would modify our results. Another possible limitation
-is the use of multiple trials with each partner. Although the decision
-to use repeated measures during our design serves more the purpose of
-reducing contaminant sources and increasing internal validity (Maxwell,
-Delaney, and Ken 2018), to have more clarity regarding the difference in
-the intrinsic and instrumental motivations, the studies could benefit
-from only include one trial for each partner. Play a one-shot with each
-partner avoids the possibility that multiple trials could generate the
-belief that the computer can also vary its behavior according to the
-decisions of the trustee. Finally, subjects that performed the study
-inside the MRI scanner may differ in their responses than subjects
-outside of the scanner. However, our analysis did not show this
-explicitly.
+could be the use of multiple trials with each partner. Although the
+decision to use repeated measures during our design serves the purpose
+of reducing contaminant sources and increasing internal validity
+(Maxwell, Delaney, and Ken 2018), the studies could benefit from only
+including one trial for each partner to have more clarity regarding the
+difference in the intrinsic and instrumental motivations. Play a
+one-shot with each partner avoids the possibility that multiple trials
+could generate the belief that the computer can also vary its behavior
+according to the decisions of the trustee.
 
 \hypertarget{conclusions}{%
 \section{Conclusions}\label{conclusions}}
 
-Subjects seem to keep their promises by a combination of
-\emph{intrinsic} and \emph{instrumental} motivations. They are
-predominantly ``nice people'' because they keep their word even with
-investors with no social closeness. However, their trustworthiness is
-far from perfect, since there is a small proportion of betrayals
-committed towards this partner. It seems that if subjects cannot be sure
-their investor will be a ``potential cooperator'', dishonesty may emerge
-in the form of broken promises. Framing the finding in terms of the
-theoretical predictions of the social norm ``conditional cooperation'',
-social closeness decreases the probability of breaking the promise and
-increases cooperation, and suggests the correspondence between
-commitment expressed through promises and subsequent behavior.
+Subjects in our study seemed to keep their promises by a combination of
+\emph{intrinsic} and \emph{instrumental} motivations. They can be
+regarded as predominantly ``nice people'' because they kept their word
+even with investors with no social closeness (computer). However, their
+trustworthiness was far from perfect, since there was a small proportion
+of betrayals committed towards the computer. If subjects could not be
+sure their investor would be a ``potential cooperator'', dishonesty may
+have emerged in the form of broken promises. Framing our findings in
+terms of the theoretical predictions of the social norm ``conditional
+cooperation'', social closeness decreases the probability of breaking
+the promise and increases cooperation, and suggests the correspondence
+between commitment expressed through promises and subsequent behavior.
 
 \hypertarget{bibliography}{%
 \section*{Bibliography}\label{bibliography}}
